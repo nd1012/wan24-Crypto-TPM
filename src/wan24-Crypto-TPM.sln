@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wan24-Crypto-TPM", "wan24-Crypto-TPM\wan24-Crypto-TPM.csproj", "{A5AAB1CB-424F-427E-BC75-98B61A73091C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wan24-Crypto-TPM Docs", "wan24-Crypto-TPM Docs\wan24-Crypto-TPM Docs.csproj", "{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wan24-Crypto-TPM Tests", "wan24-Crypto-TPM Tests\wan24-Crypto-TPM Tests.csproj", "{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Trunk|Any CPU = Trunk|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5AAB1CB-424F-427E-BC75-98B61A73091C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AAB1CB-424F-427E-BC75-98B61A73091C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AAB1CB-424F-427E-BC75-98B61A73091C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AAB1CB-424F-427E-BC75-98B61A73091C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AAB1CB-424F-427E-BC75-98B61A73091C}.Trunk|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AAB1CB-424F-427E-BC75-98B61A73091C}.Trunk|Any CPU.Build.0 = Release|Any CPU
+		{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}.Trunk|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD6FFD3-1908-4108-B8EF-5CA8C619961A}.Trunk|Any CPU.Build.0 = Release|Any CPU
+		{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}.Trunk|Any CPU.ActiveCfg = Release|Any CPU
+		{C0285B59-7E58-4CCF-B9E6-8DC0193A8C4F}.Trunk|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32FDDCAD-3A88-434A-9166-79E31EA31ACF}
+	EndGlobalSection
+EndGlobal

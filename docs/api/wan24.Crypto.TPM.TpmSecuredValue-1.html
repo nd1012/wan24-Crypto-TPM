@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TpmSecuredValue&lt;T&gt;
+   | wan24-Crypto-TPM </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TpmSecuredValue&lt;T&gt;
+   | wan24-Crypto-TPM ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1">
+  
+  
+  <h1 id="wan24_Crypto_TPM_TpmSecuredValue_1" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1" class="text-break">Class TpmSecuredValue&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Secure value (keeps a value encrypted using TPM after a timeout without any access, re-crypts from time to time; see
+<a href="https://static.usenix.org/events/sec01/full_papers/gutmann/gutmann.pdf">https://static.usenix.org/events/sec01/full_papers/gutmann/gutmann.pdf</a>)</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">wan24.Core.DisposableBase</span></div>
+    <div class="level2"><a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html">TpmSecuredValue</a></div>
+    <div class="level3"><span class="xref">TpmSecuredValue&lt;T&gt;</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">wan24.Crypto.ISecureValue</span></div>
+    <div><span class="xref">wan24.Core.IDisposableObject</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.IAsyncDisposable</span></div>
+    <div><span class="xref">wan24.Core.IStatusProvider</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_DefaultEncryptTimeout">TpmSecuredValue.DefaultEncryptTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_DefaultRecryptTimeout">TpmSecuredValue.DefaultRecryptTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_GUID">TpmSecuredValue.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Name">TpmSecuredValue.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_State">TpmSecuredValue.State</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Value">TpmSecuredValue.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Options">TpmSecuredValue.Options</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_EncryptTimeout">TpmSecuredValue.EncryptTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_RecryptTimeout">TpmSecuredValue.RecryptTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_IsEncrypted">TpmSecuredValue.IsEncrypted</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_LastAccess">TpmSecuredValue.LastAccess</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_EncryptedSince">TpmSecuredValue.EncryptedSince</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_AccessCount">TpmSecuredValue.AccessCount</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_GetValueAsync_CancellationToken_">TpmSecuredValue.GetValueAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_SetValueAsync_System_Byte___CancellationToken_">TpmSecuredValue.SetValueAsync(Byte[], CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_OnAccess">TpmSecuredValue.OnAccess</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_RaiseOnAccess">TpmSecuredValue.RaiseOnAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Encrypt">TpmSecuredValue.Encrypt()</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Decrypt">TpmSecuredValue.Decrypt()</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Recrypt">TpmSecuredValue.Recrypt()</a>
+    </div>
+    <div>
+      <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_Dispose_System_Boolean_">TpmSecuredValue.Dispose(Boolean)</a>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.DisposeSyncObject</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.AsyncDisposing</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.AllowFinalizer</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.StackInfo</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.EnsureUndisposed(System.Boolean, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.IfUndisposed&lt;T&gt;(T, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.IfUndisposed(System.Action, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.IfUndisposed&lt;T&gt;(System.Func&lt;T&gt;, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.IfUndisposedNullable&lt;T&gt;(System.Func&lt;T&gt;, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.DisposeCore()</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.DisposeAttributes()</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.DisposeAttributesAsync()</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.DisposeAsync()</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.CreateStackInfo</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.IsDisposing</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.IsDisposed</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.OnDisposing</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.OnDisposed</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="wan24.Crypto.TPM.html">wan24.Crypto.TPM</a></h6>
+  <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
+  <h5 id="wan24_Crypto_TPM_TpmSecuredValue_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TpmSecuredValue&lt;T&gt; : TpmSecuredValue, ISecureValue, IDisposableObject, IDisposable, IAsyncDisposable, IStatusProvider where T : class, IStreamSerializer, new()</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_TpmSecuredValue_1__ctor_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue_1__ctor__0__System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__System_Boolean__" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.#ctor(`0@,System.Nullable{TimeSpan}@,System.Nullable{TimeSpan}@,wan24.Crypto.TPM.Tpm2Options@,wan24.Crypto.CryptoOptions@,System.Boolean@)">TpmSecuredValue(in T, in Nullable&lt;TimeSpan&gt;, in Nullable&lt;TimeSpan&gt;, in Tpm2Options, in CryptoOptions, in Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSecuredValue(in T value, in TimeSpan? encryptTimeout = null, in TimeSpan? recryptTimeout = null, in Tpm2Options tpmOptions = null, in CryptoOptions options = null, in bool requireTpm = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">encryptTimeout</span></td>
+        <td><p>Encrypt timeout (<see cref="!:TimeSpan.Zero"></see> to keep encrypted all the time)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">recryptTimeout</span></td>
+        <td><p>Re-crypt timeout (one minute, for example)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">tpmOptions</span></td>
+        <td><p>TPM options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options (will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">requireTpm</span></td>
+        <td><p>Require a TPM?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_TpmSecuredValue_1__ctor_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue_1__ctor_System_Byte____System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__System_Boolean__" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.#ctor(System.Byte[]@,System.Nullable{TimeSpan}@,System.Nullable{TimeSpan}@,wan24.Crypto.TPM.Tpm2Options@,wan24.Crypto.CryptoOptions@,System.Boolean@)">TpmSecuredValue(in Byte[], in Nullable&lt;TimeSpan&gt;, in Nullable&lt;TimeSpan&gt;, in Tpm2Options, in CryptoOptions, in Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSecuredValue(in byte[] value, in TimeSpan? encryptTimeout = null, in TimeSpan? recryptTimeout = null, in Tpm2Options tpmOptions = null, in CryptoOptions options = null, in bool requireTpm = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value (will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">encryptTimeout</span></td>
+        <td><p>Encrypt timeout (<see cref="!:TimeSpan.Zero"></see> to keep encrypted all the time)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">recryptTimeout</span></td>
+        <td><p>Re-crypt timeout (one minute, for example)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">tpmOptions</span></td>
+        <td><p>TPM options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options (will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">requireTpm</span></td>
+        <td><p>Require a TPM?</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_TpmSecuredValue_1_Object_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.Object*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue_1_Object" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.Object">Object</h4>
+  <div class="markdown level1 summary"><p>Get/set as object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual T Object { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_TpmSecuredValue_1_GetObjectAsync_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.GetObjectAsync*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue_1_GetObjectAsync_CancellationToken_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.GetObjectAsync(CancellationToken)">GetObjectAsync(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Get the object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;T&gt; GetObjectAsync(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;T&gt;</td>
+        <td><p>Object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_TpmSecuredValue_1_SetObjectAsync_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.SetObjectAsync*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue_1_SetObjectAsync__0_CancellationToken_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.SetObjectAsync(`0,CancellationToken)">SetObjectAsync(T, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Set the object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task SetObjectAsync(T obj, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_TpmSecuredValue_1_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.op_Implicit*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue_1_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue__0____0" data-uid="wan24.Crypto.TPM.TpmSecuredValue`1.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue{`0})~`0">Implicit(TpmSecuredValue&lt;T&gt; to T)</h4>
+  <div class="markdown level1 summary"><p>Cast as object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator T(TpmSecuredValue&lt;T&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue-1.html">TpmSecuredValue</a>&lt;T&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">wan24.Crypto.ISecureValue</span>
+  </div>
+  <div>
+      <span class="xref">wan24.Core.IDisposableObject</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.IAsyncDisposable</span>
+  </div>
+  <div>
+      <span class="xref">wan24.Core.IStatusProvider</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) 2023 Andreas Zimmermann, wan24.de
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

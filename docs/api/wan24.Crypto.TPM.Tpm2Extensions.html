@@ -1,0 +1,1340 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Tpm2Extensions
+   | wan24-Crypto-TPM </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Tpm2Extensions
+   | wan24-Crypto-TPM ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="wan24.Crypto.TPM.Tpm2Extensions">
+  
+  
+  <h1 id="wan24_Crypto_TPM_Tpm2Extensions" data-uid="wan24.Crypto.TPM.Tpm2Extensions" class="text-break">Class Tpm2Extensions
+  </h1>
+  <div class="markdown level0 summary"><p>TPM2 extension methods</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Tpm2Extensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="wan24.Crypto.TPM.html">wan24.Crypto.TPM</a></h6>
+  <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
+  <h5 id="wan24_Crypto_TPM_Tpm2Extensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Tpm2Extensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_GetMacAlgorithmId_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.GetMacAlgorithmId*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_GetMacAlgorithmId_Tpm2Lib_TpmAlgId_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.GetMacAlgorithmId(Tpm2Lib.TpmAlgId)">GetMacAlgorithmId(TpmAlgId)</h4>
+  <div class="markdown level1 summary"><p>Get the <code>wan24-Crypto</code> MAC algorithm ID of the TPM HMAC algorithm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetMacAlgorithmId(this TpmAlgId algo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tpm2Lib.TpmAlgId</span></td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>Algorithm</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Algorithm ID or <code>-1</code>, if not supported</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_GetMacAlgorithmName_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.GetMacAlgorithmName*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_GetMacAlgorithmName_Tpm2Lib_TpmAlgId_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.GetMacAlgorithmName(Tpm2Lib.TpmAlgId)">GetMacAlgorithmName(TpmAlgId)</h4>
+  <div class="markdown level1 summary"><p>Get the <code>wan24-Crypto</code> MAC algorithm name of the TPM HMAC algorithm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetMacAlgorithmName(this TpmAlgId algo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tpm2Lib.TpmAlgId</span></td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>Algorithm</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_GetMacLength_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.GetMacLength*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_GetMacLength_Tpm2Lib_TpmAlgId_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.GetMacLength(Tpm2Lib.TpmAlgId)">GetMacLength(TpmAlgId)</h4>
+  <div class="markdown level1 summary"><p>Get the MAC length of the TPM HMAC algorithm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetMacLength(this TpmAlgId algo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tpm2Lib.TpmAlgId</span></td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>Algorithm</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>MAC length in byte</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmEncrypt_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmEncrypt*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmEncrypt_wan24_Crypto_PrivateKeySuite_System_Byte___wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmEncrypt(wan24.Crypto.PrivateKeySuite,System.Byte[],wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)">TpmEncrypt(PrivateKeySuite, Byte[], in CryptoOptions, in Nullable&lt;TpmAlgId&gt;, Tpm2, in Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Encrypt a private key suite protected using TPM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] TpmEncrypt(this PrivateKeySuite suite, byte[] key, in CryptoOptions options = null, in TpmAlgId? algo = null, Tpm2 engine = null, in Tpm2Options tpmOptions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.PrivateKeySuite</span></td>
+        <td><span class="parametername">suite</span></td>
+        <td><p>Private key suite</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>TPM HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">tpmOptions</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>Cipher data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmac_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmac*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmac_ReadOnlySpan_System_Byte__System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmac(ReadOnlySpan{System.Byte},System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmac(ReadOnlySpan&lt;Byte&gt;, Nullable&lt;TpmAlgId&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmac(this ReadOnlySpan&lt;byte&gt; data, TpmAlgId? algo = null, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmac_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmac*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmac_Span_System_Byte__System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmac(Span{System.Byte},System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmac(Span&lt;Byte&gt;, Nullable&lt;TpmAlgId&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmac(this Span&lt;byte&gt; data, TpmAlgId? algo = null, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmac_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmac*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmac_System_Byte___System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmac(System.Byte[],System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmac(Byte[], Nullable&lt;TpmAlgId&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmac(this byte[] data, TpmAlgId? algo = null, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha1_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha1*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha1_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha1(ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha1(ReadOnlySpan&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha1(this ReadOnlySpan&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha1_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha1*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha1_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha1(Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha1(Span&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha1(this Span&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha1_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha1*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha1_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha1(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha1(Byte[], in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha1(this byte[] data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-1</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha256_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha256*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha256_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha256(ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha256(ReadOnlySpan&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-256</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha256(this ReadOnlySpan&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-256</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha256_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha256*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha256_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha256(Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha256(Span&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-256</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha256(this Span&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-256</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha256_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha256*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha256_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha256(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha256(Byte[], in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-256</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha256(this byte[] data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-256</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha384_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha384*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha384_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha384(ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha384(ReadOnlySpan&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-384</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha384(this ReadOnlySpan&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-384</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha384_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha384*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha384_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha384(Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha384(Span&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-384</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha384(this Span&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-384</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha384_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha384*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha384_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha384(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha384(Byte[], in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-384</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha384(this byte[] data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-384</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha512_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha512*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha512_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha512(ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha512(ReadOnlySpan&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-512</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha512(this ReadOnlySpan&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-512</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha512_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha512*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha512_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha512(Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha512(Span&lt;Byte&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-512</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha512(this Span&lt;byte&gt; data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Span</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-512</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha512_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha512*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Extensions_TpmHmacSha512_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Extensions.TpmHmacSha512(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha512(Byte[], in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC-SHA-512</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TargetedPatchingOptOut(&quot;Just a method adapter&quot;)]
+public static byte[] TpmHmacSha512(this byte[] data, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC-SHA-512</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) 2023 Andreas Zimmermann, wan24.de
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

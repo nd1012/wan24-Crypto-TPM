@@ -1,0 +1,836 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Tpm2Helper
+   | wan24-Crypto-TPM </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Tpm2Helper
+   | wan24-Crypto-TPM ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="wan24.Crypto.TPM.Tpm2Helper">
+  
+  
+  <h1 id="wan24_Crypto_TPM_Tpm2Helper" data-uid="wan24.Crypto.TPM.Tpm2Helper" class="text-break">Class Tpm2Helper
+  </h1>
+  <div class="markdown level0 summary"><p>TPM2 helper</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Tpm2Helper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="wan24.Crypto.TPM.html">wan24.Crypto.TPM</a></h6>
+  <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
+  <h5 id="wan24_Crypto_TPM_Tpm2Helper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Tpm2Helper</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_DEFAULT_LINUX_DEVICE" data-uid="wan24.Crypto.TPM.Tpm2Helper.DEFAULT_LINUX_DEVICE">DEFAULT_LINUX_DEVICE</h4>
+  <div class="markdown level1 summary"><p>Default Linux TPM device</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_LINUX_DEVICE = &quot;/dev/tpm0&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_DIGEST_BUFFER_SIZE" data-uid="wan24.Crypto.TPM.Tpm2Helper.DIGEST_BUFFER_SIZE">DIGEST_BUFFER_SIZE</h4>
+  <div class="markdown level1 summary"><p>Digest buffer size in byte</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DIGEST_BUFFER_SIZE = 1024</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_DefaultOptions_" data-uid="wan24.Crypto.TPM.Tpm2Helper.DefaultOptions*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_DefaultOptions" data-uid="wan24.Crypto.TPM.Tpm2Helper.DefaultOptions">DefaultOptions</h4>
+  <div class="markdown level1 summary"><p>Default options (get/set instance will be copied on every access)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Tpm2Options DefaultOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_CreateEngine_" data-uid="wan24.Crypto.TPM.Tpm2Helper.CreateEngine*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_CreateEngine_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.CreateEngine(wan24.Crypto.TPM.Tpm2Options)">CreateEngine(Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a TPM2 engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Tpm2 CreateEngine(Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><p>Engine (don't forget to dispose!)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_CreateRandomData_" data-uid="wan24.Crypto.TPM.Tpm2Helper.CreateRandomData*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_CreateRandomData_System_Int32__Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.CreateRandomData(System.Int32@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">CreateRandomData(in Int32, Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create random data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] CreateRandomData(in int len = 32, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">len</span></td>
+        <td><p>Length in byte (must not exceed <a class="xref" href="wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_GetMaxDigestSize_Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_">GetMaxDigestSize(Tpm2, Tpm2Options)</a>, which usually restricts the length to the max. digest size
+in byte)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>Random data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_DecryptPrivateKeySuite_" data-uid="wan24.Crypto.TPM.Tpm2Helper.DecryptPrivateKeySuite*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_DecryptPrivateKeySuite_System_Byte____System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__" data-uid="wan24.Crypto.TPM.Tpm2Helper.DecryptPrivateKeySuite(System.Byte[]@,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)">DecryptPrivateKeySuite(in Byte[], in Byte[], in CryptoOptions, in Nullable&lt;TpmAlgId&gt;, Tpm2, in Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Decrypt a private key suite</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PrivateKeySuite DecryptPrivateKeySuite(in byte[] cipher, in byte[] key, in CryptoOptions options = null, in TpmAlgId? algo = null, Tpm2 engine = null, in Tpm2Options tpmOptions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">cipher</span></td>
+        <td><p>Private key suite cipher data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>TPM HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">tpmOptions</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.PrivateKeySuite</span></td>
+        <td><p>Private key suite (don't forget to dispose!)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_GetDefaultOptions_" data-uid="wan24.Crypto.TPM.Tpm2Helper.GetDefaultOptions*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_GetDefaultOptions_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.GetDefaultOptions(wan24.Crypto.TPM.Tpm2Options)">GetDefaultOptions(Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Get default options</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Tpm2Options GetDefaultOptions(Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_GetDigestAlgorithm_" data-uid="wan24.Crypto.TPM.Tpm2Helper.GetDigestAlgorithm*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_GetDigestAlgorithm_System_Int32__" data-uid="wan24.Crypto.TPM.Tpm2Helper.GetDigestAlgorithm(System.Int32@)">GetDigestAlgorithm(in Int32)</h4>
+  <div class="markdown level1 summary"><p>Get the digest algorithm for a digest size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TpmAlgId GetDigestAlgorithm(in int digestSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">digestSize</span></td>
+        <td><p>Digest size in byte</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tpm2Lib.TpmAlgId</span></td>
+        <td><p>Digest algorithm which matches the size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_GetMaxDigestSize_" data-uid="wan24.Crypto.TPM.Tpm2Helper.GetMaxDigestSize*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_GetMaxDigestSize_Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.GetMaxDigestSize(Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">GetMaxDigestSize(Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Get the max. digest size in byte</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetMaxDigestSize(Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Max. digest size in byte</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_Hmac_" data-uid="wan24.Crypto.TPM.Tpm2Helper.Hmac*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_Hmac_ReadOnlySpan_System_Byte___System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.Hmac(ReadOnlySpan{System.Byte}@,System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">Hmac(in ReadOnlySpan&lt;Byte&gt;, Nullable&lt;TpmAlgId&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] Hmac(in ReadOnlySpan&lt;byte&gt; data, TpmAlgId? algo = null, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_Hmac_" data-uid="wan24.Crypto.TPM.Tpm2Helper.Hmac*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_Hmac_System_Byte____System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.Hmac(System.Byte[]@,System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">Hmac(in Byte[], Nullable&lt;TpmAlgId&gt;, in Byte[], Tpm2, Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Create a HMAC</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] Hmac(in byte[] data, TpmAlgId? algo = null, in byte[] key = null, Tpm2 engine = null, Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Authenticated data</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Tpm2Lib.TpmAlgId</span>&gt;</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><p>HMAC</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_IsAvailable_" data-uid="wan24.Crypto.TPM.Tpm2Helper.IsAvailable*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_IsAvailable_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.Tpm2Helper.IsAvailable(wan24.Crypto.TPM.Tpm2Options)">IsAvailable(Tpm2Options)</h4>
+  <div class="markdown level1 summary"><p>Determine if TPM &gt;=2.x access is available</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAvailable(Tpm2Options options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If available</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_IsAvailableAsync_" data-uid="wan24.Crypto.TPM.Tpm2Helper.IsAvailableAsync*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_IsAvailableAsync_wan24_Crypto_TPM_Tpm2Options_CancellationToken_" data-uid="wan24.Crypto.TPM.Tpm2Helper.IsAvailableAsync(wan24.Crypto.TPM.Tpm2Options,CancellationToken)">IsAvailableAsync(Tpm2Options, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Determine if TPM &gt;=2.x access is available</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static async Task&lt;bool&gt; IsAvailableAsync(Tpm2Options options = null, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><p>If available</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="wan24_Crypto_TPM_Tpm2Helper_TryCreateEngine_" data-uid="wan24.Crypto.TPM.Tpm2Helper.TryCreateEngine*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Helper_TryCreateEngine_wan24_Crypto_TPM_Tpm2Options__Tpm2Lib_Tpm2__" data-uid="wan24.Crypto.TPM.Tpm2Helper.TryCreateEngine(wan24.Crypto.TPM.Tpm2Options@,Tpm2Lib.Tpm2@)">TryCreateEngine(in Tpm2Options, out Tpm2)</h4>
+  <div class="markdown level1 summary"><p>Try creating an engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryCreateEngine(in Tpm2Options options, out Tpm2 engine)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">wan24.Crypto.TPM.Tpm2Options</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2Lib.Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If succeed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) 2023 Andreas Zimmermann, wan24.de
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

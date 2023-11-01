@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>wan24-Crypto-TPM | wan24-Crypto-TPM </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="wan24-Crypto-TPM | wan24-Crypto-TPM ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="wan24-crypto-tpm">wan24-Crypto-TPM</h1>
+
+<p><strong>CAUTION</strong>: The code has not been tested with a real TPM yet. I'd appreciate
+if someone would give me some feedback, if it worked for them. Anyway the
+tests use the Microsoft TPM simulator and did run successfully.</p>
+<p>This library contains some helpers for easy TPM(2) usage. It does <em>way not</em>
+implement everything that a TPM offers - these are the selected features,
+which include the TPM into your security model:</p>
+<ul>
+<li>Determine if TPM2 can be accessed</li>
+<li>Determine the max. supported digest (size)</li>
+<li>Random number generation (<code>TpmRng</code>)</li>
+<li>HMAC-SHA-1/256/384/512 (<code>Tpm2Helper</code> and <code>MacTpmHmacSha*Algorithm</code>)</li>
+<li><code>TpmSymmetricKeySuite</code> which implements <code>ISymmetricKeySuite</code></li>
+<li><code>TpmSecuredValue</code> which works like <code>SecureValue</code></li>
+<li><code>TpmSharedSecret</code> for usage with a remote key storage</li>
+<li><code>TpmValueProtection</code> to extend <code>ValueProtection</code></li>
+</ul>
+<p>As you can see, the number of features is quiet clear.</p>
+<p>This library extends the <code>wan24-Crypto</code> library with these algorithms:</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>ID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MAC</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TPM HMAC-SHA-1</td>
+<td>7</td>
+<td>TPMHMAC-SHA-1</td>
+</tr>
+<tr>
+<td>TPM HMAC-SHA-256</td>
+<td>8</td>
+<td>TPMHMAC-SHA-256</td>
+</tr>
+<tr>
+<td>TPM HMAC-SHA-384</td>
+<td>9</td>
+<td>TPMHMAC-SHA-384</td>
+</tr>
+<tr>
+<td>TPM HMAC-SHA-512</td>
+<td>10</td>
+<td>TPMHMAC-SHA-512</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CAUTION</strong>: TPM secured information won't be usable anymore, if the TPM (or
+even the TPM owner) changes!</p>
+<p>The goal of this library is to make TPM usable for everyone in a simple way,
+without having to fight with a firmware and complex/missing documentation.
+It's an ideal extension to the existing <code>wan24-Crypto</code> infrastructure.</p>
+<p><strong>NOTE</strong>: There are no provisioning functionaliies implemented in this
+library. A TPM which is going to be used needs to be provisioned manually or
+from the host OS (Windows f.e. does provision a TPM automatically).</p>
+<h2 id="how-to-get-it">How to get it</h2>
+<p>This library is available as
+<a href="https://www.nuget.org/packages/wan24-Crypto-TPM/">NuGet package</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>In case you don't use the <code>wan24-Core</code> bootstrapper logic, you need to
+initialize the TPM2 extension first, before you can use it:</p>
+<pre><code class="lang-cs">wan24.Crypto.TPM.Bootstrap.Boot();
+</code></pre>
+<p>This will register the algorithms to the <code>wan24-Crypto</code> library.</p>
+<p><strong>NOTE</strong>: All algorithms will be registered, no matter if there's even a TPM
+available or not, or if the algorithm is supported by an available TPM. This
+is because the TPM options support configuring a simulator or to choose
+between multiple available TPMs. So the bootstrapper can't really know which
+algorithms are going to be available (or used).</p>
+<p>In case you work with dependency injection (DI), you may want to add some
+services:</p>
+<pre><code class="lang-cs">builder.Services.AddWan24CryptoTpm();
+</code></pre>
+<p>This will register transient <code>Tpm2Options</code> (using <code>Tpm2Helper.DefaultOptions</code>)
+and <code>Tpm2</code> (using <code>Tpm2Helper.CreateEngine</code>) service objects.</p>
+<h3 id="tpm2-options">TPM2 options</h3>
+<p>In the <code>Tpm2Options</code> you can define how to connect to the TPM. You may also
+specify</p>
+<ul>
+<li>a resource handle (currently used for finalizing a HMAC)</li>
+<li>an algorithm (currently used for creating a HMAC)</li>
+<li>a tagged object (which will be cloned, if it implements <code>ICloneable</code>, and
+the <code>GetCopy</code> method of the <code>Tpm2Options</code> instance has been called)</li>
+</ul>
+<p>Using the <code>With*</code> methods you can configure options fluent.</p>
+<h3 id="determine-if-tpm2-can-be-accessed">Determine if TPM2 can be accessed</h3>
+<pre><code class="lang-cs">bool canAccessTpm2 = Tpm2Helper.IsAvailable();
+</code></pre>
+<p>Because on a Linux system some file IO operations may run, there's an
+<code>IsAvailableAsync</code> method, too.</p>
+<h3 id="tpm2-instance-creation"><code>Tpm2</code> instance creation</h3>
+<pre><code class="lang-cs">using Tpm2 engine = Tpm2Helper.CreateEngine();
+</code></pre>
+<p>The <code>Tpm2</code> instance is a connected TPM2 TSS, which allows to do whatever the
+TSS offers. By giving <code>Tpm2Options</code> to the <code>CreateEngine</code> method, you can
+define which TPM to use, and optional set an <code>Initializer</code> delegate, which may
+bring the TPM into the desired state, before running any other operation.</p>
+<p>The <code>CreateEngine</code> method is being called internal, whenever you use a TPM
+functionality without giving an existing <code>Tpm2</code> instance to the called method.
+And if you didn't specify the <code>Tpm2Options</code>, the <code>Tpm2Helper.DefaultOptions</code>
+will be used, which you may preset, if required.</p>
+<p>The <code>TryCreateEngine</code> does the same as <code>CreateEngine</code>, but won't throw on
+error.</p>
+<h3 id="maximum-supported-digest-size">Maximum supported digest (size)</h3>
+<pre><code class="lang-cs">int maxDigestSize = Tpm2Helper.GetMaxDigestSize();// Size in byte
+TpmAlgId maxDigest = Tpm2Helper.GetDigestAlgorithm(maxDigestSize);
+</code></pre>
+<p>The max. supported digest size limits the output of the random number
+generator, and it also defines the possible digest algorithms.</p>
+<p><strong>NOTE</strong>: <code>TpmRng</code> doesn't limit the random number count being generated in
+any way.</p>
+<h3 id="random-number-generator">Random number generator</h3>
+<p><strong>CAUTION</strong>: The example code is actually a negative example - see &quot;Best
+practices&quot; for a better solution suggestion!</p>
+<pre><code class="lang-cs">RND.Generator = new TpmRng();// If not used as singleton, an instance should be disposed!
+</code></pre>
+<p>The <code>TpmRng</code> implements the <code>IRng</code> interface, which allows to use the TPM as
+RNG for <code>wan24-Crypto</code>. Internal it uses the <code>Tpm2Helper.CreateRandomData</code>
+helper method, which is restricted to the TPMs random number output length,
+while the RNG implementation doesn't restrict the length of the generated
+random data.</p>
+<h3 id="hmac-sha-1256384512">HMAC-SHA-1/256/384/512</h3>
+<pre><code class="lang-cs">byte[] hmac = Tpm2Helper.Hmac(anyAuthMessage);
+</code></pre>
+<p><strong>NOTE</strong>: The owner resource handle will be used per default.</p>
+<p>Using the <code>Tpm2Helper.Hmac</code> method you can create a HMAC-SHA-1/256/384/512
+using the TPM. These HMACs can only be re-created using the same TPM.
+Specifying an additional MAC key is optional.</p>
+<p><strong>NOTE</strong>: Not every TPM implements all algorithms. HMAC-SHA-256 seems to be
+implemented by most TPMs. If you don't specify an algorithm to the <code>Hmac</code>
+method, it'll determine and use the maximum supported algorithm.</p>
+<p><strong>CAUTION</strong>: If you change your TPM hardware, you won't be able to re-create a
+HMAC! This also applies even only the TPM owner changes.</p>
+<p>You can also use the <code>wan24-Crypto</code> registered HMAC algorithms during
+encryption, for example. Then cipher data couldn't be decrypted on any other
+computer than the one that encrypted it.</p>
+<p><strong>TIP</strong>: If you use a TPM HMAC of your encryption password, you can ensure
+that the cipher data can only be decrypted from the same computer that was
+used to encrypt it!</p>
+<p>There are also <code>TpmHmac*</code> extension methods for a <code>byte[]</code> and
+<code>(ReadOnly)Span&lt;byte&gt;</code>.</p>
+<h3 id="tpm-symmetric-key-suite">TPM symmetric key suite</h3>
+<pre><code class="lang-cs">using TpmSymmetricKeySuite tpmAuth = new(key);
+</code></pre>
+<p>The <code>TpmSymmetricKeySuite</code> works as the <code>SymmetricKeySuite</code>, but uses a TPM
+HMAC for calculating the final key (and identifier, if any).</p>
+<h3 id="tpm-secured-value">TPM secured value</h3>
+<p>The <code>TpmSecuredValue</code> works as <code>SecureValue</code> and protects a value using the
+TPM.</p>
+<p>If you'd like TPM only if available, you can set the constructor parameter
+value of <code>requireTpm</code> to <code>false</code>. If TPM is not available, the constructor
+won't throw, and <code>TpmSecuredValue</code> will just work as <code>SecureValue</code> as a
+fallback solution.</p>
+<h3 id="en-decrypting-a-private-key-suite">En-/decrypting a private key suite</h3>
+<p>Using the <code>TpmEncrypt</code> extension method you can encrypt a <code>PrivateKeySuite</code>
+using a TPM flavored key. With <code>Tpm2Helper.DecryptPrivateKeySuite</code> you can
+decrypt it.</p>
+<p><strong>CAUTION</strong>: If you change your TPM hardware, there's no way to decrypt the
+private key suite anymore! The cipher data can only be decrypted using the
+same TPM hardware that was used for encryption. This also applies even only
+the TPM owner changes.</p>
+<h3 id="tpm-shared-secret">TPM shared secret</h3>
+<p>The <code>TpmSharedSecret</code> is a helper for deriving a TPM secured key from a remote
+key storage.</p>
+<p><strong>NOTE</strong>: The following examples assume that your remote key storage requires
+sending a secret for receiving a secret. This may be different per each remote
+key storage.</p>
+<p>Example how to initialize a new secret:</p>
+<pre><code class="lang-cs">using Tpm2 engine = Tpm2Helper.CreateEngine();
+byte[] token = RND.GetBytes(Tpm2Helper.GetMaxDigestLength(engine)),
+	remoteSecret = RND.GetBytes(token.Length);
+// Store the token somewhere for restoring the secret later
+using TpmSharedSecret tpmSecret = new(token, engine: engine);
+tpmSecret.ProtectRemoteSecret(remoteSecret);
+// Send tpmSecret.Secret.Array and remoteSecret to the remote key storage
+byte[] secret = tpmSecret + remoteSecret;
+</code></pre>
+<p><strong>CAUTION</strong>: <strong><em>NEVER</em></strong> store <code>remoteSecret</code> persistent outside of the remote
+key storage! <strong><em>NEVER</em></strong> store <code>tpmSecret.Secret.Array</code> anywhere!</p>
+<p><code>tpmSecret.Secret.Array</code> is used to authenticate for receiving the value of
+<code>remoteSecret</code> from the remote key storage later.</p>
+<p><strong>NOTE</strong>: <code>token</code> may be stored plain, maybe protected using the OS
+capabilities (like the file system ACL, f.e.).</p>
+<p>Example how to restore a previously initialized secret:</p>
+<pre><code class="lang-cs">// Load the token from where it was saved during secret initialization
+using TpmSharedSecret tpmSecret = new(token);
+// Send tpmSecret.Secret.Array to the remote key storage and receive remoteSecret
+byte[] secret = tpmSecret + remoteSecret;
+</code></pre>
+<p>The <code>TpmSharedSecret</code> also supports including an additional secret (for user
+authentication f.e.).</p>
+<h3 id="tpm-value-protection">TPM value protection</h3>
+<p>The <code>TpmValueProtection</code> uses the TPM for protecting a value as
+<code>ValueProtection</code> does without the TPM. For this the scope keys will be used
+as value for a TPM HMAC, which will then be the final key being used for the
+value encryption (the max. TPM supported HMAC algorithm will be used).</p>
+<p><strong>NOTE</strong>: The <code>TpmValueProtection</code> uses the scope keys from <code>ValueProtection</code>
+and uses the default TPM state for creating the HMAC. That means in particular
+you'll still have to ensure a restorable user scope key, while you don't have
+to take care the system scope key anymore.</p>
+<p>You may replace the <code>ValueProtection</code> protect/unprotect handlers:</p>
+<pre><code class="lang-cs">TpmValueProtection.Enable();
+</code></pre>
+<p><strong>NOTE</strong>: The <code>TpmValueProtection</code> protect/unprotect handlers will connect to
+the TPM for every call, which is an overhead and may impact the performance of
+your application. If you don't want that, you may simply replace the
+<code>ValueProtection</code> user/system scope keys with TPM HMACs, probably including an
+user secret for the user scope key.</p>
+<p>Or you can use both, the <code>ValueProtection</code> and the <code>TpmValueProtection</code>, as it
+is suitable for your application, separately.</p>
+<h3 id="extension-methods">Extension methods</h3>
+<p>The <code>TpmExtensions</code> class exports some extension methods to make life more
+easy, when working with TPM types and <code>wan24-Crypto</code>. There are also
+extensions for the <code>PrivateKeySuite</code>, <code>byte[]</code> and <code>(ReadOnly)Span&lt;byte&gt;</code>
+(TPM HMAC creation). Using the <code>CryptoOptions.WithTpmHmac</code> extension method,
+you can set the max. supported TPM HMAC algorithm for any crypto application
+which requires to compute a MAC.</p>
+<h2 id="why-not-support-tpm-pkisigningsealingetc">Why not support TPM PKI/signing/sealing/etc.?</h2>
+<p>If you followed the TPM development process until today you know that TPM2 is
+fully incompatible with TPM1. I try to concentrate on the absolute minimum
+that TPM offers, to stay (hopefully) compatible with TPM3 (or any future TPM
+version). With the HMAC function you should have everything that is required
+at minimum, for implementing everything else using <code>wan24-Crypto</code> (which
+offers way more functionality than TPM does). The <code>ExpandedKey</code> of a
+<code>TpmSymmetricKeySuite</code> can be used for any encryption, and it's bound to the
+available TPM, so you could encrypt a <code>PrivateKeySuite</code>, for example, which
+can then only be decrypted using the same TPM. And you're not bound to the TPM
+implemented algorithms, as you have the free choice to use any <code>wan24-Crypto</code>
+implemented cryptographic algorithm, and optional combine them with the
+provided TPM functionality.</p>
+<p>To sum it up - the reasons for <em>not</em> using all of the TPM capabilities:</p>
+<ul>
+<li>TPM doesn't implement the cryptographic algorithms that you need to use</li>
+<li>The TPM processing speed is decreased because of KDF usage in places where
+you don't want (need) to use KDF (at all)</li>
+<li>Future security developments require new TPM hardware, which will mess up
+your PKI</li>
+<li><em>TPM is way not the answer</em> to all crypto related questions</li>
+<li>TPMx may fully break TPM2 key capabilities (again), while the implemented
+features of <code>wan24-Crypto-TPM</code> <em>may</em> still be supported ('cause they're the
+absolute basics, which should be valid for at last the next decade from now)</li>
+</ul>
+<p>There are many good reasons to use only the absolute basics of the offered TPM
+features, and only a few applications which are really enriched by the TPM,
+which is usually being used in normal devices.</p>
+<p>Someone might argue that TPM can encrypt/decrypt (seal/unseal) data
+independent from the OS and other hardware - yes, that's true. If AES-128 does
+still fit your security policy in 2023+, you'd be fine with it (use <code>Tpm2</code>).
+But remember that the in-TPM en-/decryption is only suitable for small blobs!
+This in combination limits the application in a way which is not acceptable
+for the most use cases for cryptography: If you want to process larger blobs,
+you have to DIY. If you need AES-256 (or any other algorithm than the TPM
+implemented ones), you have to DIY. Instead of using the TPM lockout, DIY and
+use KDF in addition. That's enough DIY to skip implementing support for the
+TPM offered functionality into <code>wan24-Crypto-TPM</code> and sticking to the TPMs
+HMAC only, which is enough already (and not to forget the RNG also). Brute
+Force will always stay possible, no matter if you use TPM or not - remember
+that.</p>
+<p>However, if you need all the TPM functionality (if your boss or a customer is
+obsessed with TPM and no technical argument seems to count anymore - I know
+something like that...), you're free to use <code>Tpm2Helper.CreateEngine</code> and work
+with the <code>Tpm2</code> object directly and without any limit.</p>
+<p>From my sight there's only one reason for sticking to the TPM implemented
+functionality: Private keys will be used for crypto/signature witin the TPM
+only, which allows protecting/authenticating sensitive information within an
+isolated processor, which runs independent from the rest of the system. But
+since the rest of the system controls the TPM, it's nothing more than a piece
+of hardware which can be used to identify a device. Remember that there's
+still software (the TSS and the firmware), which is required to be
+implemented, and is a point of failure for the TPM offered security stack.
+Once that software was attacked with success, your software has been broken,
+too. So even the identification of a device using TPM isn't 100% trustable.</p>
+<h2 id="best-practice">Best practice</h2>
+<h3 id="tpmrng-usage"><code>TpmRng</code> usage</h3>
+<p>Random numbers are security critical, and it may be a bad idea to rely on one
+entropy source or RNG only. For this I suggest to use the <code>TpmRng</code> together
+with other RNGs, and combine their generated random numbers using a <code>XorRng</code>.</p>
+<h3 id="tpm-encrypted-privatekeysuite">TPM encrypted <code>PrivateKeySuite</code></h3>
+<p>When your app requires a TPM protected private key suite, you can create one
+with these steps:</p>
+<ol>
+<li>Create a <code>PrivateKeySuite</code></li>
+<li>Encrypt the <code>PrivateKeySuite</code> using the <code>TpmEncrypt</code> extension method</li>
+<li>Store the cipher data in a file</li>
+<li>Dispose the <code>PrivateKeySuite</code> when not in use anymore!</li>
+</ol>
+<p>To load it when your app starts again:</p>
+<ol>
+<li>Decrypt the <code>PrivateKeySuite</code> cipher data from the file using
+<code>Tpm2Helper.DecryptPrivateKeySuite</code></li>
+<li>Dispose the <code>PrivateKeySuite</code> when not in use anymore!</li>
+</ol>
+<h3 id="persistent-secret-storage">Persistent secret storage</h3>
+<p>Different OS offer different secret storage solutions - but none of them seem
+to offer a real security benefit. There's only one thing, which could enhance
+security (really): Storing a part of a secret at another system.</p>
+<p>To make this process combinable with TPM, there's the <code>TpmSharedSecret</code>
+helper class, which makes it possible to restore an (user) secret using a TPM
+bound token, which may be stored in plain on the processing system, but
+requires using a remote key storage to provide a partial key for a TPM
+processed token value, which acts as a shared secret.</p>
+<p>When storing a mashine scope secret, it ensures that</p>
+<ul>
+<li>the ciphered data on that mashine can be remote-deleted by simply deleting
+the remote stored secret</li>
+<li>someone which could access any key part (or both), but isn't able to access
+the TPM, can't get to the final key</li>
+</ul>
+<p>When storing an user scope secret, it ensures in addition that</p>
+<ul>
+<li>even when having both key parts and access to the TPM, a dictionary or Brute
+Force attack on the user password isn't practicable, when the user password is
+secure (has been KDF processed)</li>
+</ul>
+<p>These benefits apply to both sides: The local system, and the remote key
+storage. By the way the remote key storage should store the provided secret
+encrypted using the shared secret, and never store the shared secret anywhere.</p>
+<p>To get a final key</p>
+<ul>
+<li>the plain stored token must be available (1st part of the key)</li>
+<li>access to the TPM must be available (for computing the shared secret)</li>
+<li>the remote storage must reply the 2nd part of the key for the provided
+shared secret</li>
+<li>another TPM access must be possible to combine both key parts</li>
+</ul>
+<p>An attacker can't use the plain stored token (1st key part) alone. He even
+can't request the 2nd key part from the remote key storage, if the TPM can't
+be accessed. Also the 2nd key part alone doesn't offer any success for an
+attacker, if the TPM can't be accessed, too - and even when having both key
+parts, the TPM access is a required component to get to the final key. To
+break the security, an attacker requires both key parts and having access to
+the TPM. This applies to a mashine scope secret.</p>
+<p>For an user scope secret, an attacker would then still need the user password.
+To secure the user password, you should pre-process it using KDF before you
+use it as the <code>key</code> parameter in the <code>TpmSharedSecret</code> constructor. This I'd
+call an almost perfect solution in 2023 then.</p>
+<p>Anyway, there are some pitfalls with that solution: IF</p>
+<ul>
+<li>the TPM (owner) changed, or the TPM is broken, then ciphered data is lost</li>
+<li>there is no connection to the remote key storage possible, ciphered data
+can't be accessed unless the connection problem was solved</li>
+<li>the remote stored key part got lost, then ciphered data is lost, too</li>
+</ul>
+<p>It's important to have that in mind and implement emergency solutions for such
+(worst case) scenarios to avoid a data loss.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) 2023 Andreas Zimmermann, wan24.de
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
