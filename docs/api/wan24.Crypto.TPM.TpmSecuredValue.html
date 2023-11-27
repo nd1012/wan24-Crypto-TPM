@@ -181,8 +181,13 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue__ctor_System_Byte____System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__System_Boolean__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.%23ctor(System.Byte%5B%5D%40%2CSystem.Nullable%7BTimeSpan%7D%40%2CSystem.Nullable%7BTimeSpan%7D%40%2Cwan24.Crypto.TPM.Tpm2Options%40%2Cwan24.Crypto.CryptoOptions%40%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L125">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue__ctor_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.#ctor*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue__ctor_System_Byte____System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__System_Boolean__" data-uid="wan24.Crypto.TPM.TpmSecuredValue.#ctor(System.Byte[]@,System.Nullable{TimeSpan}@,System.Nullable{TimeSpan}@,wan24.Crypto.TPM.Tpm2Options@,wan24.Crypto.CryptoOptions@,System.Boolean@)">TpmSecuredValue(in Byte[], in Nullable&lt;TimeSpan&gt;, in Nullable&lt;TimeSpan&gt;, in Tpm2Options, in CryptoOptions, in Boolean)</h4>
   <div class="markdown level1 summary"><p>Constructor</p>
@@ -240,10 +245,73 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue__ctor_wan24_Crypto_TPM_Tpm2Engine__System_Byte____System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_CryptoOptions__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.%23ctor(wan24.Crypto.TPM.Tpm2Engine%40%2CSystem.Byte%5B%5D%40%2CSystem.Nullable%7BTimeSpan%7D%40%2CSystem.Nullable%7BTimeSpan%7D%40%2Cwan24.Crypto.CryptoOptions%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L182">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmSecuredValue__ctor_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSecuredValue__ctor_wan24_Crypto_TPM_Tpm2Engine__System_Byte____System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_CryptoOptions__" data-uid="wan24.Crypto.TPM.TpmSecuredValue.#ctor(wan24.Crypto.TPM.Tpm2Engine@,System.Byte[]@,System.Nullable{TimeSpan}@,System.Nullable{TimeSpan}@,wan24.Crypto.CryptoOptions@)">TpmSecuredValue(in Tpm2Engine, in Byte[], in Nullable&lt;TimeSpan&gt;, in Nullable&lt;TimeSpan&gt;, in CryptoOptions)</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSecuredValue(in Tpm2Engine engine, in byte[] value, in TimeSpan? encryptTimeout = null, in TimeSpan? recryptTimeout = null, in CryptoOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Engine.html">Tpm2Engine</a></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>TPM engine (won't be disposed, but used for synchronizing TPM access)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Value (will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">encryptTimeout</span></td>
+        <td><p>Encrypt timeout (<see cref="!:TimeSpan.Zero"></see> to keep encrypted all the time)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">recryptTimeout</span></td>
+        <td><p>Re-crypt timeout (one minute, for example)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">wan24.Crypto.CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options (will be cleared!)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_AccessCount.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.AccessCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L359">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_AccessCount_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.AccessCount*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_AccessCount" data-uid="wan24.Crypto.TPM.TpmSecuredValue.AccessCount">AccessCount</h4>
   <div class="markdown level1 summary"><p>Access count</p>
@@ -268,8 +336,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_DefaultEncryptTimeout.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.DefaultEncryptTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L232">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_DefaultEncryptTimeout_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.DefaultEncryptTimeout*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_DefaultEncryptTimeout" data-uid="wan24.Crypto.TPM.TpmSecuredValue.DefaultEncryptTimeout">DefaultEncryptTimeout</h4>
   <div class="markdown level1 summary"><p>Default encrypt timeout</p>
@@ -294,8 +367,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_DefaultRecryptTimeout.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.DefaultRecryptTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L237">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_DefaultRecryptTimeout_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.DefaultRecryptTimeout*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_DefaultRecryptTimeout" data-uid="wan24.Crypto.TPM.TpmSecuredValue.DefaultRecryptTimeout">DefaultRecryptTimeout</h4>
   <div class="markdown level1 summary"><p>Default re-crypt timeout</p>
@@ -320,8 +398,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_EncryptedSince.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.EncryptedSince%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L354">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_EncryptedSince_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.EncryptedSince*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_EncryptedSince" data-uid="wan24.Crypto.TPM.TpmSecuredValue.EncryptedSince">EncryptedSince</h4>
   <div class="markdown level1 summary"><p>Encryption time</p>
@@ -346,8 +429,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_EncryptTimeout.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.EncryptTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L334">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_EncryptTimeout_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.EncryptTimeout*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_EncryptTimeout" data-uid="wan24.Crypto.TPM.TpmSecuredValue.EncryptTimeout">EncryptTimeout</h4>
   <div class="markdown level1 summary"><p>Encrypt timeout</p>
@@ -372,8 +460,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_GUID.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.GUID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L242">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_GUID_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.GUID*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_GUID" data-uid="wan24.Crypto.TPM.TpmSecuredValue.GUID">GUID</h4>
   <div class="markdown level1 summary"><p>GUID</p>
@@ -398,8 +491,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_IsEncrypted.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.IsEncrypted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L344">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_IsEncrypted_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.IsEncrypted*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_IsEncrypted" data-uid="wan24.Crypto.TPM.TpmSecuredValue.IsEncrypted">IsEncrypted</h4>
   <div class="markdown level1 summary"><p>Is the value encrypted at present?</p>
@@ -424,8 +522,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_LastAccess.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.LastAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L349">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_LastAccess_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.LastAccess*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_LastAccess" data-uid="wan24.Crypto.TPM.TpmSecuredValue.LastAccess">LastAccess</h4>
   <div class="markdown level1 summary"><p>Last access time</p>
@@ -450,8 +553,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Name.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L247">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Name_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Name*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Name" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Name">Name</h4>
   <div class="markdown level1 summary"><p>Name</p>
@@ -476,8 +584,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Options.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Options%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L329">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Options_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Options*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Options" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Options">Options</h4>
   <div class="markdown level1 summary"><p>Options</p>
@@ -502,8 +615,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_RecryptTimeout.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.RecryptTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L339">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_RecryptTimeout_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.RecryptTimeout*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_RecryptTimeout" data-uid="wan24.Crypto.TPM.TpmSecuredValue.RecryptTimeout">RecryptTimeout</h4>
   <div class="markdown level1 summary"><p>Recrypt timeout</p>
@@ -528,8 +646,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_State.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L250">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_State_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.State*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_State" data-uid="wan24.Crypto.TPM.TpmSecuredValue.State">State</h4>
   <div class="markdown level1 summary"></div>
@@ -553,8 +676,13 @@
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Value.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L266">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Value_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Value*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Value" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Value">Value</h4>
   <div class="markdown level1 summary"></div>
@@ -582,8 +710,13 @@ public byte[] Value { get; set; }</code></pre>
   </table>
   <h3 id="methods">Methods
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Decrypt.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Decrypt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Internals.cs/#L72">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Decrypt_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Decrypt*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Decrypt" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Decrypt">Decrypt()</h4>
   <div class="markdown level1 summary"><p>Decrypt</p>
@@ -609,8 +742,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Internals.cs/#L131">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Dispose_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Dispose*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Dispose_System_Boolean_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Dispose(System.Boolean)">Dispose(Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -638,8 +776,13 @@ public byte[] Value { get; set; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">wan24.Core.DisposableBase.Dispose(System.Boolean)</span></div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Encrypt.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Encrypt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Internals.cs/#L45">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Encrypt_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Encrypt*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Encrypt" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Encrypt">Encrypt()</h4>
   <div class="markdown level1 summary"><p>Encrypt</p>
@@ -649,8 +792,13 @@ public byte[] Value { get; set; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Encrypt()</code></pre>
   </div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_GetValueAsync_CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.GetValueAsync(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L366">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_GetValueAsync_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.GetValueAsync*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_GetValueAsync_CancellationToken_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.GetValueAsync(CancellationToken)">GetValueAsync(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Get the value</p>
@@ -694,8 +842,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_RaiseOnAccess.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.RaiseOnAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L441">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_RaiseOnAccess_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.RaiseOnAccess*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_RaiseOnAccess" data-uid="wan24.Crypto.TPM.TpmSecuredValue.RaiseOnAccess">RaiseOnAccess()</h4>
   <div class="markdown level1 summary"><p>Raise the <a class="xref" href="wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_OnAccess">OnAccess</a> event</p>
@@ -705,8 +858,13 @@ public byte[] Value { get; set; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void RaiseOnAccess()</code></pre>
   </div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_Recrypt.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.Recrypt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Internals.cs/#L106">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_Recrypt_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Recrypt*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_Recrypt" data-uid="wan24.Crypto.TPM.TpmSecuredValue.Recrypt">Recrypt()</h4>
   <div class="markdown level1 summary"><p>Re-crypt</p>
@@ -716,8 +874,13 @@ public byte[] Value { get; set; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void Recrypt()</code></pre>
   </div>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_SetValueAsync_System_Byte___CancellationToken_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.SetValueAsync(System.Byte%5B%5D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L390">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_SetValueAsync_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.SetValueAsync*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_SetValueAsync_System_Byte___CancellationToken_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.SetValueAsync(System.Byte[],CancellationToken)">SetValueAsync(Byte[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Set the value</p>
@@ -768,8 +931,13 @@ public byte[] Value { get; set; }</code></pre>
   </table>
   <h3 id="events">Events
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_OnAccess.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.OnAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.cs/#L437">View Source</a>
+  </span>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_OnAccess" data-uid="wan24.Crypto.TPM.TpmSecuredValue.OnAccess">OnAccess</h4>
   <div class="markdown level1 summary"><p>Raised on value access</p>
 </div>
@@ -795,8 +963,13 @@ public byte[] Value { get; set; }</code></pre>
   </table>
   <h3 id="operators">Operators
   </h3>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_ReadOnlyMemory_System_Byte____wan24_Crypto_TPM_TpmSecuredValue.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(ReadOnlyMemory%7BSystem.Byte%7D%40)~wan24.Crypto.TPM.TpmSecuredValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L72">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_ReadOnlyMemory_System_Byte____wan24_Crypto_TPM_TpmSecuredValue" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(ReadOnlyMemory{System.Byte}@)~wan24.Crypto.TPM.TpmSecuredValue">Implicit(in ReadOnlyMemory&lt;Byte&gt; to TpmSecuredValue)</h4>
   <div class="markdown level1 summary"><p>Cast as <span class="xref">wan24.Crypto.SecureValue</span> (don't forget to dispose!)</p>
@@ -839,8 +1012,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_ReadOnlySpan_System_Byte____wan24_Crypto_TPM_TpmSecuredValue.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(ReadOnlySpan%7BSystem.Byte%7D%40)~wan24.Crypto.TPM.TpmSecuredValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L66">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_ReadOnlySpan_System_Byte____wan24_Crypto_TPM_TpmSecuredValue" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(ReadOnlySpan{System.Byte}@)~wan24.Crypto.TPM.TpmSecuredValue">Implicit(in ReadOnlySpan&lt;Byte&gt; to TpmSecuredValue)</h4>
   <div class="markdown level1 summary"><p>Cast as <span class="xref">wan24.Crypto.SecureValue</span> (don't forget to dispose!)</p>
@@ -883,8 +1061,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_System_Byte_____wan24_Crypto_TPM_TpmSecuredValue.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(System.Byte%5B%5D%40)~wan24.Crypto.TPM.TpmSecuredValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L48">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_System_Byte_____wan24_Crypto_TPM_TpmSecuredValue" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(System.Byte[]@)~wan24.Crypto.TPM.TpmSecuredValue">Implicit(in Byte[] to TpmSecuredValue)</h4>
   <div class="markdown level1 summary"><p>Cast as <span class="xref">wan24.Crypto.SecureValue</span> (don't forget to dispose!)</p>
@@ -927,8 +1110,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Core_SecureByteArray___wan24_Crypto_TPM_TpmSecuredValue.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Core.SecureByteArray%40)~wan24.Crypto.TPM.TpmSecuredValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L54">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Core_SecureByteArray___wan24_Crypto_TPM_TpmSecuredValue" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Core.SecureByteArray@)~wan24.Crypto.TPM.TpmSecuredValue">Implicit(in SecureByteArray to TpmSecuredValue)</h4>
   <div class="markdown level1 summary"><p>Cast as <span class="xref">wan24.Crypto.SecureValue</span> (don't forget to dispose!)</p>
@@ -971,8 +1159,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Core_SecureByteArrayStruct___wan24_Crypto_TPM_TpmSecuredValue.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Core.SecureByteArrayStruct%40)~wan24.Crypto.TPM.TpmSecuredValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L60">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Core_SecureByteArrayStruct___wan24_Crypto_TPM_TpmSecuredValue" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Core.SecureByteArrayStruct@)~wan24.Crypto.TPM.TpmSecuredValue">Implicit(in SecureByteArrayStruct to TpmSecuredValue)</h4>
   <div class="markdown level1 summary"><p>Cast as <span class="xref">wan24.Crypto.SecureValue</span> (don't forget to dispose!)</p>
@@ -1015,8 +1208,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___Memory_System_Byte_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue%40)~Memory%7BSystem.Byte%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L24">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___Memory_System_Byte_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~Memory{System.Byte}">Implicit(in TpmSecuredValue to Memory&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"><p>Cast as value (should be cleaned!)</p>
@@ -1059,8 +1257,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___Span_System_Byte_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue%40)~Span%7BSystem.Byte%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L18">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___Span_System_Byte_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~Span{System.Byte}">Implicit(in TpmSecuredValue to Span&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"><p>Cast as value (should be cleaned!)</p>
@@ -1103,8 +1306,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___System_Byte__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue%40)~System.Byte%5B%5D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L12">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___System_Byte__" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~System.Byte[]">Implicit(in TpmSecuredValue to Byte[])</h4>
   <div class="markdown level1 summary"><p>Cast as value (should be cleared!)</p>
@@ -1147,8 +1355,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArray.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue%40)~wan24.Core.SecureByteArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L30">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArray" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArray">Implicit(in TpmSecuredValue to SecureByteArray)</h4>
   <div class="markdown level1 summary"><p>Cast as value (should be disposed!)</p>
@@ -1191,8 +1404,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayRefStruct.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue%40)~wan24.Core.SecureByteArrayRefStruct%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L42">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayRefStruct" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayRefStruct">Implicit(in TpmSecuredValue to SecureByteArrayRefStruct)</h4>
   <div class="markdown level1 summary"><p>Cast as value (should be disposed!)</p>
@@ -1235,8 +1453,13 @@ public byte[] Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayStruct.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue%40)~wan24.Core.SecureByteArrayStruct%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Casting.cs/#L36">View Source</a>
+  </span>
   <a id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*"></a>
   <h4 id="wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayStruct" data-uid="wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayStruct">Implicit(in TpmSecuredValue to SecureByteArrayStruct)</h4>
   <div class="markdown level1 summary"><p>Cast as value (should be disposed!)</p>
@@ -1302,6 +1525,12 @@ public byte[] Value { get; set; }</code></pre>
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSecuredValue.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSecuredValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSecuredValue.Internals.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

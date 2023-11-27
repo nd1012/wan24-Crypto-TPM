@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "n3FGg+N1gNL5dDoIqwx3IlWnXmVn05fDQ/BVGL/NWA8="
+          "hash": "mstn8V2yIUetx4q5xFI3wRDZuj176FiDF5/vRq7eA0Y="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "5v9q01uZkIXbYSzHdu1QVqYuzRJcHQ1t6qkLkoOSx8s="
+          "hash": "XTjQmG+b4ueJIax/jNsFpsujmOdEJCKj9kpyVaCiPcc="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM..html",
-          "hash": "kD8ujUdP/tOZrtl3DXvYa6yLApJBq8C5pTa7QlRxPAM="
+          "hash": "VGFJfwPkH856f1DI2Kmkd3F7qXapaYIiN5c4w6BYigU="
         }
       },
       "is_incremental": false,
@@ -45,10 +45,22 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.Bootstrap.html",
-          "hash": "/k5pGZ+cbUG0m47Qa7UOBpo/dRLRK6JFaULMmCaDTFU="
+          "hash": "YJUwHpci7dTQ4e1Jg+zvzA+M3UM5SPDJifecG78urXI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/wan24.Crypto.TPM.Tpm2Engine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/wan24.Crypto.TPM.Tpm2Engine.html",
+          "hash": "m7evX7REDi09gGIc2drakrXdz7FfeeT47kdeI6XDEBM="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.Tpm2Helper.html",
-          "hash": "JhNiT1U3ACT1K1Q4eS3rSmFi5FBUj3lwldqsc//nilI="
+          "hash": "7GM534WLfpv6RwsjfY4SnvNFmtEJDknNWHZwJ8ZKusA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.Tpm2HmacAlgorithm.html",
-          "hash": "CkFFNmYon3/Lpa8+2Az+1yZGTnjKesePZYxj3KytDwI="
+          "hash": "/JBgv2do9FnmajJSwinw+Go0QDUTU5BrOV+DC6PEFWs="
         }
       },
       "is_incremental": false,
@@ -81,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmExtensions.html",
-          "hash": "5fV7t/H2TLzygGVrllFLWQnh7JwMm8icOQ1TWsJNBMc="
+          "hash": "PU8o8cU0DRyxOKULnRZ9oZJlj1EPh1RV4fe4l9jEhic="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmRng.html",
-          "hash": "uYJ/HYAXQgpR3kovJOxpfH0P+cJ47woWaE7YqlidmQo="
+          "hash": "EyIteH4lCmRCubimBUX29E+lNmW1opuFT3G5ZC0azuQ="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmSecuredValue-1.html",
-          "hash": "Movsj8HDC9ZyV+pDBBSv5wIOUBBIlK+hE4H/VkUh77E="
+          "hash": "KW97t+r4OqkMunUx6SerXCfxuMj+fVjxca0qx9HkEjg="
         }
       },
       "is_incremental": false,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmSecuredValue.Access_Delegate.html",
-          "hash": "Nt+YLzvrcmCfRQeSKFPbHlrYa2drRqHfhft3/FEIPz4="
+          "hash": "ub3WlMvHf6gpsOnsgWa9d7j9M+RaMCY8IuPPoR3KcnE="
         }
       },
       "is_incremental": false,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmSecuredValue.html",
-          "hash": "4pDkc2CJ6YMLeCHQXXK+/V+kqyI1ONB+dL9V+PQGrzM="
+          "hash": "HevFOl9ttJUY+KtGYcBaZUABUZzyN04o9EzKx+dCz6Y="
         }
       },
       "is_incremental": false,
@@ -141,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmSecuredValueTable.html",
-          "hash": "DcDny3ln3WxkZ9dy/E0YlkEfoNITfeYZNsUtpmNKtwo="
+          "hash": "J/zsZ1H0F83xkDtk/31grro2XDva1b1SiGnxUBrx0ro="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmSharedSecret.html",
-          "hash": "xQxcPn+xuGN8JNJ8d7H/ZCwtcDgr9nS3x2vYzHiJgrE="
+          "hash": "mI3XcnDin8FCML/SRLZZuaNZ+mMMji3PfoGReJ88cKY="
         }
       },
       "is_incremental": false,
@@ -165,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.TpmValueProtection.html",
-          "hash": "WVVKmRTM4VqnHrUBXJi9GjPlnM3zK33oFYfP1r+6kU4="
+          "hash": "e84/d51P2sS1RtrpwZqAo6ebr2AFR4NK82yAi25/DsE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/wan24.Crypto.TPM.html",
-          "hash": "0gjzMkCQ2RHQJ7qIz4i+fBW9AdwmiZt9lo8J3oooT2I="
+          "hash": "R/tk6nyx+J5470K9GIBv0YJt80OHay304jLwbAQV+S8="
         }
       },
       "is_incremental": false,
@@ -189,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "ByqumjlPVQz6a+Bea29bAbBW2pyJVksZuGaZlGff4/k="
+          "hash": "mmm9iVdhKU42pZuFr8+8TYvI/uNc+39mdnrx86q42tQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "43GyUYmPh63UgDwNGPcaEMiUGuxrQfWsI7Je6GLlYtk="
+          "hash": "wg7AFA4JfL0+eQg1+GaknYy6y6PicyMr0fY3Vbrxnoo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -235,23 +247,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 3
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 13,
-          "skipped_file_count": 7
+          "total_file_count": 14,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -264,8 +278,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

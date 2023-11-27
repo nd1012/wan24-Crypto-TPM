@@ -44,6 +44,137 @@ references:
   isSpec: "True"
   fullName: wan24.Crypto.TPM.Bootstrap.Boot
   nameWithType: Bootstrap.Boot
+- uid: wan24.Crypto.TPM.Tpm2Engine
+  name: Tpm2Engine
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html
+  commentId: T:wan24.Crypto.TPM.Tpm2Engine
+  fullName: wan24.Crypto.TPM.Tpm2Engine
+  nameWithType: Tpm2Engine
+- uid: wan24.Crypto.TPM.Tpm2Engine.#ctor(wan24.Crypto.TPM.Tpm2Options@)
+  name: Tpm2Engine(in Tpm2Options)
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine__ctor_wan24_Crypto_TPM_Tpm2Options__
+  commentId: M:wan24.Crypto.TPM.Tpm2Engine.#ctor(wan24.Crypto.TPM.Tpm2Options@)
+  name.vb: Tpm2Engine(ByRef Tpm2Options)
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Tpm2Engine(in wan24.Crypto.TPM.Tpm2Options)
+  fullName.vb: wan24.Crypto.TPM.Tpm2Engine.Tpm2Engine(ByRef wan24.Crypto.TPM.Tpm2Options)
+  nameWithType: Tpm2Engine.Tpm2Engine(in Tpm2Options)
+  nameWithType.vb: Tpm2Engine.Tpm2Engine(ByRef Tpm2Options)
+- uid: wan24.Crypto.TPM.Tpm2Engine.#ctor*
+  name: Tpm2Engine
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine__ctor_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.#ctor
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Tpm2Engine
+  nameWithType: Tpm2Engine.Tpm2Engine
+- uid: wan24.Crypto.TPM.Tpm2Engine.Create(wan24.Crypto.TPM.Tpm2Options@,CancellationToken@)
+  name: Create(in Tpm2Options, in CancellationToken)
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Create_wan24_Crypto_TPM_Tpm2Options__CancellationToken__
+  commentId: M:wan24.Crypto.TPM.Tpm2Engine.Create(wan24.Crypto.TPM.Tpm2Options@,CancellationToken@)
+  name.vb: Create(ByRef Tpm2Options, ByRef CancellationToken)
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Create(in wan24.Crypto.TPM.Tpm2Options, in CancellationToken)
+  fullName.vb: wan24.Crypto.TPM.Tpm2Engine.Create(ByRef wan24.Crypto.TPM.Tpm2Options, ByRef CancellationToken)
+  nameWithType: Tpm2Engine.Create(in Tpm2Options, in CancellationToken)
+  nameWithType.vb: Tpm2Engine.Create(ByRef Tpm2Options, ByRef CancellationToken)
+- uid: wan24.Crypto.TPM.Tpm2Engine.Create*
+  name: Create
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Create_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.Create
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Create
+  nameWithType: Tpm2Engine.Create
+- uid: wan24.Crypto.TPM.Tpm2Engine.CreateAsync(wan24.Crypto.TPM.Tpm2Options,CancellationToken)
+  name: CreateAsync(Tpm2Options, CancellationToken)
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_CreateAsync_wan24_Crypto_TPM_Tpm2Options_CancellationToken_
+  commentId: M:wan24.Crypto.TPM.Tpm2Engine.CreateAsync(wan24.Crypto.TPM.Tpm2Options,CancellationToken)
+  fullName: wan24.Crypto.TPM.Tpm2Engine.CreateAsync(wan24.Crypto.TPM.Tpm2Options, CancellationToken)
+  nameWithType: Tpm2Engine.CreateAsync(Tpm2Options, CancellationToken)
+- uid: wan24.Crypto.TPM.Tpm2Engine.CreateAsync*
+  name: CreateAsync
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_CreateAsync_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.CreateAsync
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.CreateAsync
+  nameWithType: Tpm2Engine.CreateAsync
+- uid: wan24.Crypto.TPM.Tpm2Engine.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Dispose_System_Boolean_
+  commentId: M:wan24.Crypto.TPM.Tpm2Engine.Dispose(System.Boolean)
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Dispose(System.Boolean)
+  nameWithType: Tpm2Engine.Dispose(Boolean)
+- uid: wan24.Crypto.TPM.Tpm2Engine.Dispose*
+  name: Dispose
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Dispose_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.Dispose
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Dispose
+  nameWithType: Tpm2Engine.Dispose
+- uid: wan24.Crypto.TPM.Tpm2Engine.op_Implicit(wan24.Crypto.TPM.Tpm2Engine@)~Tpm2Lib.Tpm2
+  name: Implicit(in Tpm2Engine to Tpm2)
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_op_Implicit_wan24_Crypto_TPM_Tpm2Engine___Tpm2Lib_Tpm2
+  commentId: M:wan24.Crypto.TPM.Tpm2Engine.op_Implicit(wan24.Crypto.TPM.Tpm2Engine@)~Tpm2Lib.Tpm2
+  name.vb: Widening(ByRef Tpm2Engine to Tpm2)
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Implicit(in wan24.Crypto.TPM.Tpm2Engine to Tpm2Lib.Tpm2)
+  fullName.vb: wan24.Crypto.TPM.Tpm2Engine.Widening(ByRef wan24.Crypto.TPM.Tpm2Engine to Tpm2Lib.Tpm2)
+  nameWithType: Tpm2Engine.Implicit(in Tpm2Engine to Tpm2)
+  nameWithType.vb: Tpm2Engine.Widening(ByRef Tpm2Engine to Tpm2)
+- uid: wan24.Crypto.TPM.Tpm2Engine.op_Implicit(wan24.Crypto.TPM.Tpm2Engine@)~wan24.Crypto.TPM.Tpm2Options
+  name: Implicit(in Tpm2Engine to Tpm2Options)
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_op_Implicit_wan24_Crypto_TPM_Tpm2Engine___wan24_Crypto_TPM_Tpm2Options
+  commentId: M:wan24.Crypto.TPM.Tpm2Engine.op_Implicit(wan24.Crypto.TPM.Tpm2Engine@)~wan24.Crypto.TPM.Tpm2Options
+  name.vb: Widening(ByRef Tpm2Engine to Tpm2Options)
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Implicit(in wan24.Crypto.TPM.Tpm2Engine to wan24.Crypto.TPM.Tpm2Options)
+  fullName.vb: wan24.Crypto.TPM.Tpm2Engine.Widening(ByRef wan24.Crypto.TPM.Tpm2Engine to wan24.Crypto.TPM.Tpm2Options)
+  nameWithType: Tpm2Engine.Implicit(in Tpm2Engine to Tpm2Options)
+  nameWithType.vb: Tpm2Engine.Widening(ByRef Tpm2Engine to Tpm2Options)
+- uid: wan24.Crypto.TPM.Tpm2Engine.op_Implicit*
+  name: Implicit
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_op_Implicit_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Implicit
+  fullName.vb: wan24.Crypto.TPM.Tpm2Engine.Widening
+  nameWithType: Tpm2Engine.Implicit
+  nameWithType.vb: Tpm2Engine.Widening
+- uid: wan24.Crypto.TPM.Tpm2Engine.Options
+  name: Options
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Options
+  commentId: P:wan24.Crypto.TPM.Tpm2Engine.Options
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Options
+  nameWithType: Tpm2Engine.Options
+- uid: wan24.Crypto.TPM.Tpm2Engine.Options*
+  name: Options
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Options_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.Options
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Options
+  nameWithType: Tpm2Engine.Options
+- uid: wan24.Crypto.TPM.Tpm2Engine.Sync
+  name: Sync
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Sync
+  commentId: P:wan24.Crypto.TPM.Tpm2Engine.Sync
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Sync
+  nameWithType: Tpm2Engine.Sync
+- uid: wan24.Crypto.TPM.Tpm2Engine.Sync*
+  name: Sync
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_Sync_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.Sync
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.Sync
+  nameWithType: Tpm2Engine.Sync
+- uid: wan24.Crypto.TPM.Tpm2Engine.TPM
+  name: TPM
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_TPM
+  commentId: P:wan24.Crypto.TPM.Tpm2Engine.TPM
+  fullName: wan24.Crypto.TPM.Tpm2Engine.TPM
+  nameWithType: Tpm2Engine.TPM
+- uid: wan24.Crypto.TPM.Tpm2Engine.TPM*
+  name: TPM
+  href: api/wan24.Crypto.TPM.Tpm2Engine.html#wan24_Crypto_TPM_Tpm2Engine_TPM_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Engine.TPM
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Engine.TPM
+  nameWithType: Tpm2Engine.TPM
 - uid: wan24.Crypto.TPM.Tpm2Helper
   name: Tpm2Helper
   href: api/wan24.Crypto.TPM.Tpm2Helper.html
@@ -101,6 +232,32 @@ references:
   commentId: F:wan24.Crypto.TPM.Tpm2Helper.DEFAULT_LINUX_DEVICE
   fullName: wan24.Crypto.TPM.Tpm2Helper.DEFAULT_LINUX_DEVICE
   nameWithType: Tpm2Helper.DEFAULT_LINUX_DEVICE
+- uid: wan24.Crypto.TPM.Tpm2Helper.DefaultEngine
+  name: DefaultEngine
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DefaultEngine
+  commentId: P:wan24.Crypto.TPM.Tpm2Helper.DefaultEngine
+  fullName: wan24.Crypto.TPM.Tpm2Helper.DefaultEngine
+  nameWithType: Tpm2Helper.DefaultEngine
+- uid: wan24.Crypto.TPM.Tpm2Helper.DefaultEngine*
+  name: DefaultEngine
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DefaultEngine_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Helper.DefaultEngine
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Helper.DefaultEngine
+  nameWithType: Tpm2Helper.DefaultEngine
+- uid: wan24.Crypto.TPM.Tpm2Helper.DefaultEngineSync
+  name: DefaultEngineSync
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DefaultEngineSync
+  commentId: P:wan24.Crypto.TPM.Tpm2Helper.DefaultEngineSync
+  fullName: wan24.Crypto.TPM.Tpm2Helper.DefaultEngineSync
+  nameWithType: Tpm2Helper.DefaultEngineSync
+- uid: wan24.Crypto.TPM.Tpm2Helper.DefaultEngineSync*
+  name: DefaultEngineSync
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DefaultEngineSync_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Helper.DefaultEngineSync
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Helper.DefaultEngineSync
+  nameWithType: Tpm2Helper.DefaultEngineSync
 - uid: wan24.Crypto.TPM.Tpm2Helper.DefaultOptions
   name: DefaultOptions
   href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DefaultOptions
@@ -610,15 +767,24 @@ references:
   commentId: T:wan24.Crypto.TPM.TpmRng
   fullName: wan24.Crypto.TPM.TpmRng
   nameWithType: TpmRng
-- uid: wan24.Crypto.TPM.TpmRng.#ctor(Tpm2Lib.Tpm2@,wan24.Crypto.TPM.Tpm2Options@)
-  name: TpmRng(in Tpm2, in Tpm2Options)
-  href: api/wan24.Crypto.TPM.TpmRng.html#wan24_Crypto_TPM_TpmRng__ctor_Tpm2Lib_Tpm2__wan24_Crypto_TPM_Tpm2Options__
-  commentId: M:wan24.Crypto.TPM.TpmRng.#ctor(Tpm2Lib.Tpm2@,wan24.Crypto.TPM.Tpm2Options@)
-  name.vb: TpmRng(ByRef Tpm2, ByRef Tpm2Options)
-  fullName: wan24.Crypto.TPM.TpmRng.TpmRng(in Tpm2Lib.Tpm2, in wan24.Crypto.TPM.Tpm2Options)
-  fullName.vb: wan24.Crypto.TPM.TpmRng.TpmRng(ByRef Tpm2Lib.Tpm2, ByRef wan24.Crypto.TPM.Tpm2Options)
-  nameWithType: TpmRng.TpmRng(in Tpm2, in Tpm2Options)
-  nameWithType.vb: TpmRng.TpmRng(ByRef Tpm2, ByRef Tpm2Options)
+- uid: wan24.Crypto.TPM.TpmRng.#ctor(Tpm2Lib.Tpm2@,wan24.Crypto.TPM.Tpm2Options@,System.Boolean@)
+  name: TpmRng(in Tpm2, in Tpm2Options, in Boolean)
+  href: api/wan24.Crypto.TPM.TpmRng.html#wan24_Crypto_TPM_TpmRng__ctor_Tpm2Lib_Tpm2__wan24_Crypto_TPM_Tpm2Options__System_Boolean__
+  commentId: M:wan24.Crypto.TPM.TpmRng.#ctor(Tpm2Lib.Tpm2@,wan24.Crypto.TPM.Tpm2Options@,System.Boolean@)
+  name.vb: TpmRng(ByRef Tpm2, ByRef Tpm2Options, ByRef Boolean)
+  fullName: wan24.Crypto.TPM.TpmRng.TpmRng(in Tpm2Lib.Tpm2, in wan24.Crypto.TPM.Tpm2Options, in System.Boolean)
+  fullName.vb: wan24.Crypto.TPM.TpmRng.TpmRng(ByRef Tpm2Lib.Tpm2, ByRef wan24.Crypto.TPM.Tpm2Options, ByRef System.Boolean)
+  nameWithType: TpmRng.TpmRng(in Tpm2, in Tpm2Options, in Boolean)
+  nameWithType.vb: TpmRng.TpmRng(ByRef Tpm2, ByRef Tpm2Options, ByRef Boolean)
+- uid: wan24.Crypto.TPM.TpmRng.#ctor(wan24.Crypto.TPM.Tpm2Engine@)
+  name: TpmRng(in Tpm2Engine)
+  href: api/wan24.Crypto.TPM.TpmRng.html#wan24_Crypto_TPM_TpmRng__ctor_wan24_Crypto_TPM_Tpm2Engine__
+  commentId: M:wan24.Crypto.TPM.TpmRng.#ctor(wan24.Crypto.TPM.Tpm2Engine@)
+  name.vb: TpmRng(ByRef Tpm2Engine)
+  fullName: wan24.Crypto.TPM.TpmRng.TpmRng(in wan24.Crypto.TPM.Tpm2Engine)
+  fullName.vb: wan24.Crypto.TPM.TpmRng.TpmRng(ByRef wan24.Crypto.TPM.Tpm2Engine)
+  nameWithType: TpmRng.TpmRng(in Tpm2Engine)
+  nameWithType.vb: TpmRng.TpmRng(ByRef Tpm2Engine)
 - uid: wan24.Crypto.TPM.TpmRng.#ctor*
   name: TpmRng
   href: api/wan24.Crypto.TPM.TpmRng.html#wan24_Crypto_TPM_TpmRng__ctor_
@@ -686,6 +852,15 @@ references:
   fullName.vb: wan24.Crypto.TPM.TpmSecuredValue.TpmSecuredValue(ByRef System.Byte(), ByRef System.Nullable(Of TimeSpan), ByRef System.Nullable(Of TimeSpan), ByRef wan24.Crypto.TPM.Tpm2Options, ByRef wan24.Crypto.CryptoOptions, ByRef System.Boolean)
   nameWithType: TpmSecuredValue.TpmSecuredValue(in Byte[], in Nullable<TimeSpan>, in Nullable<TimeSpan>, in Tpm2Options, in CryptoOptions, in Boolean)
   nameWithType.vb: TpmSecuredValue.TpmSecuredValue(ByRef Byte(), ByRef Nullable(Of TimeSpan), ByRef Nullable(Of TimeSpan), ByRef Tpm2Options, ByRef CryptoOptions, ByRef Boolean)
+- uid: wan24.Crypto.TPM.TpmSecuredValue.#ctor(wan24.Crypto.TPM.Tpm2Engine@,System.Byte[]@,System.Nullable{TimeSpan}@,System.Nullable{TimeSpan}@,wan24.Crypto.CryptoOptions@)
+  name: TpmSecuredValue(in Tpm2Engine, in Byte[], in Nullable<TimeSpan>, in Nullable<TimeSpan>, in CryptoOptions)
+  href: api/wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue__ctor_wan24_Crypto_TPM_Tpm2Engine__System_Byte____System_Nullable_TimeSpan___System_Nullable_TimeSpan___wan24_Crypto_CryptoOptions__
+  commentId: M:wan24.Crypto.TPM.TpmSecuredValue.#ctor(wan24.Crypto.TPM.Tpm2Engine@,System.Byte[]@,System.Nullable{TimeSpan}@,System.Nullable{TimeSpan}@,wan24.Crypto.CryptoOptions@)
+  name.vb: TpmSecuredValue(ByRef Tpm2Engine, ByRef Byte(), ByRef Nullable(Of TimeSpan), ByRef Nullable(Of TimeSpan), ByRef CryptoOptions)
+  fullName: wan24.Crypto.TPM.TpmSecuredValue.TpmSecuredValue(in wan24.Crypto.TPM.Tpm2Engine, in System.Byte[], in System.Nullable<TimeSpan>, in System.Nullable<TimeSpan>, in wan24.Crypto.CryptoOptions)
+  fullName.vb: wan24.Crypto.TPM.TpmSecuredValue.TpmSecuredValue(ByRef wan24.Crypto.TPM.Tpm2Engine, ByRef System.Byte(), ByRef System.Nullable(Of TimeSpan), ByRef System.Nullable(Of TimeSpan), ByRef wan24.Crypto.CryptoOptions)
+  nameWithType: TpmSecuredValue.TpmSecuredValue(in Tpm2Engine, in Byte[], in Nullable<TimeSpan>, in Nullable<TimeSpan>, in CryptoOptions)
+  nameWithType.vb: TpmSecuredValue.TpmSecuredValue(ByRef Tpm2Engine, ByRef Byte(), ByRef Nullable(Of TimeSpan), ByRef Nullable(Of TimeSpan), ByRef CryptoOptions)
 - uid: wan24.Crypto.TPM.TpmSecuredValue.#ctor*
   name: TpmSecuredValue
   href: api/wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue__ctor_
@@ -1210,6 +1385,15 @@ references:
   fullName.vb: wan24.Crypto.TPM.TpmSharedSecret.TpmSharedSecret(ByRef System.Byte(), ByRef System.Byte(), ByRef Tpm2Lib.Tpm2, ByRef wan24.Crypto.TPM.Tpm2Options, ByRef wan24.Crypto.CryptoOptions)
   nameWithType: TpmSharedSecret.TpmSharedSecret(in Byte[], in Byte[], in Tpm2, in Tpm2Options, in CryptoOptions)
   nameWithType.vb: TpmSharedSecret.TpmSharedSecret(ByRef Byte(), ByRef Byte(), ByRef Tpm2, ByRef Tpm2Options, ByRef CryptoOptions)
+- uid: wan24.Crypto.TPM.TpmSharedSecret.#ctor(wan24.Crypto.TPM.Tpm2Engine@,System.Byte[]@,System.Byte[]@,wan24.Crypto.TPM.Tpm2Options@,wan24.Crypto.CryptoOptions@)
+  name: TpmSharedSecret(in Tpm2Engine, in Byte[], in Byte[], in Tpm2Options, in CryptoOptions)
+  href: api/wan24.Crypto.TPM.TpmSharedSecret.html#wan24_Crypto_TPM_TpmSharedSecret__ctor_wan24_Crypto_TPM_Tpm2Engine__System_Byte____System_Byte____wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__
+  commentId: M:wan24.Crypto.TPM.TpmSharedSecret.#ctor(wan24.Crypto.TPM.Tpm2Engine@,System.Byte[]@,System.Byte[]@,wan24.Crypto.TPM.Tpm2Options@,wan24.Crypto.CryptoOptions@)
+  name.vb: TpmSharedSecret(ByRef Tpm2Engine, ByRef Byte(), ByRef Byte(), ByRef Tpm2Options, ByRef CryptoOptions)
+  fullName: wan24.Crypto.TPM.TpmSharedSecret.TpmSharedSecret(in wan24.Crypto.TPM.Tpm2Engine, in System.Byte[], in System.Byte[], in wan24.Crypto.TPM.Tpm2Options, in wan24.Crypto.CryptoOptions)
+  fullName.vb: wan24.Crypto.TPM.TpmSharedSecret.TpmSharedSecret(ByRef wan24.Crypto.TPM.Tpm2Engine, ByRef System.Byte(), ByRef System.Byte(), ByRef wan24.Crypto.TPM.Tpm2Options, ByRef wan24.Crypto.CryptoOptions)
+  nameWithType: TpmSharedSecret.TpmSharedSecret(in Tpm2Engine, in Byte[], in Byte[], in Tpm2Options, in CryptoOptions)
+  nameWithType.vb: TpmSharedSecret.TpmSharedSecret(ByRef Tpm2Engine, ByRef Byte(), ByRef Byte(), ByRef Tpm2Options, ByRef CryptoOptions)
 - uid: wan24.Crypto.TPM.TpmSharedSecret.#ctor*
   name: TpmSharedSecret
   href: api/wan24.Crypto.TPM.TpmSharedSecret.html#wan24_Crypto_TPM_TpmSharedSecret__ctor_
@@ -1287,6 +1471,12 @@ references:
   isSpec: "True"
   fullName: wan24.Crypto.TPM.TpmSharedSecret.ProtectRemoteSecret
   nameWithType: TpmSharedSecret.ProtectRemoteSecret
+- uid: wan24.Crypto.TPM.TpmSharedSecret.TpmEngine
+  name: TpmEngine
+  href: api/wan24.Crypto.TPM.TpmSharedSecret.html#wan24_Crypto_TPM_TpmSharedSecret_TpmEngine
+  commentId: F:wan24.Crypto.TPM.TpmSharedSecret.TpmEngine
+  fullName: wan24.Crypto.TPM.TpmSharedSecret.TpmEngine
+  nameWithType: TpmSharedSecret.TpmEngine
 - uid: wan24.Crypto.TPM.TpmValueProtection
   name: TpmValueProtection
   href: api/wan24.Crypto.TPM.TpmValueProtection.html
