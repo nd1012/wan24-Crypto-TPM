@@ -172,6 +172,61 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="engine">TPM engine (won't be disposed, but used for synchronizing TPM access)</param>
+        /// <param name="value">Value (will be cleared!)</param>
+        /// <param name="encryptTimeout">Encrypt timeout (<see cref="TimeSpan.Zero"/> to keep encrypted all the time)</param>
+        /// <param name="recryptTimeout">Re-crypt timeout (one minute, for example)</param>
+        /// <param name="options">Options (will be cleared!)</param>
+        public TpmSecuredValue(
+            in Tpm2Engine engine,
+            in byte[] value,
+            in TimeSpan? encryptTimeout = null,
+            in TimeSpan? recryptTimeout = null,
+            in CryptoOptions? options = null
+            )
+            : base(asyncDisposing: false)
+        {
+            RawValue = new(value);
+            try
+            {
+                Engine = engine.TPM;
+                EncryptTimeout = encryptTimeout ?? DefaultEncryptTimeout;
+                RecryptTimeout = recryptTimeout ?? DefaultRecryptTimeout;
+                Options = options ?? new();
+                if (Options.Algorithm is null) Options.WithEncryptionAlgorithm();
+                EncryptTimer = new()
+                {
+                    Interval = EncryptTimeout.TotalMilliseconds,
+                    AutoReset = false
+                };
+                EncryptTimer.Elapsed += (s, e) => Encrypt();
+                RecryptTimer = new()
+                {
+                    Interval = RecryptTimeout.TotalMilliseconds,
+                    AutoReset = false
+                };
+                RecryptTimer.Elapsed += (s, e) => Recrypt();
+                if (EncryptTimeout == TimeSpan.Zero)
+                {
+                    Encrypt();
+                }
+                else
+                {
+                    EncryptTimer.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                Dispose();
+                if (ex is CryptographicException) throw;
+                throw CryptographicException.From(ex);
+            }
+            TpmSecuredValueTable.Values[GUID] = this;
+        }
+
+        /// <summary>
         /// Default encrypt timeout
         /// </summary>
         public static TimeSpan DefaultEncryptTimeout { get; set; } = TimeSpan.FromMilliseconds(150);
@@ -249,6 +304,7 @@ namespace wan24.Crypto.TPM
                         }
                         else
                         {
+                            using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
                             using SecureByteArrayRefStruct key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
                             EncryptedValue = new(secureValue.Array.Encrypt(key, Options));
                         }
@@ -351,6 +407,7 @@ namespace wan24.Crypto.TPM
                     }
                     else
                     {
+                        using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
                         using SecureByteArrayStructSimple key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
                         EncryptedValue = new(secureValue.Array.Encrypt(key, Options));
                     }

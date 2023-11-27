@@ -28,7 +28,7 @@ namespace wan24_Crypto_TPM_Tests
             };
             Tpm2Helper.DefaultOptions = new()
             {
-                UseSimulator = true // https://www.microsoft.com/en-us/download/details.aspx?id=52507
+                //UseSimulator = true // https://www.microsoft.com/en-us/download/details.aspx?id=52507
             };
             ValidateObject.Logger("wan24-Crypto-TPM Tests initialized");
         }

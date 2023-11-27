@@ -21,6 +21,10 @@ namespace wan24.Crypto.TPM
         /// </summary>
         protected readonly Tpm2 Engine = null!;
         /// <summary>
+        /// TPM engine
+        /// </summary>
+        protected readonly Tpm2Engine? TpmEngine = null;
+        /// <summary>
         /// Internal secret
         /// </summary>
         protected readonly SecureByteArray InternalSecret = null!;
@@ -66,6 +70,49 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="engine">TPM engine (won't be disposed, but used for synchronizing TPM access)</param>
+        /// <param name="token">Token (will be cleared)</param>
+        /// <param name="key">Key (will be cleared)</param>
+        /// <param name="tpmOptions">TPM options</param>
+        /// <param name="options">Options with MAC algorithm (won't be cleared)</param>
+        public TpmSharedSecret(
+            in Tpm2Engine engine,
+            in byte[] token,
+            in byte[]? key = null,
+            in Tpm2Options? tpmOptions = null,
+            in CryptoOptions? options = null
+            )
+            : base(options)
+        {
+            DisposeEngine = false;
+            try
+            {
+                if (key is null) Token = new(token);
+                TpmOptions = Tpm2Helper.GetDefaultOptions(tpmOptions);
+                Engine = engine;
+                using (SemaphoreSyncContext ssc = engine.Sync)
+                {
+                    Algorithm = TpmOptions.Algorithm ?? Tpm2Helper.GetDigestAlgorithm(Tpm2Helper.GetMaxDigestSize(Engine, TpmOptions));
+                    InternalSecret = new(Tpm2Helper.Hmac(token, Algorithm, key, Engine, TpmOptions));
+                }
+                Secret = new(InternalSecret.Array.Mac(token, options).Xor(InternalSecret.Array));
+                if (key is not null) Token = new(token.Mac(key, options));
+            }
+            catch
+            {
+                if (key is not null) token.Clear();
+                Dispose();
+                throw;
+            }
+            finally
+            {
+                key?.Clear();
+            }
+        }
+
+        /// <summary>
         /// Used TPM HMAC algorithm
         /// </summary>
         public TpmAlgId Algorithm { get; }
@@ -88,6 +135,7 @@ namespace wan24.Crypto.TPM
             try
             {
                 EnsureUndisposed();
+                using SemaphoreSyncContext? ssc = TpmEngine?.Sync.SyncContext();
                 return Tpm2Helper.Hmac(Token, Algorithm, ProtectRemoteSecret(remoteSecret), Engine, TpmOptions);
             }
             finally

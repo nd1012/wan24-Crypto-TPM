@@ -10,21 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Mac_Tests.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Mac_Tests.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
     <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="wan24-Crypto-Shared-Tests" Version="1.13.0" />
   </ItemGroup>
 
   <ItemGroup>

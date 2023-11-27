@@ -38,6 +38,16 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// Default singleton engine to use (you should synchronize the access using <see cref="DefaultEngineSync"/>)
+        /// </summary>
+        public static Tpm2? DefaultEngine { get; set; }
+
+        /// <summary>
+        /// Thread synchronization (used for <see cref="DefaultEngine"/> access)
+        /// </summary>
+        public static SemaphoreSync DefaultEngineSync { get; } = new();
+
+        /// <summary>
         /// Get default options
         /// </summary>
         /// <param name="options">Options</param>
@@ -188,6 +198,7 @@ namespace wan24.Crypto.TPM
         /// <returns>Max. digest size in byte</returns>
         public static int GetMaxDigestSize(Tpm2? engine = null, Tpm2Options? options = null)
         {
+            engine ??= DefaultEngine;
             bool disposeEngine = engine is null;
             engine ??= CreateEngine(options);
             try
@@ -232,6 +243,7 @@ namespace wan24.Crypto.TPM
         public static byte[] CreateRandomData(in int len = 32, Tpm2? engine = null, Tpm2Options? options = null)
         {
             if (len == 0) return Array.Empty<byte>();
+            engine ??= DefaultEngine;
             bool disposeEngine = engine is null;
             engine ??= CreateEngine(options);
             try
@@ -239,7 +251,7 @@ namespace wan24.Crypto.TPM
                 byte[] res = engine.GetRandom((ushort)len);
                 if (res.Length == len) return res;
                 res.Clear();
-                throw new IOException($"TPM2 failed to generate {len} byte random data");
+                throw new IOException($"TPM2 failed to generate {len} byte random data (got only {res.Length} byte instead)");
             }
             catch (Exception ex)
             {
@@ -263,6 +275,7 @@ namespace wan24.Crypto.TPM
         /// <returns>HMAC</returns>
         public static byte[] Hmac(in byte[] data, TpmAlgId? algo = null, in byte[]? key = null, Tpm2? engine = null, Tpm2Options? options = null)
         {
+            engine ??= DefaultEngine;
             bool disposeEngine = engine is null;
             options = GetDefaultOptions(options);
             engine ??= CreateEngine(options);
@@ -315,6 +328,7 @@ namespace wan24.Crypto.TPM
         /// <returns>HMAC</returns>
         public static byte[] Hmac(in ReadOnlySpan<byte> data, TpmAlgId? algo = null, in byte[]? key = null, Tpm2? engine = null, Tpm2Options? options = null)
         {
+            engine ??= DefaultEngine;
             bool disposeEngine = engine is null;
             options = GetDefaultOptions(options);
             engine ??= CreateEngine(options);
@@ -379,6 +393,7 @@ namespace wan24.Crypto.TPM
             in Tpm2Options? tpmOptions = null
             )
         {
+            engine ??= DefaultEngine;
             bool disposeEngine = engine is null;
             engine ??= CreateEngine(tpmOptions);
             try

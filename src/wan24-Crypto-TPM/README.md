@@ -1,8 +1,9 @@
 # wan24-Crypto-TPM
 
-**CAUTION**: The code has not been tested with a real TPM yet. I'd appreciate 
-if someone would give me some feedback, if it worked for them. Anyway the 
-tests use the Microsoft TPM simulator and did run successfully.
+**WARNING**: The code has not been tested with a real TPM running on Linux 
+yet. I'd appreciate if someone would give me some feedback, if it worked for 
+them. Anyway the tests use the Microsoft TPM simulator and did run 
+successfully (and also with a real TPM device on Windows 11).
 
 This library contains some helpers for easy TPM(2) usage. It does _way not_ 
 implement everything that a TPM offers - these are the selected features, 
@@ -71,6 +72,46 @@ builder.Services.AddWan24CryptoTpm();
 
 This will register transient `Tpm2Options` (using `Tpm2Helper.DefaultOptions`) 
 and `Tpm2` (using `Tpm2Helper.CreateEngine`) service objects.
+
+### `Tpm2Engine` fixes multithreading bugs
+
+Using a `Tpm2` instance for each thread still has multithreading problems in 
+the MS.TSS .NET library, that's why a `Tpm2Engine` should be used in 
+multithreading environments. It ensures that
+
+- only one `Tpm2` instance is being used at a time
+- only one thread can use the `Tpm2` instance at a time
+
+Example:
+
+```cs
+// Creating a Tpm2Engine uses static thread synchronization (a Tpm2Engine instance should be singleton)
+using Tpm2Engine engine = Tmp2Engine.Create();
+
+// Using per-engine thread synchronization (optional, to use one Tpm2Engine instance from multiple threads)
+using SemaphoreSyncContext ssc = engine.Sync;
+
+// Now you can perform a TPM operation using the engine.TPM property, which hosts the Tpm2 instance
+```
+
+**NOTE**: This is only required unless the multithreading bugs in the MS.TSS 
+.NET library has been fixed by its vendor. In theory it should be possible to 
+use a `Tpm2` instance per thread without static thread locking (while 
+multithreaded access to a `Tpm2` instance still requires thread 
+synchronization).
+
+In case you're using `Tpm2Helper.DefaultEngine`, the `Tpm2Engine` usage is 
+slightly different:
+
+```cs
+// Creating a Tpm2Engine uses static thread synchronization (a Tpm2Engine instance should be singleton)
+using Tpm2Engine engine = new();
+
+// Using per-engine thread synchronization (optional, to use one Tpm2Engine instance from multiple threads)
+using SemaphoreSyncContext ssc = engine.Sync;
+
+// Now you can perform a TPM operation using the engine.TPM property, which hosts the Tpm2 instance
+```
 
 ### TPM2 options
 
@@ -279,6 +320,24 @@ extensions for the `PrivateKeySuite`, `byte[]` and `(ReadOnly)Span<byte>`
 you can set the max. supported TPM HMAC algorithm for any crypto application 
 which requires to compute a MAC.
 
+### Using a singleton TPM2 connection
+
+By setting a `Tpm2`  instance to the `Tpm2Helper.DefaultEngine` property, you 
+can specify a singleton connection to use from `Tpm2Helper` methods. Use the 
+`Tmp2Helper.DefaultEngineSync` to synchronize multithreaded connection usage:
+
+```cs
+// Set a singleton default TPM engine
+Tpm2Helper.DefaultEngine = Tpm2Helper.CreateEngine();
+
+// Synchronize the default TPM engine access before performing any Tpm2Helper operation
+using SemaphoreSyncContext ssc = Tpm2Helper.DefaultEngineSync;
+// Now you can perform any Tpm2Helper operation in a multithreaded environment using the singleton Tpm2Helper.DefaultEngine
+```
+
+The `Tpm2Helper.DefaultEngine` value will be set to the `engine` parameter of 
+`Tpm2Helper` methods, if no value was given.
+
 ## Why not support TPM PKI/signing/sealing/etc.?
 
 If you followed the TPM development process until today you know that TPM2 is 
@@ -339,6 +398,38 @@ still software (the TSS and the firmware), which is required to be
 implemented, and is a point of failure for the TPM offered security stack. 
 Once that software was attacked with success, your software has been broken, 
 too. So even the identification of a device using TPM isn't 100% trustable.
+
+## Supported platforms
+
+All platforms which support TPM should be supported by this library. Anyway, 
+Apple devices often don't contain a TPM, but a T2 (which is similar to TPM) 
+instead (which may be called T8012, too).
+
+I've successfully run the tests on a Windows 11 computer only so far, since at 
+the moment I don't own a Linux device with a TPM. But Linux supports TPM, and 
+the underlaying TSS.MSR .NET library supports Linux, finally.
+
+So the supported platform list may be:
+
+- Windows (10+)
+- Linux
+- (MAC OSX)
+
+There seems to be no .NET library for Apples T2 chip, and I'm not going to 
+implement one. You could use the MAC OSX API for the T2 chip directly by using 
+interop, but however, since HMAC seems not to be supported, I'd use a T2 as a 
+better HWRNG only.
+
+For Apple iOS (and others != OSX) there is a "Security Enclave", which is a 
+SoC like TPM - but also without HMAC support, so it can be seen as a better 
+HWRNG, too.
+
+On an Android device you'd use the KeyChain or TEE API usually, but there 
+could also be a TPM being supported. However, it's not supported by the 
+TSS.MSR, so this library can't offer support, too.
+
+To sum it up: Forget about Apple and Android, and concentrate on Windows and 
+Linux, if you'd like to use this TPM library.
 
 ## Best practice
 
