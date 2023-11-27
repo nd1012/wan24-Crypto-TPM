@@ -48,6 +48,44 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="engine">TPM engine (won't be disposed, but used for synchronizing TPM access)</param>
+        /// <param name="key">Symmetric key (private!; will be cleared!)</param>
+        /// <param name="identifier">Identifier (private!; will be cleared!)</param>
+        /// <param name="options">Options with KDF settings (MAC algorithm will be set automatic; will be cleared!)</param>
+        public TpmSymmetricKeySuite(
+            in Tpm2Engine engine,
+            in byte[] key,
+            in byte[]? identifier = null,
+            in CryptoOptions? options = null
+            )
+            : base(options)
+        {
+            try
+            {
+                using SemaphoreSyncContext ssc = engine.Sync;
+                if (identifier is null)
+                {
+                    ExpandedKey = new(InitKeyOnly(key, engine, options: null));
+                }
+                else
+                {
+                    (byte[] expandedKey, Identifier) = InitKeyAndIdentifier(key, identifier, engine, options: null);
+                    ExpandedKey = new(expandedKey);
+                }
+            }
+            catch (Exception ex)
+            {
+                Dispose();
+                key.Clear();
+                identifier?.Clear();
+                if (ex is CryptographicException) throw;
+                throw CryptographicException.From("TPM symmetric key suite initialization failed", ex);
+            }
+        }
+
+        /// <summary>
         /// Constructor (not supported!)
         /// </summary>
         /// <param name="options"></param>

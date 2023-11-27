@@ -16,7 +16,9 @@ namespace wan24.Crypto.TPM
         public static byte[] Protect(byte[] value, ValueProtection.Scope scope = ValueProtection.Scope.Process)
         {
             using SecureByteArrayRefStruct key = new(ValueProtection.GetScopeKey(scope));
+            using SemaphoreSyncContext? ssc = Tpm2Helper.DefaultEngine is null ? null : Tpm2Helper.DefaultEngineSync.SyncContext();
             using SecureByteArrayRefStruct tpmKey = new(Tpm2Helper.Hmac(key));
+            ssc?.Dispose();
             return value.Encrypt(tpmKey);
         }
 
@@ -29,7 +31,9 @@ namespace wan24.Crypto.TPM
         public static byte[] Unprotect(byte[] protectedValue, ValueProtection.Scope scope = ValueProtection.Scope.Process)
         {
             using SecureByteArrayRefStruct key = new(ValueProtection.GetScopeKey(scope));
+            using SemaphoreSyncContext? ssc = Tpm2Helper.DefaultEngine is null ? null : Tpm2Helper.DefaultEngineSync.SyncContext();
             using SecureByteArrayRefStruct tpmKey = new(Tpm2Helper.Hmac(key));
+            ssc?.Dispose();
             return protectedValue.Decrypt(tpmKey);
         }
 

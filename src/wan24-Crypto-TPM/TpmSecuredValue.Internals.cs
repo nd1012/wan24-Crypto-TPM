@@ -23,6 +23,10 @@ namespace wan24.Crypto.TPM
         /// </summary>
         private readonly Tpm2? Engine = null;
         /// <summary>
+        /// TPM engine
+        /// </summary>
+        private readonly Tpm2Engine? TpmEngine = null;
+        /// <summary>
         /// Raw value
         /// </summary>
         private SecureByteArray? RawValue;
@@ -52,6 +56,7 @@ namespace wan24.Crypto.TPM
             }
             else
             {
+                using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
                 using SecureByteArrayRefStruct key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
                 using SecureByteArray rawValue = RawValue;
                 EncryptedValue = new(rawValue!.Array.Encrypt(key, Options));
@@ -81,6 +86,7 @@ namespace wan24.Crypto.TPM
                 }
                 else
                 {
+                    using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
                     using SecureByteArrayRefStruct key = new(Tpm2Helper.Hmac(encryptionKey, engine: Engine));
                     RawValue = new(EncryptedValue!.Array.Decrypt(key, Options));
                 }
@@ -113,6 +119,7 @@ namespace wan24.Crypto.TPM
                 }
                 else
                 {
+                    using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
                     using SecureByteArrayRefStruct key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
                     EncryptedValue = new(rawValue.Array.Encrypt(key, Options));
                 }
@@ -131,7 +138,7 @@ namespace wan24.Crypto.TPM
             using SecureByteArray? encryptedValue = EncryptedValue;
             using SecureByteArray? encryptionKey = EncryptionKey;
             using SecureByteArray? rawValue = RawValue;
-            using Tpm2? engine = Engine;
+            using Tpm2? engine = TpmEngine is null ? Engine : null;
             RecryptTimer?.Stop();
             EncryptTimer?.Stop();
             Options?.Clear();
