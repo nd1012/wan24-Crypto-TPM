@@ -105,13 +105,16 @@ slightly different:
 
 ```cs
 // Creating a Tpm2Engine uses static thread synchronization (a Tpm2Engine instance should be singleton)
-using Tpm2Engine engine = new();
+using Tpm2Engine engine = new();// The empty constructor will use the Tpm2Helper.DefaultEngine and Tpm2Helper.DefaultEngineSync
 
-// Using per-engine thread synchronization (optional, to use one Tpm2Engine instance from multiple threads)
+// Using per-engine thread synchronization
 using SemaphoreSyncContext ssc = engine.Sync;
 
 // Now you can perform a TPM operation using the engine.TPM property, which hosts the Tpm2 instance
 ```
+
+Implemented types support using a `Tpm2Engine` also, which will then not be 
+disposed, but used for synchronizing the TPM access.
 
 ### TPM2 options
 
