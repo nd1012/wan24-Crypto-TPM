@@ -47,6 +47,9 @@ namespace wan24.Crypto.TPM
         public override bool IsPostQuantum => false;
 
         /// <inheritdoc/>
+        public override bool UsesTpm => true;
+
+        /// <inheritdoc/>
         public override string DisplayName => DISPLAY_NAME;
 
         /// <inheritdoc/>

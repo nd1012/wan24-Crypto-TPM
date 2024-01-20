@@ -39,7 +39,7 @@ namespace wan24.Crypto.TPM
         /// Cast as value (should be disposed!)
         /// </summary>
         /// <param name="value">Value</param>
-        public static implicit operator SecureByteArrayRefStruct(in TpmSecuredValue value) => new(value.Value);
+        public static implicit operator SecureByteArrayStructSimple(in TpmSecuredValue value) => new(value.Value);
 
         /// <summary>
         /// Cast as <see cref="SecureValue"/> (don't forget to dispose!)
