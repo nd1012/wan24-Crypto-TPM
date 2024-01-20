@@ -1130,15 +1130,6 @@ references:
   fullName.vb: wan24.Crypto.TPM.TpmSecuredValue.Widening(ByRef wan24.Crypto.TPM.TpmSecuredValue to wan24.Core.SecureByteArray)
   nameWithType: TpmSecuredValue.Implicit(in TpmSecuredValue to SecureByteArray)
   nameWithType.vb: TpmSecuredValue.Widening(ByRef TpmSecuredValue to SecureByteArray)
-- uid: wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayRefStruct
-  name: Implicit(in TpmSecuredValue to SecureByteArrayRefStruct)
-  href: api/wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayRefStruct
-  commentId: M:wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayRefStruct
-  name.vb: Widening(ByRef TpmSecuredValue to SecureByteArrayRefStruct)
-  fullName: wan24.Crypto.TPM.TpmSecuredValue.Implicit(in wan24.Crypto.TPM.TpmSecuredValue to wan24.Core.SecureByteArrayRefStruct)
-  fullName.vb: wan24.Crypto.TPM.TpmSecuredValue.Widening(ByRef wan24.Crypto.TPM.TpmSecuredValue to wan24.Core.SecureByteArrayRefStruct)
-  nameWithType: TpmSecuredValue.Implicit(in TpmSecuredValue to SecureByteArrayRefStruct)
-  nameWithType.vb: TpmSecuredValue.Widening(ByRef TpmSecuredValue to SecureByteArrayRefStruct)
 - uid: wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayStruct
   name: Implicit(in TpmSecuredValue to SecureByteArrayStruct)
   href: api/wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayStruct
@@ -1148,6 +1139,15 @@ references:
   fullName.vb: wan24.Crypto.TPM.TpmSecuredValue.Widening(ByRef wan24.Crypto.TPM.TpmSecuredValue to wan24.Core.SecureByteArrayStruct)
   nameWithType: TpmSecuredValue.Implicit(in TpmSecuredValue to SecureByteArrayStruct)
   nameWithType.vb: TpmSecuredValue.Widening(ByRef TpmSecuredValue to SecureByteArrayStruct)
+- uid: wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayStructSimple
+  name: Implicit(in TpmSecuredValue to SecureByteArrayStructSimple)
+  href: api/wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_wan24_Crypto_TPM_TpmSecuredValue___wan24_Core_SecureByteArrayStructSimple
+  commentId: M:wan24.Crypto.TPM.TpmSecuredValue.op_Implicit(wan24.Crypto.TPM.TpmSecuredValue@)~wan24.Core.SecureByteArrayStructSimple
+  name.vb: Widening(ByRef TpmSecuredValue to SecureByteArrayStructSimple)
+  fullName: wan24.Crypto.TPM.TpmSecuredValue.Implicit(in wan24.Crypto.TPM.TpmSecuredValue to wan24.Core.SecureByteArrayStructSimple)
+  fullName.vb: wan24.Crypto.TPM.TpmSecuredValue.Widening(ByRef wan24.Crypto.TPM.TpmSecuredValue to wan24.Core.SecureByteArrayStructSimple)
+  nameWithType: TpmSecuredValue.Implicit(in TpmSecuredValue to SecureByteArrayStructSimple)
+  nameWithType.vb: TpmSecuredValue.Widening(ByRef TpmSecuredValue to SecureByteArrayStructSimple)
 - uid: wan24.Crypto.TPM.TpmSecuredValue.op_Implicit*
   name: Implicit
   href: api/wan24.Crypto.TPM.TpmSecuredValue.html#wan24_Crypto_TPM_TpmSecuredValue_op_Implicit_

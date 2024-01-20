@@ -86,6 +86,7 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><span class="xref">wan24.Core.IWillDispose</span></div>
     <div><span class="xref">wan24.Crypto.ISecureValue</span></div>
     <div><span class="xref">wan24.Core.IDisposableObject</span></div>
     <div><span class="xref">System.IDisposable</span></div>
@@ -167,7 +168,13 @@
       <span class="xref">wan24.Core.DisposableBase.AllowFinalizer</span>
     </div>
     <div>
+      <span class="xref">wan24.Core.DisposableBase.DisposeObjects</span>
+    </div>
+    <div>
       <span class="xref">wan24.Core.DisposableBase.StackInfo</span>
+    </div>
+    <div>
+      <span class="xref">wan24.Core.DisposableBase.RegisterForDispose&lt;T&gt;(T)</span>
     </div>
     <div>
       <span class="xref">wan24.Core.DisposableBase.EnsureUndisposed(System.Boolean, System.Boolean)</span>
@@ -240,7 +247,7 @@
   <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
   <h5 id="wan24_Crypto_TPM_TpmSecuredValue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TpmSecuredValue&lt;T&gt; : TpmSecuredValue, ISecureValue, IDisposableObject, IDisposable, IAsyncDisposable, IStatusProvider where T : class, IStreamSerializer, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class TpmSecuredValue&lt;T&gt; : TpmSecuredValue, IWillDispose, ISecureValue, IDisposableObject, IDisposable, IAsyncDisposable, IStatusProvider where T : class, IStreamSerializer, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -579,6 +586,9 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">wan24.Core.IWillDispose</span>
+  </div>
   <div>
       <span class="xref">wan24.Crypto.ISecureValue</span>
   </div>
