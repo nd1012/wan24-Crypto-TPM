@@ -20,7 +20,6 @@ namespace wan24_Crypto_TPM_Tests
             wan24.Core.Bootstrap.Async(typeof(A_Initialization).Assembly).Wait();
             wan24.Crypto.Bootstrap.Boot();
             wan24.Crypto.TPM.Bootstrap.Boot();
-            MacHelper.Algorithms.TryRemove(MacTpmHmacSha512Algorithm.ALGORITHM_NAME, out _);// Not supported by the simulator
             DisposableBase.CreateStackInfo = true;
             ErrorHandling.ErrorHandler = (info) =>
             {
@@ -28,9 +27,25 @@ namespace wan24_Crypto_TPM_Tests
             };
             Tpm2Helper.DefaultOptions = new()
             {
-                //UseSimulator = true // https://www.microsoft.com/en-us/download/details.aspx?id=52507
+                UseSimulator = !Tpm2Helper.IsAvailable() // https://www.microsoft.com/en-us/download/details.aspx?id=52507
             };
             ValidateObject.Logger("wan24-Crypto-TPM Tests initialized");
+            int maxDigest = Tpm2Helper.GetMaxDigestSize();
+            if (maxDigest < MacTpmHmacSha512Algorithm.MAC_LENGTH)
+            {
+                Logging.WriteWarning("TPM HMAC-SHA512 isn't supported");
+                MacHelper.Algorithms.TryRemove(MacTpmHmacSha512Algorithm.ALGORITHM_NAME, out _);
+            }
+            if (maxDigest < MacTpmHmacSha384Algorithm.MAC_LENGTH)
+            {
+                Logging.WriteWarning("TPM HMAC-SHA384 isn't supported");
+                MacHelper.Algorithms.TryRemove(MacTpmHmacSha384Algorithm.ALGORITHM_NAME, out _);
+            }
+            if (maxDigest < MacTpmHmacSha256Algorithm.MAC_LENGTH)
+            {
+                Logging.WriteWarning("TPM HMAC-SHA256 isn't supported");
+                MacHelper.Algorithms.TryRemove(MacTpmHmacSha256Algorithm.ALGORITHM_NAME, out _);
+            }
         }
     }
 }
