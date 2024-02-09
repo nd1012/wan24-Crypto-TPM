@@ -147,12 +147,15 @@ namespace wan24.Crypto.TPM
                     AutoReset = false
                 };
                 EncryptTimer.Elapsed += (s, e) => Encrypt();
-                RecryptTimer = new()
+                if (Engine is null)
                 {
-                    Interval = RecryptTimeout.TotalMilliseconds,
-                    AutoReset = false
-                };
-                RecryptTimer.Elapsed += (s, e) => Recrypt();
+                    RecryptTimer = new()
+                    {
+                        Interval = RecryptTimeout.TotalMilliseconds,
+                        AutoReset = false
+                    };
+                    RecryptTimer.Elapsed += (s, e) => Recrypt();
+                }
                 if (EncryptTimeout == TimeSpan.Zero)
                 {
                     Encrypt();
@@ -202,12 +205,6 @@ namespace wan24.Crypto.TPM
                     AutoReset = false
                 };
                 EncryptTimer.Elapsed += (s, e) => Encrypt();
-                RecryptTimer = new()
-                {
-                    Interval = RecryptTimeout.TotalMilliseconds,
-                    AutoReset = false
-                };
-                RecryptTimer.Elapsed += (s, e) => Recrypt();
                 if (EncryptTimeout == TimeSpan.Zero)
                 {
                     Encrypt();
@@ -289,7 +286,7 @@ namespace wan24.Crypto.TPM
                 using SecureByteArrayRefStruct secureValue = new(value);
                 EnsureUndisposed();
                 using SemaphoreSyncContext ssc = Sync;
-                RecryptTimer.Stop();
+                RecryptTimer?.Stop();
                 EncryptTimer.Stop();
                 if (RawValue is null)
                 {
@@ -308,7 +305,7 @@ namespace wan24.Crypto.TPM
                             using SecureByteArrayRefStruct key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
                             EncryptedValue = new(secureValue.Array.Encrypt(key, Options));
                         }
-                        RecryptTimer.Start();
+                        RecryptTimer?.Start();
                         return;
                     }
                     else
@@ -392,7 +389,7 @@ namespace wan24.Crypto.TPM
             using SecureByteArrayStructSimple secureValue = new(value);
             EnsureUndisposed();
             using SemaphoreSyncContext ssc = await Sync.SyncContextAsync(cancellationToken).DynamicContext();
-            RecryptTimer.Stop();
+            RecryptTimer?.Stop();
             EncryptTimer.Stop();
             if (RawValue is null)
             {
@@ -407,11 +404,11 @@ namespace wan24.Crypto.TPM
                     }
                     else
                     {
-                        using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
+                        using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext(CancellationToken.None);
                         using SecureByteArrayStructSimple key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
                         EncryptedValue = new(secureValue.Array.Encrypt(key, Options));
                     }
-                    RecryptTimer.Start();
+                    RecryptTimer?.Start();
                     return;
                 }
                 else

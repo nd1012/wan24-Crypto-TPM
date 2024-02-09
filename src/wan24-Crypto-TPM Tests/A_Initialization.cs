@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using wan24.Core;
 using wan24.Crypto;
+using wan24.Crypto.Tests;
 using wan24.Crypto.TPM;
 using wan24.ObjectValidation;
 
@@ -46,6 +47,7 @@ namespace wan24_Crypto_TPM_Tests
                 Logging.WriteWarning("TPM HMAC-SHA256 isn't supported");
                 MacHelper.Algorithms.TryRemove(MacTpmHmacSha256Algorithm.ALGORITHM_NAME, out _);
             }
+            SharedTests.Initialize();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace wan24.Crypto.TPM
     /// <summary>
     /// TPM2 helper
     /// </summary>
-    public static class Tpm2Helper
+    public static partial class Tpm2Helper
     {
         /// <summary>
         /// Digest buffer size in byte
@@ -22,7 +22,7 @@ namespace wan24.Crypto.TPM
         /// <summary>
         /// Regular expression to match the TPM device name from a device path (<c>/dev/tpm0</c> f.e.; <c>$1</c> contains the device name)
         /// </summary>
-        private static readonly Regex RxDevicePath = new(@"^\/(.*\/)?([^\/]+)$", RegexOptions.Compiled);
+        private static readonly Regex RxDevicePath = RxDevicePath_Generator();
         /// <summary>
         /// Default options
         /// </summary>
@@ -242,7 +242,7 @@ namespace wan24.Crypto.TPM
         /// <returns>Random data</returns>
         public static byte[] CreateRandomData(in int len = 32, Tpm2? engine = null, Tpm2Options? options = null)
         {
-            if (len == 0) return Array.Empty<byte>();
+            if (len == 0) return [];
             engine ??= DefaultEngine;
             bool disposeEngine = engine is null;
             engine ??= CreateEngine(options);
@@ -284,7 +284,7 @@ namespace wan24.Crypto.TPM
             try
             {
                 algo ??= GetDigestAlgorithm(GetMaxDigestSize(engine, options));
-                TpmHandle hmacHandle = engine.HashSequenceStart(key ?? Array.Empty<byte>(), algo.Value);
+                TpmHandle hmacHandle = engine.HashSequenceStart(key ?? [], algo.Value);
                 authSession = engine.StartAuthSessionEx(TpmSe.Hmac, algo.Value);
                 int len = data.Length;
                 if (data.Length <= DIGEST_BUFFER_SIZE) return engine[authSession].SequenceComplete(hmacHandle, data, hierarchy, out _);
@@ -298,7 +298,7 @@ namespace wan24.Crypto.TPM
                         engine[authSession].SequenceUpdate(hmacHandle, buffer);
                     }
                 }
-                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, Array.Empty<byte>(), hierarchy, out _);
+                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, [], hierarchy, out _);
                 {
                     using SecureByteArrayRefStruct buffer = new(len - index);
                     dataSpan[index..].CopyTo(buffer.Span);
@@ -337,7 +337,7 @@ namespace wan24.Crypto.TPM
             try
             {
                 algo ??= GetDigestAlgorithm(GetMaxDigestSize(engine, options));
-                TpmHandle hmacHandle = engine.HashSequenceStart(key ?? Array.Empty<byte>(), algo.Value);
+                TpmHandle hmacHandle = engine.HashSequenceStart(key ?? [], algo.Value);
                 authSession = engine.StartAuthSessionEx(TpmSe.Hmac, algo.Value);
                 int len = data.Length;
                 if (data.Length <= DIGEST_BUFFER_SIZE)
@@ -355,7 +355,7 @@ namespace wan24.Crypto.TPM
                         engine[authSession].SequenceUpdate(hmacHandle, buffer);
                     }
                 }
-                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, Array.Empty<byte>(), hierarchy, out _);
+                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, [], hierarchy, out _);
                 {
                     using SecureByteArrayRefStruct buffer = new(len - index);
                     data[index..].CopyTo(buffer.Span);
@@ -411,5 +411,12 @@ namespace wan24.Crypto.TPM
                 if (disposeEngine) engine.Dispose();
             }
         }
+
+        /// <summary>
+        /// Regular expression to match the TPM device name from a device path (<c>/dev/tpm0</c> f.e.; <c>$1</c> contains the device name)
+        /// </summary>
+        /// <returns>Regular expression</returns>
+        [GeneratedRegex(@"^\/(.*\/)?([^\/]+)$", RegexOptions.Compiled)]
+        private static partial Regex RxDevicePath_Generator();
     }
 }
