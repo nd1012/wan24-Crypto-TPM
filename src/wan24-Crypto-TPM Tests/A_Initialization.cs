@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using wan24.Core;
 using wan24.Crypto;
+using wan24.Crypto.Tests;
 using wan24.Crypto.TPM;
 using wan24.ObjectValidation;
 
@@ -29,7 +30,6 @@ namespace wan24_Crypto_TPM_Tests
             {
                 UseSimulator = !Tpm2Helper.IsAvailable() // https://www.microsoft.com/en-us/download/details.aspx?id=52507
             };
-            ValidateObject.Logger("wan24-Crypto-TPM Tests initialized");
             int maxDigest = Tpm2Helper.GetMaxDigestSize();
             if (maxDigest < MacTpmHmacSha512Algorithm.MAC_LENGTH)
             {
@@ -46,6 +46,8 @@ namespace wan24_Crypto_TPM_Tests
                 Logging.WriteWarning("TPM HMAC-SHA256 isn't supported");
                 MacHelper.Algorithms.TryRemove(MacTpmHmacSha256Algorithm.ALGORITHM_NAME, out _);
             }
+            SharedTests.Initialize();
+            ValidateObject.Logger("wan24-Crypto-TPM Tests initialized");
         }
     }
 }

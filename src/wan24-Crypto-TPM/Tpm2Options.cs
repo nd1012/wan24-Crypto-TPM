@@ -11,6 +11,15 @@ namespace wan24.Crypto.TPM
     public sealed record class Tpm2Options : ValidatableRecordBase
     {
         /// <summary>
+        /// Default TPM simulator IP address
+        /// </summary>
+        public const string DEFAULT_SIMULATOR_IP = "127.0.0.1";
+        /// <summary>
+        /// Default TPM simulator TCP port number
+        /// </summary>
+        public const int DEFAULT_SIMULATOR_PORT = 2321;
+
+        /// <summary>
         /// Constructor
         /// </summary>
         public Tpm2Options() : base() { }
@@ -34,13 +43,13 @@ namespace wan24.Crypto.TPM
         /// TPM simulator IP address
         /// </summary>
         [Ip(AddressFamily.InterNetwork)]
-        public string SimulatorIp { get; set; } = "127.0.0.1";
+        public string SimulatorIp { get; set; } = DEFAULT_SIMULATOR_IP;
 
         /// <summary>
         /// TPM simulator port number
         /// </summary>
         [System.ComponentModel.DataAnnotations.Range(1, ushort.MaxValue)]
-        public int SimulatorPort { get; set; } = 2321;
+        public int SimulatorPort { get; set; } = DEFAULT_SIMULATOR_PORT;
 
         /// <summary>
         /// Stop the TPM simulator after use?
@@ -97,7 +106,7 @@ namespace wan24.Crypto.TPM
         /// </summary>
         /// <param name="tag">Tagged object</param>
         /// <returns>This</returns>
-        public Tpm2Options WithTag(object tag)
+        public Tpm2Options WithTag(in object tag)
         {
             Tag = tag;
             return this;
@@ -108,7 +117,7 @@ namespace wan24.Crypto.TPM
         /// </summary>
         /// <param name="initializer">Initializer</param>
         /// <returns>This</returns>
-        public Tpm2Options WithInitializer(Initialization_Delegate initializer)
+        public Tpm2Options WithInitializer(in Initialization_Delegate initializer)
         {
             Initializer = initializer;
             return this;
@@ -119,7 +128,7 @@ namespace wan24.Crypto.TPM
         /// </summary>
         /// <param name="handle">Resource handle</param>
         /// <returns>This</returns>
-        public Tpm2Options WithResourceHandle(TpmRh handle)
+        public Tpm2Options WithResourceHandle(in TpmRh handle)
         {
             ResourceHandle = handle;
             return this;
@@ -130,7 +139,7 @@ namespace wan24.Crypto.TPM
         /// </summary>
         /// <param name="algo">Algorithm</param>
         /// <returns>This</returns>
-        public Tpm2Options WithAlgorithm(TpmAlgId algo)
+        public Tpm2Options WithAlgorithm(in TpmAlgId algo)
         {
             Algorithm = algo;
             return this;

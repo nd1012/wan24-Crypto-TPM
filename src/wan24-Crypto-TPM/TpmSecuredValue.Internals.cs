@@ -13,7 +13,7 @@ namespace wan24.Crypto.TPM
         /// <summary>
         /// Recrypt timer
         /// </summary>
-        private readonly System.Timers.Timer RecryptTimer = null!;
+        private readonly System.Timers.Timer? RecryptTimer = null;
         /// <summary>
         /// Thread synchronization
         /// </summary>
@@ -62,7 +62,7 @@ namespace wan24.Crypto.TPM
                 EncryptedValue = new(rawValue!.Array.Encrypt(key, Options));
             }
             RawValue = null;
-            RecryptTimer.Start();
+            RecryptTimer?.Start();
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace wan24.Crypto.TPM
             if (EncryptTimeout == TimeSpan.Zero)
                 return EncryptedValue!.Array.Decrypt(EncryptionKey!, Options);
             EncryptedSince = DateTime.MinValue;
-            RecryptTimer.Stop();
+            RecryptTimer?.Stop();
             try
             {
                 using SecureByteArray encryptedValue = EncryptedValue!;
@@ -107,24 +107,13 @@ namespace wan24.Crypto.TPM
         {
             using SemaphoreSyncContext ssc = Sync;
             if (RawValue is not null) return;
-            RecryptTimer.Stop();
+            RecryptTimer!.Stop();
             using SecureByteArrayRefStruct rawValue = new(EncryptedValue!.Array.Decrypt(EncryptionKey!, Options));
-            {
-                EncryptionKey!.Dispose();
-                EncryptedValue.Dispose();
-                EncryptionKey = new(RND.GetBytes(MacHmacSha512Algorithm.MAC_LENGTH));
-                if (Engine is null)
-                {
-                    EncryptedValue = new(rawValue.Array.Encrypt(EncryptionKey, Options));
-                }
-                else
-                {
-                    using SemaphoreSyncContext? essc = TpmEngine?.Sync.SyncContext();
-                    using SecureByteArrayRefStruct key = new(Tpm2Helper.Hmac(EncryptionKey, engine: Engine));
-                    EncryptedValue = new(rawValue.Array.Encrypt(key, Options));
-                }
-            }
-            RecryptTimer.Start();
+            EncryptionKey!.Dispose();
+            EncryptedValue.Dispose();
+            EncryptionKey = new(RND.GetBytes(MacHmacSha512Algorithm.MAC_LENGTH));
+            EncryptedValue = new(rawValue.Array.Encrypt(EncryptionKey, Options));
+            RecryptTimer!.Start();
         }
 
         /// <inheritdoc/>

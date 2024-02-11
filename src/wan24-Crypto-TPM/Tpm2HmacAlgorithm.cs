@@ -50,7 +50,7 @@ namespace wan24.Crypto.TPM
             DisposeEngine = engine is null;
             Options = Tpm2Helper.GetDefaultOptions(options);
             Engine = engine ?? Tpm2Helper.CreateEngine(Options);
-            HmacHandle = Engine.HashSequenceStart(key ?? Array.Empty<byte>(), algo);
+            HmacHandle = Engine.HashSequenceStart(key ?? [], algo);
             Session = Engine.StartAuthSessionEx(TpmSe.Hmac, algo);
         }
 
@@ -63,7 +63,7 @@ namespace wan24.Crypto.TPM
         /// <inheritdoc/>
         protected override void HashCore(byte[] array, int ibStart, int cbSize)
         {
-            if (IsDisposed || TransformedFinal) throw new ObjectDisposedException(GetType().ToString());
+            ObjectDisposedException.ThrowIf(IsDisposed || TransformedFinal, this);
             int len = cbSize;
             Span<byte> dataSpan = array.AsSpan(ibStart, len);
             if (len <= Tpm2Helper.DIGEST_BUFFER_SIZE)
@@ -76,7 +76,7 @@ namespace wan24.Crypto.TPM
                 {
                     using SecureByteArrayRefStruct buffer = new(len);
                     dataSpan.CopyTo(buffer.Span);
-                    Engine[Session].SequenceUpdate(HmacHandle, buffer);
+                    Engine[Session].SequenceUpdate(HmacHandle, buffer.Array);
                 }
             }
             else
@@ -87,14 +87,14 @@ namespace wan24.Crypto.TPM
                     for (; index + Tpm2Helper.DIGEST_BUFFER_SIZE <= len; index += Tpm2Helper.DIGEST_BUFFER_SIZE)
                     {
                         dataSpan[index..].CopyTo(buffer.Span);
-                        Engine[Session].SequenceUpdate(HmacHandle, buffer);
+                        Engine[Session].SequenceUpdate(HmacHandle, buffer.Array);
                     }
                 }
                 if (index == len) return;
                 {
                     using SecureByteArrayRefStruct buffer = new(len - index);
                     dataSpan[index..].CopyTo(buffer.Span);
-                    Engine[Session].SequenceUpdate(HmacHandle, buffer);
+                    Engine[Session].SequenceUpdate(HmacHandle, buffer.Array);
                 }
             }
         }
@@ -102,18 +102,18 @@ namespace wan24.Crypto.TPM
         /// <inheritdoc/>
         protected override void HashCore(ReadOnlySpan<byte> source)
         {
-            if (IsDisposed || TransformedFinal) throw new ObjectDisposedException(GetType().ToString());
+            ObjectDisposedException.ThrowIf(IsDisposed || TransformedFinal, this);
             using SecureByteArrayRefStruct buffer = new(source.ToArray());
-            HashCore(buffer, 0, buffer.Length);
+            HashCore(buffer.Array, 0, buffer.Length);
         }
 
         /// <inheritdoc/>
         protected override byte[] HashFinal()
         {
-            if (IsDisposed || TransformedFinal) throw new ObjectDisposedException(GetType().ToString());
+            ObjectDisposedException.ThrowIf(IsDisposed || TransformedFinal, this);
             try
             {
-                return Engine[Session].SequenceComplete(HmacHandle, Array.Empty<byte>(), Options.ResourceHandle ?? TpmRh.Owner, out _);
+                return Engine[Session].SequenceComplete(HmacHandle, [], Options.ResourceHandle ?? TpmRh.Owner, out _);
             }
             finally
             {
@@ -136,8 +136,9 @@ namespace wan24.Crypto.TPM
                 bytesWritten = mac.Length;
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                ErrorHandling.Handle(new(new CryptographicException($"Failed to create TPM HMAC", ex), Constants.CRYPTO_ERROR_SOURCE, this));
                 bytesWritten = 0;
                 return false;
             }

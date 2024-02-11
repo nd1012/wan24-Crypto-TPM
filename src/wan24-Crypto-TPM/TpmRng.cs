@@ -89,7 +89,7 @@ namespace wan24.Crypto.TPM
         {
             byte[] rnd;
             Span<byte> rndSpan;
-            using SemaphoreSyncContext? ssc = TpmEngine?.Sync.SyncContext();
+            using SemaphoreSyncContext? ssc = TpmEngine?.Sync.SyncContext(cancellationToken);
             for (int index = 0; index != buffer.Length; cancellationToken.ThrowIfCancellationRequested())
             {
                 rnd = Tpm2Helper.CreateRandomData(Math.Min(LengthRestriction, buffer.Length - index), Engine);
