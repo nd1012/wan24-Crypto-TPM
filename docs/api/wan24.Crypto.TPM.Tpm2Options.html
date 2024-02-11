@@ -1,0 +1,843 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class Tpm2Options | wan24-Crypto-TPM </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class Tpm2Options | wan24-Crypto-TPM ">
+    
+    <meta name="description" content="TPM2 options">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="wan24.Crypto.TPM.Tpm2Options">
+
+
+
+  <h1 id="wan24_Crypto_TPM_Tpm2Options" data-uid="wan24.Crypto.TPM.Tpm2Options" class="text-break">Class Tpm2Options</h1>
+  <div class="markdown level0 summary"><p>TPM2 options</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ValidatableRecordBase</span></div>
+    <div class="level2"><span class="xref">Tpm2Options</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IObjectValidatable</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.ivalidatableobject">IValidatableObject</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<span class="xref">ValidatableRecordBase</span>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">ValidatableRecordBase.ObjectValidatable(IObjectValidatable)</span>
+    </div>
+    <div>
+      <span class="xref">ValidatableRecordBase.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">ValidatableRecordBase.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">ValidatableRecordBase.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">ValidatableRecordBase.Equals(ValidatableRecordBase)</span>
+    </div>
+    <div>
+      <span class="xref">ValidatableRecordBase.&lt;Clone&gt;$()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="wan24.html">wan24</a>.<a class="xref" href="wan24.Crypto.html">Crypto</a>.<a class="xref" href="wan24.Crypto.TPM.html">TPM</a></h6>
+  <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
+  <h5 id="wan24_Crypto_TPM_Tpm2Options_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record Tpm2Options : ValidatableRecordBase, IObjectValidatable, IValidatableObject, IEquatable&lt;ValidatableRecordBase&gt;, IEquatable&lt;Tpm2Options&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options__ctor.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L25">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options__ctor_" data-uid="wan24.Crypto.TPM.Tpm2Options.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options__ctor" data-uid="wan24.Crypto.TPM.Tpm2Options.#ctor">Tpm2Options()</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options()</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_DEFAULT_SIMULATOR_IP.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.DEFAULT_SIMULATOR_IP%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L16">View Source</a>
+  </span>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_DEFAULT_SIMULATOR_IP" data-uid="wan24.Crypto.TPM.Tpm2Options.DEFAULT_SIMULATOR_IP">DEFAULT_SIMULATOR_IP</h4>
+  <div class="markdown level1 summary"><p>Default TPM simulator IP address</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_SIMULATOR_IP = &quot;127.0.0.1&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_DEFAULT_SIMULATOR_PORT.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.DEFAULT_SIMULATOR_PORT%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L20">View Source</a>
+  </span>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_DEFAULT_SIMULATOR_PORT" data-uid="wan24.Crypto.TPM.Tpm2Options.DEFAULT_SIMULATOR_PORT">DEFAULT_SIMULATOR_PORT</h4>
+  <div class="markdown level1 summary"><p>Default TPM simulator TCP port number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DEFAULT_SIMULATOR_PORT = 2321</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_Algorithm.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.Algorithm%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L83">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_Algorithm_" data-uid="wan24.Crypto.TPM.Tpm2Options.Algorithm*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_Algorithm" data-uid="wan24.Crypto.TPM.Tpm2Options.Algorithm">Algorithm</h4>
+  <div class="markdown level1 summary"><p>Algorithm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmAlgId? Algorithm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TpmAlgId</span>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_HasResourceManager.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.HasResourceManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L67">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_HasResourceManager_" data-uid="wan24.Crypto.TPM.Tpm2Options.HasResourceManager*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_HasResourceManager" data-uid="wan24.Crypto.TPM.Tpm2Options.HasResourceManager">HasResourceManager</h4>
+  <div class="markdown level1 summary"><p>Does the TPM have a resource manager?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasResourceManager { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_Initializer.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.Initializer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L35">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_Initializer_" data-uid="wan24.Crypto.TPM.Tpm2Options.Initializer*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_Initializer" data-uid="wan24.Crypto.TPM.Tpm2Options.Initializer">Initializer</h4>
+  <div class="markdown level1 summary"><p>Engine initializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options.Initialization_Delegate? Initializer { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a>.<a class="xref" href="wan24.Crypto.TPM.Tpm2Options.Initialization_Delegate.html">Initialization_Delegate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_LinuxDevicePath.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.LinuxDevicePath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L72">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_LinuxDevicePath_" data-uid="wan24.Crypto.TPM.Tpm2Options.LinuxDevicePath*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_LinuxDevicePath" data-uid="wan24.Crypto.TPM.Tpm2Options.LinuxDevicePath">LinuxDevicePath</h4>
+  <div class="markdown level1 summary"><p>Linux TPM device path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MinLength(1)]
+[MaxLength(32767)]
+public string? LinuxDevicePath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_ResourceHandle.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.ResourceHandle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L78">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_ResourceHandle_" data-uid="wan24.Crypto.TPM.Tpm2Options.ResourceHandle*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_ResourceHandle" data-uid="wan24.Crypto.TPM.Tpm2Options.ResourceHandle">ResourceHandle</h4>
+  <div class="markdown level1 summary"><p>Resource handle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmRh? ResourceHandle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TpmRh</span>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_SimulatorHasReferenceModel.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.SimulatorHasReferenceModel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L62">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_SimulatorHasReferenceModel_" data-uid="wan24.Crypto.TPM.Tpm2Options.SimulatorHasReferenceModel*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_SimulatorHasReferenceModel" data-uid="wan24.Crypto.TPM.Tpm2Options.SimulatorHasReferenceModel">SimulatorHasReferenceModel</h4>
+  <div class="markdown level1 summary"><p>Does the TPM simulator have a reference model?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SimulatorHasReferenceModel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_SimulatorIp.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.SimulatorIp%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L45">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_SimulatorIp_" data-uid="wan24.Crypto.TPM.Tpm2Options.SimulatorIp*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_SimulatorIp" data-uid="wan24.Crypto.TPM.Tpm2Options.SimulatorIp">SimulatorIp</h4>
+  <div class="markdown level1 summary"><p>TPM simulator IP address</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Ip(AddressFamily.InterNetwork)]
+public string SimulatorIp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_SimulatorPort.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.SimulatorPort%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L51">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_SimulatorPort_" data-uid="wan24.Crypto.TPM.Tpm2Options.SimulatorPort*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_SimulatorPort" data-uid="wan24.Crypto.TPM.Tpm2Options.SimulatorPort">SimulatorPort</h4>
+  <div class="markdown level1 summary"><p>TPM simulator port number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Range(1, 65535)]
+public int SimulatorPort { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_StopSimulator.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.StopSimulator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L57">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_StopSimulator_" data-uid="wan24.Crypto.TPM.Tpm2Options.StopSimulator*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_StopSimulator" data-uid="wan24.Crypto.TPM.Tpm2Options.StopSimulator">StopSimulator</h4>
+  <div class="markdown level1 summary"><p>Stop the TPM simulator after use?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StopSimulator { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_Tag.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.Tag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L30">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_Tag_" data-uid="wan24.Crypto.TPM.Tpm2Options.Tag*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_Tag" data-uid="wan24.Crypto.TPM.Tpm2Options.Tag">Tag</h4>
+  <div class="markdown level1 summary"><p>Any tagged object (will be cloned, if it implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a>, and <a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html#wan24_Crypto_TPM_Tpm2Options_GetCopy">GetCopy()</a> has been called)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? Tag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_UseSimulator.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.UseSimulator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L40">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_UseSimulator_" data-uid="wan24.Crypto.TPM.Tpm2Options.UseSimulator*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_UseSimulator" data-uid="wan24.Crypto.TPM.Tpm2Options.UseSimulator">UseSimulator</h4>
+  <div class="markdown level1 summary"><p>Use a TCP TPM simulator? (<a href="https://www.microsoft.com/en-us/download/details.aspx?id=52507">https://www.microsoft.com/en-us/download/details.aspx?id=52507</a>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseSimulator { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_GetCopy.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.GetCopy%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L89">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_GetCopy_" data-uid="wan24.Crypto.TPM.Tpm2Options.GetCopy*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_GetCopy" data-uid="wan24.Crypto.TPM.Tpm2Options.GetCopy">GetCopy()</h4>
+  <div class="markdown level1 summary"><p>Get a copy of this instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options GetCopy()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><p>Instance copy</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_WithAlgorithm_Tpm2Lib_TpmAlgId__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.WithAlgorithm(Tpm2Lib.TpmAlgId%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L142">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_WithAlgorithm_" data-uid="wan24.Crypto.TPM.Tpm2Options.WithAlgorithm*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_WithAlgorithm_Tpm2Lib_TpmAlgId__" data-uid="wan24.Crypto.TPM.Tpm2Options.WithAlgorithm(Tpm2Lib.TpmAlgId@)">WithAlgorithm(in TpmAlgId)</h4>
+  <div class="markdown level1 summary"><p>Set an algorithm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options WithAlgorithm(in TpmAlgId algo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TpmAlgId</span></td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>Algorithm</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><p>This</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_WithInitializer_wan24_Crypto_TPM_Tpm2Options_Initialization_Delegate__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.WithInitializer(wan24.Crypto.TPM.Tpm2Options.Initialization_Delegate%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L120">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_WithInitializer_" data-uid="wan24.Crypto.TPM.Tpm2Options.WithInitializer*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_WithInitializer_wan24_Crypto_TPM_Tpm2Options_Initialization_Delegate__" data-uid="wan24.Crypto.TPM.Tpm2Options.WithInitializer(wan24.Crypto.TPM.Tpm2Options.Initialization_Delegate@)">WithInitializer(in Initialization_Delegate)</h4>
+  <div class="markdown level1 summary"><p>Set an initializer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options WithInitializer(in Tpm2Options.Initialization_Delegate initializer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a>.<a class="xref" href="wan24.Crypto.TPM.Tpm2Options.Initialization_Delegate.html">Initialization_Delegate</a></td>
+        <td><span class="parametername">initializer</span></td>
+        <td><p>Initializer</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><p>This</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_WithResourceHandle_Tpm2Lib_TpmRh__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.WithResourceHandle(Tpm2Lib.TpmRh%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L131">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_WithResourceHandle_" data-uid="wan24.Crypto.TPM.Tpm2Options.WithResourceHandle*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_WithResourceHandle_Tpm2Lib_TpmRh__" data-uid="wan24.Crypto.TPM.Tpm2Options.WithResourceHandle(Tpm2Lib.TpmRh@)">WithResourceHandle(in TpmRh)</h4>
+  <div class="markdown level1 summary"><p>Set a resource handle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options WithResourceHandle(in TpmRh handle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TpmRh</span></td>
+        <td><span class="parametername">handle</span></td>
+        <td><p>Resource handle</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><p>This</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options_WithTag_System_Object__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options.WithTag(System.Object%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L109">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_Tpm2Options_WithTag_" data-uid="wan24.Crypto.TPM.Tpm2Options.WithTag*"></a>
+  <h4 id="wan24_Crypto_TPM_Tpm2Options_WithTag_System_Object__" data-uid="wan24.Crypto.TPM.Tpm2Options.WithTag(System.Object@)">WithTag(in object)</h4>
+  <div class="markdown level1 summary"><p>Set the tagged object (will be cloned, if it implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icloneable">ICloneable</a>, and <a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html#wan24_Crypto_TPM_Tpm2Options_GetCopy">GetCopy()</a> has been called)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tpm2Options WithTag(in object tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>Tagged object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><p>This</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">wan24.ObjectValidation.IObjectValidatable</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.ivalidatableobject">IValidatableObject</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_Tpm2Options.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.Tpm2Options%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/Tpm2Options.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      (c) 2023 Andreas Zimmermann, wan24.de
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

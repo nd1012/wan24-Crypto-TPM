@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class TpmSymmetricKeySuite | wan24-Crypto-TPM </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class TpmSymmetricKeySuite | wan24-Crypto-TPM ">
+    
+    <meta name="description" content="TPM secured symmetric key suite">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite">
+
+
+
+  <h1 id="wan24_Crypto_TPM_TpmSymmetricKeySuite" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite" class="text-break">Class TpmSymmetricKeySuite</h1>
+  <div class="markdown level0 summary"><p>TPM secured symmetric key suite</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">DisposableRecordBase</span></div>
+    <div class="level2"><span class="xref">SymmetricKeySuite</span></div>
+    <div class="level3"><span class="xref">TpmSymmetricKeySuite</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IWillDispose</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<span class="xref">DisposableRecordBase</span>&gt;</div>
+    <div><span class="xref">ISymmetricKeySuite</span></div>
+    <div><span class="xref">IDisposableObject</span></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<span class="xref">SymmetricKeySuite</span>&gt;</div>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="wan24.Crypto.TPM.TpmSymmetricKeySuite.html">TpmSymmetricKeySuite</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">SymmetricKeySuite.GetCopy()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">SymmetricKeySuite.InitKeyOnly(in byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">SymmetricKeySuite.InitKeyAndIdentifier(in byte[], in byte[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">SymmetricKeySuite.Dispose(bool)</a>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">SymmetricKeySuite.PrintMembers(StringBuilder)</a>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">SymmetricKeySuite.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.Equals(DisposableRecordBase)</span>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.Equals(SymmetricKeySuite)</span>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.&lt;Clone&gt;$()</span>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.EqualityContract</span>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.Options</span>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.Identifier</span>
+    </div>
+    <div>
+      <span class="xref">SymmetricKeySuite.ExpandedKey</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.DisposeSyncObject</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.AsyncDisposing</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.AllowFinalizer</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.DisposeObjects</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.StackInfo</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.RegisterForDispose&lt;T&gt;(in T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">DisposableRecordBase.EnsureUndisposed(in bool, in bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">DisposableRecordBase.IfUndisposed&lt;T&gt;(in T, in bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">DisposableRecordBase.IfUndisposed(in Action, in bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">DisposableRecordBase.IfUndisposed&lt;T&gt;(in Func&lt;T&gt;, in bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-1">DisposableRecordBase.IfUndisposedNullable&lt;T&gt;(in Func&lt;T&gt;, in bool)</a>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.DisposeCore()</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.DisposeAttributes()</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.DisposeAttributesAsync()</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.DisposeAsync()</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.CreateStackInfo</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.IsDisposing</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.IsDisposed</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.OnDisposing</span>
+    </div>
+    <div>
+      <span class="xref">DisposableRecordBase.OnDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="wan24.html">wan24</a>.<a class="xref" href="wan24.Crypto.html">Crypto</a>.<a class="xref" href="wan24.Crypto.TPM.html">TPM</a></h6>
+  <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
+  <h5 id="wan24_Crypto_TPM_TpmSymmetricKeySuite_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record TpmSymmetricKeySuite : SymmetricKeySuite, IWillDispose, IEquatable&lt;DisposableRecordBase&gt;, ISymmetricKeySuite, IDisposableObject, IDisposable, IAsyncDisposable, IEquatable&lt;SymmetricKeySuite&gt;, IEquatable&lt;TpmSymmetricKeySuite&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_System_Byte____System_Byte____Tpm2Lib_Tpm2__wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSymmetricKeySuite.%23ctor(System.Byte%5B%5D%40%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%40%2Cwan24.Crypto.TPM.Tpm2Options%40%2Cwan24.Crypto.CryptoOptions%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSymmetricKeySuite.cs/#L19">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_System_Byte____System_Byte____Tpm2Lib_Tpm2__wan24_Crypto_TPM_Tpm2Options__wan24_Crypto_CryptoOptions__" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor(System.Byte[]@,System.Byte[]@,Tpm2Lib.Tpm2@,wan24.Crypto.TPM.Tpm2Options@,wan24.Crypto.CryptoOptions@)">TpmSymmetricKeySuite(in byte[], in byte[]?, in Tpm2?, in Tpm2Options?, in CryptoOptions?)</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSymmetricKeySuite(in byte[] key, in byte[]? identifier = null, in Tpm2? engine = null, in Tpm2Options? tpmOptions = null, in CryptoOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Symmetric key (private!; will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>Identifier (private!; will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><span class="parametername">tpmOptions</span></td>
+        <td><p>TPM options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options with KDF settings (MAC algorithm will be set automatic; will be cleared!)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_wan24_Crypto_CryptoOptions__System_Byte____System_Byte____.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSymmetricKeySuite.%23ctor(wan24.Crypto.CryptoOptions%40%2CSystem.Byte%5B%5D%40%2CSystem.Byte%5B%5D%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSymmetricKeySuite.cs/#L94">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_wan24_Crypto_CryptoOptions__System_Byte____System_Byte____" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor(wan24.Crypto.CryptoOptions@,System.Byte[]@,System.Byte[]@)">TpmSymmetricKeySuite(in CryptoOptions?, in byte[]?, in byte[])</h4>
+  <div class="markdown level1 summary"><p>Constructor (not supported!)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSymmetricKeySuite(in CryptoOptions? options, in byte[]? identifier, in byte[] expandedKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">identifier</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">expandedKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_wan24_Crypto_ISymmetricKeySuite__wan24_Crypto_CryptoOptions__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSymmetricKeySuite.%23ctor(wan24.Crypto.ISymmetricKeySuite%40%2Cwan24.Crypto.CryptoOptions%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSymmetricKeySuite.cs/#L101">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_wan24_Crypto_ISymmetricKeySuite__wan24_Crypto_CryptoOptions__" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor(wan24.Crypto.ISymmetricKeySuite@,wan24.Crypto.CryptoOptions@)">TpmSymmetricKeySuite(in ISymmetricKeySuite, in CryptoOptions?)</h4>
+  <div class="markdown level1 summary"><p>Constructor (not supported!)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSymmetricKeySuite(in ISymmetricKeySuite existing, in CryptoOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ISymmetricKeySuite</span></td>
+        <td><span class="parametername">existing</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_wan24_Crypto_TPM_Tpm2Engine__System_Byte____System_Byte____wan24_Crypto_CryptoOptions__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSymmetricKeySuite.%23ctor(wan24.Crypto.TPM.Tpm2Engine%40%2CSystem.Byte%5B%5D%40%2CSystem.Byte%5B%5D%40%2Cwan24.Crypto.CryptoOptions%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSymmetricKeySuite.cs/#L57">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSymmetricKeySuite__ctor_wan24_Crypto_TPM_Tpm2Engine__System_Byte____System_Byte____wan24_Crypto_CryptoOptions__" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.#ctor(wan24.Crypto.TPM.Tpm2Engine@,System.Byte[]@,System.Byte[]@,wan24.Crypto.CryptoOptions@)">TpmSymmetricKeySuite(in Tpm2Engine, in byte[], in byte[]?, in CryptoOptions?)</h4>
+  <div class="markdown level1 summary"><p>Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TpmSymmetricKeySuite(in Tpm2Engine engine, in byte[] key, in byte[]? identifier = null, in CryptoOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Engine.html">Tpm2Engine</a></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>TPM engine (won't be disposed, but used for synchronizing TPM access)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Symmetric key (private!; will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">identifier</span></td>
+        <td><p>Identifier (private!; will be cleared!)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options with KDF settings (MAC algorithm will be set automatic; will be cleared!)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSymmetricKeySuite_ReplaceExpandedKey_System_Byte____.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSymmetricKeySuite.ReplaceExpandedKey(System.Byte%5B%5D%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSymmetricKeySuite.cs/#L107">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmSymmetricKeySuite_ReplaceExpandedKey_" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.ReplaceExpandedKey*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmSymmetricKeySuite_ReplaceExpandedKey_System_Byte____" data-uid="wan24.Crypto.TPM.TpmSymmetricKeySuite.ReplaceExpandedKey(System.Byte[]@)">ReplaceExpandedKey(in byte[])</h4>
+  <div class="markdown level1 summary"><p>Replace the expanded key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReplaceExpandedKey(in byte[] newExpandedKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">newExpandedKey</span></td>
+        <td><p>New expanded key (needs to fit the length of the existing expanded key value; will be cleared!)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">wan24.Core.IWillDispose</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">wan24.Crypto.ISymmetricKeySuite</span>
+  </div>
+  <div>
+      <span class="xref">wan24.Core.IDisposableObject</span>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmSymmetricKeySuite.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmSymmetricKeySuite%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmSymmetricKeySuite.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      (c) 2023 Andreas Zimmermann, wan24.de
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
