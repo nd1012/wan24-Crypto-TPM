@@ -30,7 +30,6 @@ namespace wan24_Crypto_TPM_Tests
             {
                 UseSimulator = !Tpm2Helper.IsAvailable() // https://www.microsoft.com/en-us/download/details.aspx?id=52507
             };
-            ValidateObject.Logger("wan24-Crypto-TPM Tests initialized");
             int maxDigest = Tpm2Helper.GetMaxDigestSize();
             if (maxDigest < MacTpmHmacSha512Algorithm.MAC_LENGTH)
             {
@@ -48,6 +47,7 @@ namespace wan24_Crypto_TPM_Tests
                 MacHelper.Algorithms.TryRemove(MacTpmHmacSha256Algorithm.ALGORITHM_NAME, out _);
             }
             SharedTests.Initialize();
+            ValidateObject.Logger("wan24-Crypto-TPM Tests initialized");
         }
     }
 }

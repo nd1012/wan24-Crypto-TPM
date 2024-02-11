@@ -76,7 +76,7 @@ namespace wan24.Crypto.TPM
                 {
                     using SecureByteArrayRefStruct buffer = new(len);
                     dataSpan.CopyTo(buffer.Span);
-                    Engine[Session].SequenceUpdate(HmacHandle, buffer);
+                    Engine[Session].SequenceUpdate(HmacHandle, buffer.Array);
                 }
             }
             else
@@ -87,14 +87,14 @@ namespace wan24.Crypto.TPM
                     for (; index + Tpm2Helper.DIGEST_BUFFER_SIZE <= len; index += Tpm2Helper.DIGEST_BUFFER_SIZE)
                     {
                         dataSpan[index..].CopyTo(buffer.Span);
-                        Engine[Session].SequenceUpdate(HmacHandle, buffer);
+                        Engine[Session].SequenceUpdate(HmacHandle, buffer.Array);
                     }
                 }
                 if (index == len) return;
                 {
                     using SecureByteArrayRefStruct buffer = new(len - index);
                     dataSpan[index..].CopyTo(buffer.Span);
-                    Engine[Session].SequenceUpdate(HmacHandle, buffer);
+                    Engine[Session].SequenceUpdate(HmacHandle, buffer.Array);
                 }
             }
         }
@@ -104,7 +104,7 @@ namespace wan24.Crypto.TPM
         {
             ObjectDisposedException.ThrowIf(IsDisposed || TransformedFinal, this);
             using SecureByteArrayRefStruct buffer = new(source.ToArray());
-            HashCore(buffer, 0, buffer.Length);
+            HashCore(buffer.Array, 0, buffer.Length);
         }
 
         /// <inheritdoc/>
@@ -136,8 +136,9 @@ namespace wan24.Crypto.TPM
                 bytesWritten = mac.Length;
                 return true;
             }
-            catch
+            catch(Exception ex)
             {
+                ErrorHandling.Handle(new(new CryptographicException($"Failed to create TPM HMAC", ex), Constants.CRYPTO_ERROR_SOURCE, this));
                 bytesWritten = 0;
                 return false;
             }
