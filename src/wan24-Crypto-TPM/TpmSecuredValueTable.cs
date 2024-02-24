@@ -1,4 +1,4 @@
-﻿using System.Collections.Concurrent;
+﻿using wan24.Core;
 
 namespace wan24.Crypto.TPM
 {
@@ -10,6 +10,6 @@ namespace wan24.Crypto.TPM
         /// <summary>
         /// Values (key is the GUID)
         /// </summary>
-        public static readonly ConcurrentDictionary<string, TpmSecuredValue> Values = new();
+        public static readonly ConcurrentChangeTokenDictionary<string, TpmSecuredValue> Values = new();
     }
 }
