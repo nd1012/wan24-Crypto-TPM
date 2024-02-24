@@ -33,7 +33,7 @@ namespace wan24.Crypto.TPM
         /// <summary>
         /// Constructor
         /// </summary>
-        public MacTpmHmacSha1Algorithm() : base(ALGORITHM_NAME, ALGORITHM_VALUE) { }
+        private MacTpmHmacSha1Algorithm() : base(ALGORITHM_NAME, ALGORITHM_VALUE) { }
 
         /// <summary>
         /// Instance
