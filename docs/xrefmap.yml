@@ -45,25 +45,6 @@ references:
   commentId: T:wan24.Crypto.TPM.MacTpmHmacSha1Algorithm
   fullName: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm
   nameWithType: MacTpmHmacSha1Algorithm
-- uid: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.#ctor
-  name: MacTpmHmacSha1Algorithm()
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha1Algorithm__ctor
-  commentId: M:wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.#ctor
-  name.vb: New()
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.MacTpmHmacSha1Algorithm()
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.New()
-  nameWithType: MacTpmHmacSha1Algorithm.MacTpmHmacSha1Algorithm()
-  nameWithType.vb: MacTpmHmacSha1Algorithm.New()
-- uid: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.#ctor*
-  name: MacTpmHmacSha1Algorithm
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha1Algorithm__ctor_
-  commentId: Overload:wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.MacTpmHmacSha1Algorithm
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.New
-  nameWithType: MacTpmHmacSha1Algorithm.MacTpmHmacSha1Algorithm
-  nameWithType.vb: MacTpmHmacSha1Algorithm.New
 - uid: wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.ALGORITHM_NAME
   name: ALGORITHM_NAME
   href: api/wan24.Crypto.TPM.MacTpmHmacSha1Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha1Algorithm_ALGORITHM_NAME
@@ -188,25 +169,6 @@ references:
   commentId: T:wan24.Crypto.TPM.MacTpmHmacSha256Algorithm
   fullName: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm
   nameWithType: MacTpmHmacSha256Algorithm
-- uid: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.#ctor
-  name: MacTpmHmacSha256Algorithm()
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha256Algorithm__ctor
-  commentId: M:wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.#ctor
-  name.vb: New()
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.MacTpmHmacSha256Algorithm()
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.New()
-  nameWithType: MacTpmHmacSha256Algorithm.MacTpmHmacSha256Algorithm()
-  nameWithType.vb: MacTpmHmacSha256Algorithm.New()
-- uid: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.#ctor*
-  name: MacTpmHmacSha256Algorithm
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha256Algorithm__ctor_
-  commentId: Overload:wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.MacTpmHmacSha256Algorithm
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.New
-  nameWithType: MacTpmHmacSha256Algorithm.MacTpmHmacSha256Algorithm
-  nameWithType.vb: MacTpmHmacSha256Algorithm.New
 - uid: wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.ALGORITHM_NAME
   name: ALGORITHM_NAME
   href: api/wan24.Crypto.TPM.MacTpmHmacSha256Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha256Algorithm_ALGORITHM_NAME
@@ -331,25 +293,6 @@ references:
   commentId: T:wan24.Crypto.TPM.MacTpmHmacSha384Algorithm
   fullName: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm
   nameWithType: MacTpmHmacSha384Algorithm
-- uid: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.#ctor
-  name: MacTpmHmacSha384Algorithm()
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha384Algorithm__ctor
-  commentId: M:wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.#ctor
-  name.vb: New()
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.MacTpmHmacSha384Algorithm()
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.New()
-  nameWithType: MacTpmHmacSha384Algorithm.MacTpmHmacSha384Algorithm()
-  nameWithType.vb: MacTpmHmacSha384Algorithm.New()
-- uid: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.#ctor*
-  name: MacTpmHmacSha384Algorithm
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha384Algorithm__ctor_
-  commentId: Overload:wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.MacTpmHmacSha384Algorithm
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.New
-  nameWithType: MacTpmHmacSha384Algorithm.MacTpmHmacSha384Algorithm
-  nameWithType.vb: MacTpmHmacSha384Algorithm.New
 - uid: wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.ALGORITHM_NAME
   name: ALGORITHM_NAME
   href: api/wan24.Crypto.TPM.MacTpmHmacSha384Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha384Algorithm_ALGORITHM_NAME
@@ -474,25 +417,6 @@ references:
   commentId: T:wan24.Crypto.TPM.MacTpmHmacSha512Algorithm
   fullName: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm
   nameWithType: MacTpmHmacSha512Algorithm
-- uid: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.#ctor
-  name: MacTpmHmacSha512Algorithm()
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha512Algorithm__ctor
-  commentId: M:wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.#ctor
-  name.vb: New()
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.MacTpmHmacSha512Algorithm()
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.New()
-  nameWithType: MacTpmHmacSha512Algorithm.MacTpmHmacSha512Algorithm()
-  nameWithType.vb: MacTpmHmacSha512Algorithm.New()
-- uid: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.#ctor*
-  name: MacTpmHmacSha512Algorithm
-  href: api/wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha512Algorithm__ctor_
-  commentId: Overload:wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.MacTpmHmacSha512Algorithm
-  fullName.vb: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.New
-  nameWithType: MacTpmHmacSha512Algorithm.MacTpmHmacSha512Algorithm
-  nameWithType.vb: MacTpmHmacSha512Algorithm.New
 - uid: wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.ALGORITHM_NAME
   name: ALGORITHM_NAME
   href: api/wan24.Crypto.TPM.MacTpmHmacSha512Algorithm.html#wan24_Crypto_TPM_MacTpmHmacSha512Algorithm_ALGORITHM_NAME
