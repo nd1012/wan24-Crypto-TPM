@@ -145,6 +145,36 @@ services:</p>
 </code></pre>
 <p>This will register transient <code>Tpm2Options</code> (using <code>Tpm2Helper.DefaultOptions</code>)
 and <code>Tpm2</code> (using <code>Tpm2Helper.CreateEngine</code>) service objects.</p>
+<h3 id="json-configuration">JSON configuration</h3>
+<p>You could implement a JSON configuration file using the <code>AppConfig</code> logic from
+<code>wan24-Core</code>, and the <code>TpmCryptoAppConfig</code>. There it's possible to define
+disabled algorithms, which makes it possible to react to an unwanted algorithm
+very fast, at any time and without having to update your app, for example. If
+you use an <code>AppConfig</code>, it could look like this:</p>
+<pre><code class="lang-cs">public class YourAppConfig : AppConfig
+{
+    public YourAppConfig() : base() { }
+
+    [AppConfig(AfterBootstrap = true, Priority = 20)]
+    public CryptoAppConfig? Crypto { get; set; }
+
+    [AppConfig(AfterBootstrap = true, Priority = 10)]
+    public TpmCryptoAppConfig? Tpm { get; set; }
+}
+
+await AppConfig.LoadAsync&lt;YourAppConfig&gt;();
+</code></pre>
+<p><strong>NOTE</strong>: A <code>TpmCryptoAppConfig</code> should be applied before a <code>CryptoAppConfig</code>.
+For this reason the example defines a priority in the <code>AppConfigAttribute</code>.</p>
+<p>In the <code>config.json</code> in your app root folder:</p>
+<pre><code class="lang-json">{
+    &quot;Tpm&quot;:{
+        ...
+    }
+}
+</code></pre>
+<p>Anyway, you could also place and load a <code>TpmCryptoAppConfig</code> in any
+configuration which supports using that custom type.</p>
 <h3 id="tpm2engine-fixes-multithreading-bugs"><code>Tpm2Engine</code> fixes multithreading bugs</h3>
 <p>Using a <code>Tpm2</code> instance for each thread still has multithreading problems in
 the MS.TSS .NET library, that's why a <code>Tpm2Engine</code> should be used in

@@ -1072,6 +1072,19 @@ references:
   commentId: F:wan24.Crypto.TPM.Tpm2Options.DEFAULT_SIMULATOR_PORT
   fullName: wan24.Crypto.TPM.Tpm2Options.DEFAULT_SIMULATOR_PORT
   nameWithType: Tpm2Options.DEFAULT_SIMULATOR_PORT
+- uid: wan24.Crypto.TPM.Tpm2Options.DefaultLinuxDevicePath
+  name: DefaultLinuxDevicePath
+  href: api/wan24.Crypto.TPM.Tpm2Options.html#wan24_Crypto_TPM_Tpm2Options_DefaultLinuxDevicePath
+  commentId: P:wan24.Crypto.TPM.Tpm2Options.DefaultLinuxDevicePath
+  fullName: wan24.Crypto.TPM.Tpm2Options.DefaultLinuxDevicePath
+  nameWithType: Tpm2Options.DefaultLinuxDevicePath
+- uid: wan24.Crypto.TPM.Tpm2Options.DefaultLinuxDevicePath*
+  name: DefaultLinuxDevicePath
+  href: api/wan24.Crypto.TPM.Tpm2Options.html#wan24_Crypto_TPM_Tpm2Options_DefaultLinuxDevicePath_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Options.DefaultLinuxDevicePath
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Options.DefaultLinuxDevicePath
+  nameWithType: Tpm2Options.DefaultLinuxDevicePath
 - uid: wan24.Crypto.TPM.Tpm2Options.GetCopy
   name: GetCopy()
   href: api/wan24.Crypto.TPM.Tpm2Options.html#wan24_Crypto_TPM_Tpm2Options_GetCopy
@@ -1285,6 +1298,83 @@ references:
   isSpec: "True"
   fullName: wan24.Crypto.TPM.Tpm2Options.WithTag
   nameWithType: Tpm2Options.WithTag
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig
+  name: TpmCryptoAppConfig
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html
+  commentId: T:wan24.Crypto.TPM.TpmCryptoAppConfig
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig
+  nameWithType: TpmCryptoAppConfig
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.#ctor
+  name: TpmCryptoAppConfig()
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig__ctor
+  commentId: M:wan24.Crypto.TPM.TpmCryptoAppConfig.#ctor
+  name.vb: New()
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.TpmCryptoAppConfig()
+  fullName.vb: wan24.Crypto.TPM.TpmCryptoAppConfig.New()
+  nameWithType: TpmCryptoAppConfig.TpmCryptoAppConfig()
+  nameWithType.vb: TpmCryptoAppConfig.New()
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.#ctor*
+  name: TpmCryptoAppConfig
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig__ctor_
+  commentId: Overload:wan24.Crypto.TPM.TpmCryptoAppConfig.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.TpmCryptoAppConfig
+  fullName.vb: wan24.Crypto.TPM.TpmCryptoAppConfig.New
+  nameWithType: TpmCryptoAppConfig.TpmCryptoAppConfig
+  nameWithType.vb: TpmCryptoAppConfig.New
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.AppliedTpmCryptoConfig
+  name: AppliedTpmCryptoConfig
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_AppliedTpmCryptoConfig
+  commentId: P:wan24.Crypto.TPM.TpmCryptoAppConfig.AppliedTpmCryptoConfig
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.AppliedTpmCryptoConfig
+  nameWithType: TpmCryptoAppConfig.AppliedTpmCryptoConfig
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.AppliedTpmCryptoConfig*
+  name: AppliedTpmCryptoConfig
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_AppliedTpmCryptoConfig_
+  commentId: Overload:wan24.Crypto.TPM.TpmCryptoAppConfig.AppliedTpmCryptoConfig
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.AppliedTpmCryptoConfig
+  nameWithType: TpmCryptoAppConfig.AppliedTpmCryptoConfig
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.Apply
+  name: Apply()
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_Apply
+  commentId: M:wan24.Crypto.TPM.TpmCryptoAppConfig.Apply
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.Apply()
+  nameWithType: TpmCryptoAppConfig.Apply()
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.Apply*
+  name: Apply
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_Apply_
+  commentId: Overload:wan24.Crypto.TPM.TpmCryptoAppConfig.Apply
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.Apply
+  nameWithType: TpmCryptoAppConfig.Apply
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync(System.Threading.CancellationToken)
+  name: ApplyAsync(CancellationToken)
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_ApplyAsync_System_Threading_CancellationToken_
+  commentId: M:wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync(System.Threading.CancellationToken)
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync(System.Threading.CancellationToken)
+  nameWithType: TpmCryptoAppConfig.ApplyAsync(CancellationToken)
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync*
+  name: ApplyAsync
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_ApplyAsync_
+  commentId: Overload:wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync
+  nameWithType: TpmCryptoAppConfig.ApplyAsync
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath
+  name: DefaultLinuxDevicePath
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_DefaultLinuxDevicePath
+  commentId: P:wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath
+  nameWithType: TpmCryptoAppConfig.DefaultLinuxDevicePath
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath*
+  name: DefaultLinuxDevicePath
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_DefaultLinuxDevicePath_
+  commentId: Overload:wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath
+  nameWithType: TpmCryptoAppConfig.DefaultLinuxDevicePath
 - uid: wan24.Crypto.TPM.TpmExtensions
   name: TpmExtensions
   href: api/wan24.Crypto.TPM.TpmExtensions.html
