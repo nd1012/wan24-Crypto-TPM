@@ -73,6 +73,45 @@ builder.Services.AddWan24CryptoTpm();
 This will register transient `Tpm2Options` (using `Tpm2Helper.DefaultOptions`) 
 and `Tpm2` (using `Tpm2Helper.CreateEngine`) service objects.
 
+### JSON configuration
+
+You could implement a JSON configuration file using the `AppConfig` logic from 
+`wan24-Core`, and the `TpmCryptoAppConfig`. There it's possible to define 
+disabled algorithms, which makes it possible to react to an unwanted algorithm 
+very fast, at any time and without having to update your app, for example. If 
+you use an `AppConfig`, it could look like this:
+
+```cs
+public class YourAppConfig : AppConfig
+{
+    public YourAppConfig() : base() { }
+
+    [AppConfig(AfterBootstrap = true, Priority = 20)]
+    public CryptoAppConfig? Crypto { get; set; }
+
+    [AppConfig(AfterBootstrap = true, Priority = 10)]
+    public TpmCryptoAppConfig? Tpm { get; set; }
+}
+
+await AppConfig.LoadAsync<YourAppConfig>();
+```
+
+**NOTE**: A `TpmCryptoAppConfig` should be applied before a `CryptoAppConfig`. 
+For this reason the example defines a priority in the `AppConfigAttribute`.
+
+In the `config.json` in your app root folder:
+
+```json
+{
+    "Tpm":{
+        ...
+    }
+}
+```
+
+Anyway, you could also place and load a `TpmCryptoAppConfig` in any 
+configuration which supports using that custom type.
+
 ### `Tpm2Engine` fixes multithreading bugs
 
 Using a `Tpm2` instance for each thread still has multithreading problems in 
