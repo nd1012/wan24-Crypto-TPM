@@ -25,6 +25,11 @@ namespace wan24.Crypto.TPM
         public Tpm2Options() : base() { }
 
         /// <summary>
+        /// Default Linux TPM device path
+        /// </summary>
+        public static string? DefaultLinuxDevicePath { get; set; }
+
+        /// <summary>
         /// Any tagged object (will be cloned, if it implements <see cref="ICloneable"/>, and <see cref="GetCopy"/> has been called)
         /// </summary>
         public object? Tag { get; set; }
@@ -70,7 +75,7 @@ namespace wan24.Crypto.TPM
         /// Linux TPM device path
         /// </summary>
         [MinLength(1), MaxLength(short.MaxValue)]
-        public string? LinuxDevicePath { get; set; }
+        public string? LinuxDevicePath { get; set; } = DefaultLinuxDevicePath;
 
         /// <summary>
         /// Resource handle
