@@ -48,6 +48,25 @@ namespace wan24.Crypto.TPM
         public static SemaphoreSync DefaultEngineSync { get; } = new();
 
         /// <summary>
+        /// TPM state
+        /// </summary>
+        public static IEnumerable<Status> State
+        {
+            get
+            {
+                // TPM environment
+                if (DefaultEngine is not null)
+                    yield return new("Max. digest", GetMaxDigestSize(DefaultEngine), "Maximum supported digest size in bytes", "TPM");
+                yield return new("Linux device", Tpm2Options.DefaultLinuxDevicePath, "Default Linux TPM device path", "TPM");
+                // TPM secured values
+                yield return new("TPM secured values", TpmSecuredValueTable.Values.Count, "Number of TPM secured values", "TPM secured values");
+                foreach (TpmSecuredValue value in TpmSecuredValueTable.Values.Values)
+                    foreach (Status status in value.State)
+                        yield return new(status.Name, status.State, status.Description, $"TPM secured values\\{value.Name ?? value.GUID}");
+            }
+        }
+
+        /// <summary>
         /// Get default options
         /// </summary>
         /// <param name="options">Options</param>
