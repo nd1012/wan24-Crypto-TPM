@@ -56,8 +56,8 @@ namespace wan24.Crypto.TPM
             {
                 // TPM environment
                 if (DefaultEngine is not null)
-                    yield return new("Max. digest", GetMaxDigestSize(DefaultEngine), "Maximum supported digest size in bytes", "TPM");
-                yield return new("Linux device", Tpm2Options.DefaultLinuxDevicePath, "Default Linux TPM device path", "TPM");
+                    yield return new("Max. digest", GetMaxDigestSize(DefaultEngine), "Maximum supported digest size in bytes");
+                yield return new("Linux device", Tpm2Options.DefaultLinuxDevicePath, "Default Linux TPM device path");
                 // TPM secured values
                 yield return new("TPM secured values", TpmSecuredValueTable.Values.Count, "Number of TPM secured values", "TPM secured values");
                 foreach (TpmSecuredValue value in TpmSecuredValueTable.Values.Values)
