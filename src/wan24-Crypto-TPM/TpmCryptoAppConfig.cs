@@ -1,4 +1,5 @@
-﻿using wan24.Core;
+﻿using Tpm2Lib;
+using wan24.Core;
 
 namespace wan24.Crypto.TPM
 {
@@ -22,6 +23,11 @@ namespace wan24.Crypto.TPM
         /// </summary>
         public string? DefaultLinuxDevicePath { get; set; }
 
+        /// <summary>
+        /// Create a <see cref="Tpm2Helper.DefaultEngine"/>?
+        /// </summary>
+        public bool CreateDefaultEngine { get; set; }
+
         /// <inheritdoc/>
         public override void Apply()
         {
@@ -31,6 +37,7 @@ namespace wan24.Crypto.TPM
                 AppliedTpmCryptoConfig = this;
             }
             if (DefaultLinuxDevicePath is not null) Tpm2Options.DefaultLinuxDevicePath = DefaultLinuxDevicePath;
+            if (CreateDefaultEngine && Tpm2Helper.TryCreateEngine(options: null, out Tpm2? engine)) Tpm2Helper.DefaultEngine = engine;
             ApplyProperties(afterBootstrap: false);
             ApplyProperties(afterBootstrap: true);
         }

@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using Tpm2Lib;
 using wan24.Core;
+using static wan24.Core.TranslationHelper;
 
 namespace wan24.Crypto.TPM
 {
@@ -46,6 +47,25 @@ namespace wan24.Crypto.TPM
         /// Thread synchronization (used for <see cref="DefaultEngine"/> access)
         /// </summary>
         public static SemaphoreSync DefaultEngineSync { get; } = new();
+
+        /// <summary>
+        /// TPM state
+        /// </summary>
+        public static IEnumerable<Status> State
+        {
+            get
+            {
+                // TPM environment
+                if (DefaultEngine is not null)
+                    yield return new(__("Max. digest"), GetMaxDigestSize(DefaultEngine), __("Maximum supported digest size in bytes"));
+                yield return new(__("Linux device"), Tpm2Options.DefaultLinuxDevicePath, __("Default Linux TPM device path"));
+                // TPM secured values
+                yield return new(__("TPM secured values"), TpmSecuredValueTable.Values.Count, __("Number of TPM secured values"), __("TPM secured values"));
+                foreach (TpmSecuredValue value in TpmSecuredValueTable.Values.Values)
+                    foreach (Status status in value.State)
+                        yield return new(status.Name, status.State, status.Description, $"{__("TPM secured values")}\\{(value.Name ?? value.GUID).Replace('\\', '/')}");
+            }
+        }
 
         /// <summary>
         /// Get default options
@@ -287,7 +307,7 @@ namespace wan24.Crypto.TPM
                 TpmHandle hmacHandle = engine.HashSequenceStart(key ?? [], algo.Value);
                 authSession = engine.StartAuthSessionEx(TpmSe.Hmac, algo.Value);
                 int len = data.Length;
-                if (data.Length <= DIGEST_BUFFER_SIZE) return engine[authSession].SequenceComplete(hmacHandle, data, hierarchy, out _);
+                if (data.Length <= DIGEST_BUFFER_SIZE) return engine[authSession].SequenceComplete(hmacHandle, data, hierarchy, out TkHashcheck validation);
                 Span<byte> dataSpan = data;
                 int index = 0;
                 {
@@ -298,11 +318,11 @@ namespace wan24.Crypto.TPM
                         engine[authSession].SequenceUpdate(hmacHandle, buffer);
                     }
                 }
-                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, [], hierarchy, out _);
+                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, [], hierarchy, out TkHashcheck validation);
                 {
                     using SecureByteArrayRefStruct buffer = new(len - index);
                     dataSpan[index..].CopyTo(buffer.Span);
-                    return engine[authSession].SequenceComplete(hmacHandle, buffer, hierarchy, out _);
+                    return engine[authSession].SequenceComplete(hmacHandle, buffer, hierarchy, out TkHashcheck validation);
                 }
             }
             catch (Exception ex)
@@ -344,7 +364,7 @@ namespace wan24.Crypto.TPM
                 {
                     using SecureByteArrayRefStruct buffer = new(data.Length);
                     data.CopyTo(buffer.Span);
-                    return engine[authSession].SequenceComplete(hmacHandle, buffer, hierarchy, out _);
+                    return engine[authSession].SequenceComplete(hmacHandle, buffer, hierarchy, out TkHashcheck validation);
                 }
                 int index = 0;
                 {
@@ -355,11 +375,11 @@ namespace wan24.Crypto.TPM
                         engine[authSession].SequenceUpdate(hmacHandle, buffer);
                     }
                 }
-                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, [], hierarchy, out _);
+                if (index == len) return engine[authSession].SequenceComplete(hmacHandle, [], hierarchy, out TkHashcheck validation);
                 {
                     using SecureByteArrayRefStruct buffer = new(len - index);
                     data[index..].CopyTo(buffer.Span);
-                    return engine[authSession].SequenceComplete(hmacHandle, buffer, hierarchy, out _);
+                    return engine[authSession].SequenceComplete(hmacHandle, buffer, hierarchy, out TkHashcheck validation);
                 }
             }
             catch (Exception ex)

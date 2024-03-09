@@ -1,4 +1,5 @@
-﻿using System.Runtime;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Runtime;
 using Tpm2Lib;
 using wan24.Core;
 
@@ -315,5 +316,18 @@ namespace wan24.Crypto.TPM
         [TargetedPatchingOptOut("Just a method adapter")]
         public static byte[] TpmHmacSha512(this ReadOnlySpan<byte> data, in byte[]? key = null, Tpm2? engine = null, Tpm2Options? options = null)
             => Tpm2Helper.Hmac(data, TpmAlgId.Sha512, key, engine, options);
+
+        /// <summary>
+        /// Add TPM service objects
+        /// </summary>
+        /// <param name="services">Services</param>
+        /// <returns>Services</returns>
+        public static IServiceCollection AddWan24CryptoTpm(this IServiceCollection services)
+        {
+            if (ENV.IsBrowserApp) throw new InvalidOperationException();
+            services.AddTransient(serviceProvider => Tpm2Helper.DefaultOptions);
+            services.AddTransient(serviceProvider => Tpm2Helper.CreateEngine(serviceProvider.GetRequiredService<Tpm2Options>()));
+            return services;
+        }
     }
 }
