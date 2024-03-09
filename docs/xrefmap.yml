@@ -13,19 +13,6 @@ references:
   commentId: T:wan24.Crypto.TPM.Bootstrap
   fullName: wan24.Crypto.TPM.Bootstrap
   nameWithType: Bootstrap
-- uid: wan24.Crypto.TPM.Bootstrap.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: AddWan24CryptoTpm(IServiceCollection)
-  href: api/wan24.Crypto.TPM.Bootstrap.html#wan24_Crypto_TPM_Bootstrap_AddWan24CryptoTpm_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:wan24.Crypto.TPM.Bootstrap.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: wan24.Crypto.TPM.Bootstrap.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: Bootstrap.AddWan24CryptoTpm(IServiceCollection)
-- uid: wan24.Crypto.TPM.Bootstrap.AddWan24CryptoTpm*
-  name: AddWan24CryptoTpm
-  href: api/wan24.Crypto.TPM.Bootstrap.html#wan24_Crypto_TPM_Bootstrap_AddWan24CryptoTpm_
-  commentId: Overload:wan24.Crypto.TPM.Bootstrap.AddWan24CryptoTpm
-  isSpec: "True"
-  fullName: wan24.Crypto.TPM.Bootstrap.AddWan24CryptoTpm
-  nameWithType: Bootstrap.AddWan24CryptoTpm
 - uid: wan24.Crypto.TPM.Bootstrap.Boot
   name: Boot()
   href: api/wan24.Crypto.TPM.Bootstrap.html#wan24_Crypto_TPM_Bootstrap_Boot
@@ -885,6 +872,19 @@ references:
   isSpec: "True"
   fullName: wan24.Crypto.TPM.Tpm2Helper.IsAvailableAsync
   nameWithType: Tpm2Helper.IsAvailableAsync
+- uid: wan24.Crypto.TPM.Tpm2Helper.State
+  name: State
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_State
+  commentId: P:wan24.Crypto.TPM.Tpm2Helper.State
+  fullName: wan24.Crypto.TPM.Tpm2Helper.State
+  nameWithType: Tpm2Helper.State
+- uid: wan24.Crypto.TPM.Tpm2Helper.State*
+  name: State
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_State_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Helper.State
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Helper.State
+  nameWithType: Tpm2Helper.State
 - uid: wan24.Crypto.TPM.Tpm2Helper.TryCreateEngine(wan24.Crypto.TPM.Tpm2Options@,Tpm2Lib.Tpm2@)
   name: TryCreateEngine(in Tpm2Options?, out Tpm2?)
   href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_TryCreateEngine_wan24_Crypto_TPM_Tpm2Options__Tpm2Lib_Tpm2__
@@ -1362,6 +1362,19 @@ references:
   isSpec: "True"
   fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.ApplyAsync
   nameWithType: TpmCryptoAppConfig.ApplyAsync
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.CreateDefaultEngine
+  name: CreateDefaultEngine
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_CreateDefaultEngine
+  commentId: P:wan24.Crypto.TPM.TpmCryptoAppConfig.CreateDefaultEngine
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.CreateDefaultEngine
+  nameWithType: TpmCryptoAppConfig.CreateDefaultEngine
+- uid: wan24.Crypto.TPM.TpmCryptoAppConfig.CreateDefaultEngine*
+  name: CreateDefaultEngine
+  href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_CreateDefaultEngine_
+  commentId: Overload:wan24.Crypto.TPM.TpmCryptoAppConfig.CreateDefaultEngine
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.TpmCryptoAppConfig.CreateDefaultEngine
+  nameWithType: TpmCryptoAppConfig.CreateDefaultEngine
 - uid: wan24.Crypto.TPM.TpmCryptoAppConfig.DefaultLinuxDevicePath
   name: DefaultLinuxDevicePath
   href: api/wan24.Crypto.TPM.TpmCryptoAppConfig.html#wan24_Crypto_TPM_TpmCryptoAppConfig_DefaultLinuxDevicePath
@@ -1381,6 +1394,19 @@ references:
   commentId: T:wan24.Crypto.TPM.TpmExtensions
   fullName: wan24.Crypto.TPM.TpmExtensions
   nameWithType: TpmExtensions
+- uid: wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddWan24CryptoTpm(IServiceCollection)
+  href: api/wan24.Crypto.TPM.TpmExtensions.html#wan24_Crypto_TPM_TpmExtensions_AddWan24CryptoTpm_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: TpmExtensions.AddWan24CryptoTpm(IServiceCollection)
+- uid: wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm*
+  name: AddWan24CryptoTpm
+  href: api/wan24.Crypto.TPM.TpmExtensions.html#wan24_Crypto_TPM_TpmExtensions_AddWan24CryptoTpm_
+  commentId: Overload:wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm
+  nameWithType: TpmExtensions.AddWan24CryptoTpm
 - uid: wan24.Crypto.TPM.TpmExtensions.GetMacAlgorithm(Tpm2Lib.TpmAlgId)
   name: GetMacAlgorithm(TpmAlgId)
   href: api/wan24.Crypto.TPM.TpmExtensions.html#wan24_Crypto_TPM_TpmExtensions_GetMacAlgorithm_Tpm2Lib_TpmAlgId_
