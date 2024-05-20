@@ -433,6 +433,44 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// Decrypt a key ring
+        /// </summary>
+        /// <param name="cipher">Key ring cipher data</param>
+        /// <param name="key">Key</param>
+        /// <param name="options">Options</param>
+        /// <param name="algo">TPM HMAC algorithm</param>
+        /// <param name="engine">Engine</param>
+        /// <param name="tpmOptions">Options</param>
+        /// <returns>Key ring (don't forget to dispose!)</returns>
+        public static KeyRing DecryptKeyRing(
+            in byte[] cipher,
+            in byte[] key,
+            in CryptoOptions? options = null,
+            in TpmAlgId? algo = null,
+            Tpm2? engine = null,
+            in Tpm2Options? tpmOptions = null
+            )
+        {
+            engine ??= DefaultEngine;
+            bool disposeEngine = engine is null;
+            engine ??= CreateEngine(tpmOptions);
+            try
+            {
+                using SecureByteArrayRefStruct tpmKey = new(Hmac(key, algo, engine: engine, options: tpmOptions));
+                return KeyRing.Decrypt(cipher, tpmKey, options);
+            }
+            catch (Exception ex)
+            {
+                if (ex is CryptographicException) throw;
+                throw CryptographicException.From("Failed to decrypt key ring using TPM2", ex);
+            }
+            finally
+            {
+                if (disposeEngine) engine.Dispose();
+            }
+        }
+
+        /// <summary>
         /// Regular expression to match the TPM device name from a device path (<c>/dev/tpm0</c> f.e.; <c>$1</c> contains the device name)
         /// </summary>
         /// <returns>Regular expression</returns>
