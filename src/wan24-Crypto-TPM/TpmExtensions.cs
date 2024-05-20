@@ -101,6 +101,45 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// Encrypt a key ring protected using TPM
+        /// </summary>
+        /// <param name="keyRing">Key ring</param>
+        /// <param name="key">Key</param>
+        /// <param name="options">Options</param>
+        /// <param name="algo">TPM HMAC algorithm</param>
+        /// <param name="engine">Engine (won't be disposed)</param>
+        /// <param name="tpmOptions">Options</param>
+        /// <returns>Cipher data</returns>
+        public static byte[] TpmEncrypt(
+            this KeyRing keyRing,
+            in byte[] key,
+            in CryptoOptions? options = null,
+            in TpmAlgId? algo = null,
+            Tpm2? engine = null,
+            in Tpm2Options? tpmOptions = null
+            )
+        {
+            bool disposeEngine = engine is null;
+            engine ??= Tpm2Helper.CreateEngine(tpmOptions);
+            try
+            {
+                using SecureByteArrayRefStruct tpmKey = new(
+                    Tpm2Helper.Hmac(key, algo ?? Tpm2Helper.GetDigestAlgorithm(Tpm2Helper.GetMaxDigestSize(engine, tpmOptions)), key: null, engine, tpmOptions)
+                    );
+                return keyRing.Encrypt(tpmKey, options);
+            }
+            catch (Exception ex)
+            {
+                if (ex is CryptographicException) throw;
+                throw CryptographicException.From("Failed to encypt key ring using TPM2", ex);
+            }
+            finally
+            {
+                if (disposeEngine) engine.Dispose();
+            }
+        }
+
+        /// <summary>
         /// Enable creating a MAC 8using the max. supported TPM HMAC algorithm, if no algorithm was given)
         /// </summary>
         /// <param name="options">Options</param>
