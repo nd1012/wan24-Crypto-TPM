@@ -116,7 +116,7 @@
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_AddWan24CryptoTpm_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L325">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L364">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_AddWan24CryptoTpm_" data-uid="wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_AddWan24CryptoTpm_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="wan24.Crypto.TPM.TpmExtensions.AddWan24CryptoTpm(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddWan24CryptoTpm(IServiceCollection)</h4>
@@ -383,6 +383,86 @@ public static int GetMacLength(this TpmAlgId algo)</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmEncrypt_wan24_Crypto_KeyRing_System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.KeyRing%2CSystem.Byte%5B%5D%40%2Cwan24.Crypto.CryptoOptions%40%2CSystem.Nullable%7BTpm2Lib.TpmAlgId%7D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L113">View Source</a>
+  </span>
+  <a id="wan24_Crypto_TPM_TpmExtensions_TpmEncrypt_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmEncrypt*"></a>
+  <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmEncrypt_wan24_Crypto_KeyRing_System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.KeyRing,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)">TpmEncrypt(KeyRing, in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)</h4>
+  <div class="markdown level1 summary"><p>Encrypt a key ring protected using TPM</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] TpmEncrypt(this KeyRing keyRing, in byte[] key, in CryptoOptions? options = null, in TpmAlgId? algo = null, Tpm2? engine = null, in Tpm2Options? tpmOptions = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">KeyRing</span></td>
+        <td><span class="parametername">keyRing</span></td>
+        <td><p>Key ring</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CryptoOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TpmAlgId</span>?</td>
+        <td><span class="parametername">algo</span></td>
+        <td><p>TPM HMAC algorithm</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Tpm2</span></td>
+        <td><span class="parametername">engine</span></td>
+        <td><p>Engine (won't be disposed)</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="wan24.Crypto.TPM.Tpm2Options.html">Tpm2Options</a></td>
+        <td><span class="parametername">tpmOptions</span></td>
+        <td><p>Options</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><p>Cipher data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmEncrypt_wan24_Crypto_PrivateKeySuite_System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.PrivateKeySuite%2CSystem.Byte%5B%5D%40%2Cwan24.Crypto.CryptoOptions%40%2CSystem.Nullable%7BTpm2Lib.TpmAlgId%7D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -466,7 +546,7 @@ public static int GetMacLength(this TpmAlgId algo)</code></pre>
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmac_System_Byte___System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmac(System.Byte%5B%5D%2CSystem.Nullable%7BTpm2Lib.TpmAlgId%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L146">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L185">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmac_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmac*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmac_System_Byte___System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmac(System.Byte[],System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmac(byte[], TpmAlgId?, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -541,7 +621,7 @@ public static byte[] TpmHmac(this byte[] data, TpmAlgId? algo = null, in byte[]?
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmac_System_ReadOnlySpan_System_Byte__System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmac(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Nullable%7BTpm2Lib.TpmAlgId%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L268">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L307">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmac_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmac*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmac_System_ReadOnlySpan_System_Byte__System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmac(System.ReadOnlySpan{System.Byte},System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmac(ReadOnlySpan&lt;byte&gt;, TpmAlgId?, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -616,7 +696,7 @@ public static byte[] TpmHmac(this ReadOnlySpan&lt;byte&gt; data, TpmAlgId? algo 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmac_System_Span_System_Byte__System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmac(System.Span%7BSystem.Byte%7D%2CSystem.Nullable%7BTpm2Lib.TpmAlgId%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L159">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L198">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmac_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmac*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmac_System_Span_System_Byte__System_Nullable_Tpm2Lib_TpmAlgId__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmac(System.Span{System.Byte},System.Nullable{Tpm2Lib.TpmAlgId},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmac(Span&lt;byte&gt;, TpmAlgId?, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -691,7 +771,7 @@ public static byte[] TpmHmac(this Span&lt;byte&gt; data, TpmAlgId? algo = null, 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1(System.Byte%5B%5D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L171">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L210">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha1(byte[], in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -760,7 +840,7 @@ public static byte[] TpmHmacSha1(this byte[] data, in byte[]? key = null, Tpm2? 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L280">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L319">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1(System.ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha1(ReadOnlySpan&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -829,7 +909,7 @@ public static byte[] TpmHmacSha1(this ReadOnlySpan&lt;byte&gt; data, in byte[]? 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1(System.Span%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L219">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L258">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha1_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha1(System.Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha1(Span&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -898,7 +978,7 @@ public static byte[] TpmHmacSha1(this Span&lt;byte&gt; data, in byte[]? key = nu
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256(System.Byte%5B%5D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L183">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L222">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha256(byte[], in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -967,7 +1047,7 @@ public static byte[] TpmHmacSha256(this byte[] data, in byte[]? key = null, Tpm2
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L292">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L331">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256(System.ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha256(ReadOnlySpan&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1036,7 +1116,7 @@ public static byte[] TpmHmacSha256(this ReadOnlySpan&lt;byte&gt; data, in byte[]
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256(System.Span%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L231">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L270">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha256_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha256(System.Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha256(Span&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1105,7 +1185,7 @@ public static byte[] TpmHmacSha256(this Span&lt;byte&gt; data, in byte[]? key = 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384(System.Byte%5B%5D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L195">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L234">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha384(byte[], in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1174,7 +1254,7 @@ public static byte[] TpmHmacSha384(this byte[] data, in byte[]? key = null, Tpm2
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L304">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L343">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384(System.ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha384(ReadOnlySpan&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1243,7 +1323,7 @@ public static byte[] TpmHmacSha384(this ReadOnlySpan&lt;byte&gt; data, in byte[]
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384(System.Span%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L243">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L282">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha384_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha384(System.Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha384(Span&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1312,7 +1392,7 @@ public static byte[] TpmHmacSha384(this Span&lt;byte&gt; data, in byte[]? key = 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512(System.Byte%5B%5D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L207">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L246">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_System_Byte___System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512(System.Byte[],System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha512(byte[], in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1381,7 +1461,7 @@ public static byte[] TpmHmacSha512(this byte[] data, in byte[]? key = null, Tpm2
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512(System.ReadOnlySpan%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L316">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L355">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_System_ReadOnlySpan_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512(System.ReadOnlySpan{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha512(ReadOnlySpan&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1450,7 +1530,7 @@ public static byte[] TpmHmacSha512(this ReadOnlySpan&lt;byte&gt; data, in byte[]
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512(System.Span%7BSystem.Byte%7D%2CSystem.Byte%5B%5D%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L255">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L294">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_TpmHmacSha512_System_Span_System_Byte__System_Byte____Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options_" data-uid="wan24.Crypto.TPM.TpmExtensions.TpmHmacSha512(System.Span{System.Byte},System.Byte[]@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options)">TpmHmacSha512(Span&lt;byte&gt;, in byte[]?, Tpm2?, Tpm2Options?)</h4>
@@ -1519,7 +1599,7 @@ public static byte[] TpmHmacSha512(this Span&lt;byte&gt; data, in byte[]? key = 
     <a href="https://github.com/nd1012/wan24-Crypto-TPM/new/main/apiSpec/new?filename=wan24_Crypto_TPM_TpmExtensions_WithTpmHmac_wan24_Crypto_CryptoOptions_System_Nullable_Tpm2Lib_TpmAlgId___System_Boolean__System_Boolean__Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__.md&amp;value=---%0Auid%3A%20wan24.Crypto.TPM.TpmExtensions.WithTpmHmac(wan24.Crypto.CryptoOptions%2CSystem.Nullable%7BTpm2Lib.TpmAlgId%7D%40%2CSystem.Boolean%40%2CSystem.Boolean%40%2CTpm2Lib.Tpm2%2Cwan24.Crypto.TPM.Tpm2Options%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L113">View Source</a>
+    <a href="https://github.com/nd1012/wan24-Crypto-TPM/blob/main/src/wan24-Crypto-TPM/TpmExtensions.cs/#L152">View Source</a>
   </span>
   <a id="wan24_Crypto_TPM_TpmExtensions_WithTpmHmac_" data-uid="wan24.Crypto.TPM.TpmExtensions.WithTpmHmac*"></a>
   <h4 id="wan24_Crypto_TPM_TpmExtensions_WithTpmHmac_wan24_Crypto_CryptoOptions_System_Nullable_Tpm2Lib_TpmAlgId___System_Boolean__System_Boolean__Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__" data-uid="wan24.Crypto.TPM.TpmExtensions.WithTpmHmac(wan24.Crypto.CryptoOptions,System.Nullable{Tpm2Lib.TpmAlgId}@,System.Boolean@,System.Boolean@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)">WithTpmHmac(CryptoOptions, in TpmAlgId?, in bool, in bool, Tpm2?, in Tpm2Options?)</h4>

@@ -295,6 +295,13 @@ decrypt it.</p>
 private key suite anymore! The cipher data can only be decrypted using the
 same TPM hardware that was used for encryption. This also applies even only
 the TPM owner changes.</p>
+<h3 id="en-decrypting-a-key-ring">En-/decrypting a key ring</h3>
+<p>Using the <code>TpmEncrypt</code> extension method you can encrypt a <code>KeyRing</code> using a
+TPM flavored key. With <code>Tpm2Helper.DecryptKeyRing</code> you can decrypt it.</p>
+<p><strong>CAUTION</strong>: If you change your TPM hardware, there's no way to decrypt the
+key ring anymore! The cipher data can only be decrypted using the same TPM
+hardware that was used for encryption. This also applies even only the TPM
+owner changes.</p>
 <h3 id="tpm-shared-secret">TPM shared secret</h3>
 <p>The <code>TpmSharedSecret</code> is a helper for deriving a TPM secured key from a remote
 key storage.</p>

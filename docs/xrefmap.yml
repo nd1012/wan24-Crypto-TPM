@@ -712,6 +712,22 @@ references:
   commentId: F:wan24.Crypto.TPM.Tpm2Helper.DIGEST_BUFFER_SIZE
   fullName: wan24.Crypto.TPM.Tpm2Helper.DIGEST_BUFFER_SIZE
   nameWithType: Tpm2Helper.DIGEST_BUFFER_SIZE
+- uid: wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing(System.Byte[]@,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)
+  name: DecryptKeyRing(in byte[], in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DecryptKeyRing_System_Byte____System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__
+  commentId: M:wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing(System.Byte[]@,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)
+  name.vb: DecryptKeyRing(Byte(), Byte(), CryptoOptions, TpmAlgId?, Tpm2, Tpm2Options)
+  fullName: wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing(in byte[], in byte[], in wan24.Crypto.CryptoOptions?, in Tpm2Lib.TpmAlgId?, Tpm2Lib.Tpm2?, in wan24.Crypto.TPM.Tpm2Options?)
+  fullName.vb: wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing(Byte(), Byte(), wan24.Crypto.CryptoOptions, Tpm2Lib.TpmAlgId?, Tpm2Lib.Tpm2, wan24.Crypto.TPM.Tpm2Options)
+  nameWithType: Tpm2Helper.DecryptKeyRing(in byte[], in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)
+  nameWithType.vb: Tpm2Helper.DecryptKeyRing(Byte(), Byte(), CryptoOptions, TpmAlgId?, Tpm2, Tpm2Options)
+- uid: wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing*
+  name: DecryptKeyRing
+  href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DecryptKeyRing_
+  commentId: Overload:wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing
+  isSpec: "True"
+  fullName: wan24.Crypto.TPM.Tpm2Helper.DecryptKeyRing
+  nameWithType: Tpm2Helper.DecryptKeyRing
 - uid: wan24.Crypto.TPM.Tpm2Helper.DecryptPrivateKeySuite(System.Byte[]@,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)
   name: DecryptPrivateKeySuite(in byte[], in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)
   href: api/wan24.Crypto.TPM.Tpm2Helper.html#wan24_Crypto_TPM_Tpm2Helper_DecryptPrivateKeySuite_System_Byte____System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__
@@ -1459,6 +1475,15 @@ references:
   isSpec: "True"
   fullName: wan24.Crypto.TPM.TpmExtensions.GetMacLength
   nameWithType: TpmExtensions.GetMacLength
+- uid: wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.KeyRing,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)
+  name: TpmEncrypt(KeyRing, in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)
+  href: api/wan24.Crypto.TPM.TpmExtensions.html#wan24_Crypto_TPM_TpmExtensions_TpmEncrypt_wan24_Crypto_KeyRing_System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__
+  commentId: M:wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.KeyRing,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)
+  name.vb: TpmEncrypt(KeyRing, Byte(), CryptoOptions, TpmAlgId?, Tpm2, Tpm2Options)
+  fullName: wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.KeyRing, in byte[], in wan24.Crypto.CryptoOptions?, in Tpm2Lib.TpmAlgId?, Tpm2Lib.Tpm2?, in wan24.Crypto.TPM.Tpm2Options?)
+  fullName.vb: wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.KeyRing, Byte(), wan24.Crypto.CryptoOptions, Tpm2Lib.TpmAlgId?, Tpm2Lib.Tpm2, wan24.Crypto.TPM.Tpm2Options)
+  nameWithType: TpmExtensions.TpmEncrypt(KeyRing, in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)
+  nameWithType.vb: TpmExtensions.TpmEncrypt(KeyRing, Byte(), CryptoOptions, TpmAlgId?, Tpm2, Tpm2Options)
 - uid: wan24.Crypto.TPM.TpmExtensions.TpmEncrypt(wan24.Crypto.PrivateKeySuite,System.Byte[]@,wan24.Crypto.CryptoOptions@,System.Nullable{Tpm2Lib.TpmAlgId}@,Tpm2Lib.Tpm2,wan24.Crypto.TPM.Tpm2Options@)
   name: TpmEncrypt(PrivateKeySuite, in byte[], in CryptoOptions?, in TpmAlgId?, Tpm2?, in Tpm2Options?)
   href: api/wan24.Crypto.TPM.TpmExtensions.html#wan24_Crypto_TPM_TpmExtensions_TpmEncrypt_wan24_Crypto_PrivateKeySuite_System_Byte____wan24_Crypto_CryptoOptions__System_Nullable_Tpm2Lib_TpmAlgId___Tpm2Lib_Tpm2_wan24_Crypto_TPM_Tpm2Options__
