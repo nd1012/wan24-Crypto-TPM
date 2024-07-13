@@ -10,6 +10,7 @@ namespace wan24.Crypto.TPM
         /// <summary>
         /// Values (key is the GUID)
         /// </summary>
+        [InstanceTable]
         public static readonly ConcurrentChangeTokenDictionary<string, TpmSecuredValue> Values = new();
     }
 }

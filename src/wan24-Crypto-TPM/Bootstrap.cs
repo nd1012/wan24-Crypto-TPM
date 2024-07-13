@@ -15,6 +15,7 @@ namespace wan24.Crypto.TPM
         public static void Boot()
         {
             StatusProviderTable.Providers["TPM"] = Tpm2Helper.State;
+            InstanceTables.Registered[typeof(TpmSecuredValue)] = typeof(TpmSecuredValueTable);
             if (ENV.IsBrowserApp) return;
             MacHelper.Algorithms[MacTpmHmacSha1Algorithm.ALGORITHM_NAME] = MacTpmHmacSha1Algorithm.Instance;
             MacHelper.Algorithms[MacTpmHmacSha256Algorithm.ALGORITHM_NAME] = MacTpmHmacSha256Algorithm.Instance;
