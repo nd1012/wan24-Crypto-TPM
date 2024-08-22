@@ -3,11 +3,12 @@ using wan24.Core;
 using wan24.Crypto;
 using wan24.Crypto.Tests;
 using wan24.Crypto.TPM;
+using wan24.Tests;
 
 namespace wan24_Crypto_TPM_Tests
 {
     [TestClass]
-    public class Mac_Tests
+    public class Mac_Tests : TestBase
     {
         [TestMethod, Timeout(3000)]
         public async Task All_Tests() => await MacTests.TestAllAlgorithms();

@@ -1,9 +1,10 @@
 ﻿using wan24.Crypto.TPM;
+using wan24.Tests;
 
 namespace wan24_Crypto_TPM_Tests
 {
     [TestClass]
-    public class TpmRng_Tests
+    public class TpmRng_Tests : TestBase
     {
         [TestMethod]
         public void General_Tests()

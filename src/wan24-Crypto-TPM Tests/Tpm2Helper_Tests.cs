@@ -2,12 +2,13 @@
 using wan24.Core;
 using wan24.Crypto;
 using wan24.Crypto.TPM;
+using wan24.Tests;
 
 namespace wan24_Crypto_TPM_Tests
 {
     // NOTE: These tests require a running TCP TPM simulator!
     [TestClass]
-    public class Tpm2Helper_Tests
+    public class Tpm2Helper_Tests : TestBase
     {
         [TestMethod]
         public void Avail_Test()
