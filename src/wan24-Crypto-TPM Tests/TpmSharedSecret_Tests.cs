@@ -2,11 +2,12 @@
 using wan24.Core;
 using wan24.Crypto;
 using wan24.Crypto.TPM;
+using wan24.Tests;
 
 namespace wan24_Crypto_TPM_Tests
 {
     [TestClass]
-    public class TpmSharedSecret_Tests
+    public class TpmSharedSecret_Tests : TestBase
     {
         [TestMethod]
         public void General_Tests()
