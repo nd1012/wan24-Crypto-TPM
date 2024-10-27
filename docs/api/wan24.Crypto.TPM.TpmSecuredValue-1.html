@@ -87,6 +87,7 @@
     <div><span class="xref">IWillDispose</span></div>
     <div><span class="xref">ISecureValue</span></div>
     <div><span class="xref">IDisposableObject</span></div>
+    <div><span class="xref">IBasicDisposableObject</span></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     <div><span class="xref">IStatusProvider</span></div>
@@ -260,7 +261,7 @@
   <h6><strong>Assembly</strong>: wan24CryptoTpm.dll</h6>
   <h5 id="wan24_Crypto_TPM_TpmSecuredValue_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TpmSecuredValue&lt;T&gt; : TpmSecuredValue, IWillDispose, ISecureValue, IDisposableObject, IDisposable, IAsyncDisposable, IStatusProvider where T : class, IStreamSerializer, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public class TpmSecuredValue&lt;T&gt; : TpmSecuredValue, IWillDispose, ISecureValue, IDisposableObject, IBasicDisposableObject, IDisposable, IAsyncDisposable, IStatusProvider where T : class, IStreamSerializer, new()</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -607,6 +608,9 @@
   </div>
   <div>
       <span class="xref">wan24.Core.IDisposableObject</span>
+  </div>
+  <div>
+      <span class="xref">wan24.Core.IBasicDisposableObject</span>
   </div>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
