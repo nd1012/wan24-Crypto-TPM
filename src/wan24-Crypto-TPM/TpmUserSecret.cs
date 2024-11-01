@@ -22,7 +22,7 @@ namespace wan24.Crypto.TPM
         in Tpm2Options? tpmOptions = null,
         in CryptoOptions? options = null
         )
-        : BasicAllDisposableBase()
+        : DisposableBase()
     {
         /// <summary>
         /// Value
@@ -30,6 +30,11 @@ namespace wan24.Crypto.TPM
         private readonly TpmSecuredValue _Value = tpmOptions is null
             ? new(engine ?? throw new ArgumentNullException(nameof(engine)), value, encryptTimeout, recryptTimeout, options)
             : new(value, encryptTimeout, recryptTimeout, tpmOptions, options);
+
+        /// <summary>
+        /// If to use the <see cref="TpmValueProtection"/> per default (if <see langword="false"/>, <see cref="ValueProtection"/> will be used instead)
+        /// </summary>
+        public static bool DefaultUseTpmValueProtection { get; set; } = true;
 
         /// <summary>
         /// Value (will/should be cleared!)
@@ -41,6 +46,11 @@ namespace wan24.Crypto.TPM
         }
 
         /// <summary>
+        /// If to use the <see cref="TpmValueProtection"/> per default (if <see langword="false"/>, <see cref="ValueProtection"/> will be used instead)
+        /// </summary>
+        public bool UseTpmValueProtection { get; init; } = DefaultUseTpmValueProtection;
+
+        /// <summary>
         /// Get a storable value
         /// </summary>
         /// <returns>Storable value</returns>
@@ -48,7 +58,9 @@ namespace wan24.Crypto.TPM
         {
             EnsureUndisposed();
             using SecureByteArray secureValue = new(Value);
-            return TpmValueProtection.Protect(secureValue.Array, ValueProtection.Scope.User);
+            return UseTpmValueProtection
+                ? TpmValueProtection.Protect(secureValue.Array, ValueProtection.Scope.User)
+                : ValueProtection.Protect(secureValue.Array, ValueProtection.Scope.User);
         }
 
         /// <inheritdoc/>
@@ -66,6 +78,8 @@ namespace wan24.Crypto.TPM
         /// <param name="recryptTimeout">Re-crypt timeout (one minute, for example)</param>
         /// <param name="tpmOptions">TPM options</param>
         /// <param name="options">Options (will be cleared!)</param>
+        /// <param name="useTpmValueProtection">If to use the <see cref="TpmValueProtection"/> per default (if <see langword="false"/>, <see cref="ValueProtection"/> 
+        /// will be used instead; if <see langword="null"/>, <see cref="DefaultUseTpmValueProtection"/> will be used)</param>
         /// <returns>Instance</returns>
         public static TpmUserSecret FromStoredValue(
             in Tpm2Engine? engine,
@@ -73,8 +87,18 @@ namespace wan24.Crypto.TPM
             in TimeSpan? encryptTimeout = null,
             in TimeSpan? recryptTimeout = null,
             in Tpm2Options? tpmOptions = null,
-            in CryptoOptions? options = null
+            in CryptoOptions? options = null,
+            in bool? useTpmValueProtection = null
             )
-            => new(engine, TpmValueProtection.Unprotect(value, ValueProtection.Scope.User), encryptTimeout, recryptTimeout, tpmOptions, options);
+            => new(
+                engine,
+                useTpmValueProtection ?? DefaultUseTpmValueProtection
+                    ? TpmValueProtection.Unprotect(value, ValueProtection.Scope.User)
+                    : ValueProtection.Unprotect(value, ValueProtection.Scope.User),
+                encryptTimeout,
+                recryptTimeout,
+                tpmOptions,
+                options
+                );
     }
 }

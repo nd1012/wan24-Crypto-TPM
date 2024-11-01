@@ -363,6 +363,24 @@ user secret for the user scope key.
 Or you can use both, the `ValueProtection` and the `TpmValueProtection`, as it 
 is suitable for your application, separately.
 
+#### Storable process, device and user secret
+
+You can manage a secret which will be protected for the process, device or 
+user scope using the `TpmProcessSecret`, `TpmDeviceSecret` and `TpmUserSecret` 
+types:
+
+```cs
+using TpmDeviceSecret secret = TpmDeviceSecret.FromStoredValue(engine: null, storedValue);
+using(SecureArray secureValue = secret.Value)
+{
+    // Do something with the raw secureValue
+}
+using(SecureArray storableValue = secret.GetStorableValue())
+{
+    // Store storableValue for later use
+}
+```
+
 ### Extension methods
 
 The `TpmExtensions` class exports some extension methods to make life more 
